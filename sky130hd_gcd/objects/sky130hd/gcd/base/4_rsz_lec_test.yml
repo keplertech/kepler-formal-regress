@@ -1,0 +1,7 @@
+format: verilog
+input_paths:
+  - ./results/sky130hd/gcd/base/4_before_rsz_lec.v
+  - ./results/sky130hd/gcd/base/4_after_rsz_lec.v
+liberty_files:
+ - ./sky130_fd_sc_hd__tt_025C_1v80.lib
+log_file: ./logs/sky130hd/gcd/base/4_rsz_lec_check.log

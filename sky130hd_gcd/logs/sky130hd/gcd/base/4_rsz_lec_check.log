@@ -1,0 +1,806 @@
+[2026-01-21 17:55:06.503] [miter_logger] [info] MiterStrategy::run starting
+[2026-01-21 17:55:06.503] [miter_logger] [info] Collecting POs for design 0: gcd
+
+[2026-01-21 17:55:06.505] [miter_logger] [info] Collected 120 POs for design 0
+
+[2026-01-21 17:55:06.505] [miter_logger] [info] Collecting POs for design 1: gcd
+
+[2026-01-21 17:55:06.506] [miter_logger] [info] Collected 120 POs for design 1
+
+[2026-01-21 17:55:06.506] [miter_logger] [info] normalizeInputs: starting
+[2026-01-21 17:55:06.506] [miter_logger] [info] size of common inputs: 71
+[2026-01-21 17:55:06.506] [miter_logger] [info] size of diff0 inputs: 0
+[2026-01-21 17:55:06.506] [miter_logger] [info] size of diff1 inputs: 0
+[2026-01-21 17:55:06.506] [miter_logger] [info] normalizeOutputs: starting
+[2026-01-21 17:55:06.506] [miter_logger] [info] size of common outputs: 120
+[2026-01-21 17:55:06.506] [miter_logger] [info] size of diff0 outputs: 0
+[2026-01-21 17:55:06.506] [miter_logger] [info] size of diff1 outputs: 0
+[2026-01-21 17:55:06.506] [miter_logger] [info] size of PIs in circuit 0: 71
+[2026-01-21 17:55:06.506] [miter_logger] [info] size of PIs in circuit 1: 71
+[2026-01-21 17:55:06.506] [miter_logger] [info] size of POs in circuit 0: 120
+[2026-01-21 17:55:06.506] [miter_logger] [info] size of POs in circuit 1: 120
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 2 DNLID 0
+[2026-01-21 17:55:06.511] [miter_logger] [info] clk.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 3 DNLID 776
+[2026-01-21 17:55:06.511] [miter_logger] [info] ctrl.state.out[0]$_DFF_P_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 4 DNLID 779
+[2026-01-21 17:55:06.511] [miter_logger] [info] ctrl.state.out[1]$_DFF_P_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 5 DNLID 782
+[2026-01-21 17:55:06.511] [miter_logger] [info] ctrl.state.out[2]$_DFF_P_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 6 DNLID 786
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[0]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 7 DNLID 790
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[10]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 8 DNLID 794
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[11]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 9 DNLID 798
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[12]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 10 DNLID 802
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[13]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 11 DNLID 806
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[14]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 12 DNLID 810
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[15]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 13 DNLID 814
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[1]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 14 DNLID 818
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[2]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 15 DNLID 822
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[3]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 16 DNLID 826
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[4]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 17 DNLID 830
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[5]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 18 DNLID 834
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[6]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 19 DNLID 838
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[7]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 20 DNLID 842
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[8]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 21 DNLID 846
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.a_reg.out[9]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 22 DNLID 850
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.b_reg.out[0]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 23 DNLID 854
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.b_reg.out[10]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 24 DNLID 858
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.b_reg.out[11]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 25 DNLID 862
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.b_reg.out[12]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 26 DNLID 866
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.b_reg.out[13]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 27 DNLID 870
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.b_reg.out[14]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 28 DNLID 874
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.b_reg.out[15]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 29 DNLID 878
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.b_reg.out[1]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 30 DNLID 882
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.b_reg.out[2]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.511] [miter_logger] [info] VARID 31 DNLID 886
+[2026-01-21 17:55:06.511] [miter_logger] [info] dpath.b_reg.out[3]$_DFFE_PP_.
+[2026-01-21 17:55:06.511] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.511] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.511] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 32 DNLID 890
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[4]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 33 DNLID 894
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[5]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 34 DNLID 898
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[6]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 35 DNLID 902
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[7]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 36 DNLID 906
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[8]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 37 DNLID 910
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[9]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 38 DNLID 37
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 39 DNLID 36
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 1.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 40 DNLID 35
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 2.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 41 DNLID 34
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 3.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 42 DNLID 33
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 4.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 43 DNLID 32
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 5.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 44 DNLID 31
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 6.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 45 DNLID 30
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 7.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 46 DNLID 29
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 8.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 47 DNLID 28
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 9.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 48 DNLID 27
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 10.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 49 DNLID 26
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 11.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 50 DNLID 25
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 12.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 51 DNLID 24
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 13.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 52 DNLID 23
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 14.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 53 DNLID 22
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 15.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 54 DNLID 21
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 16.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 55 DNLID 20
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 17.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 56 DNLID 19
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 18.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 57 DNLID 18
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 19.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 58 DNLID 17
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 20.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 59 DNLID 16
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 21.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 60 DNLID 15
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 22.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 61 DNLID 14
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 23.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 62 DNLID 13
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 24.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 63 DNLID 12
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 25.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 64 DNLID 11
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 26.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 65 DNLID 10
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 27.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 66 DNLID 9
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 28.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 67 DNLID 8
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 29.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 68 DNLID 7
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 30.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 69 DNLID 6
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 31.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 70 DNLID 2
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_val.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 71 DNLID 3
+[2026-01-21 17:55:06.512] [miter_logger] [info] reset.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 72 DNLID 4
+[2026-01-21 17:55:06.512] [miter_logger] [info] resp_rdy.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 2 DNLID 0
+[2026-01-21 17:55:06.512] [miter_logger] [info] clk.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 3 DNLID 787
+[2026-01-21 17:55:06.512] [miter_logger] [info] ctrl.state.out[0]$_DFF_P_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 4 DNLID 790
+[2026-01-21 17:55:06.512] [miter_logger] [info] ctrl.state.out[1]$_DFF_P_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 5 DNLID 793
+[2026-01-21 17:55:06.512] [miter_logger] [info] ctrl.state.out[2]$_DFF_P_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 6 DNLID 797
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[0]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 7 DNLID 801
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[10]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 8 DNLID 805
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[11]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 9 DNLID 809
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[12]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 10 DNLID 813
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[13]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 11 DNLID 817
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[14]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 12 DNLID 821
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[15]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 13 DNLID 825
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[1]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 14 DNLID 829
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[2]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 15 DNLID 833
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[3]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 16 DNLID 837
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[4]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 17 DNLID 841
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[5]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 18 DNLID 845
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[6]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 19 DNLID 849
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[7]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 20 DNLID 853
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[8]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 21 DNLID 857
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.a_reg.out[9]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 22 DNLID 861
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[0]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 23 DNLID 865
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[10]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 24 DNLID 869
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[11]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 25 DNLID 873
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[12]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 26 DNLID 877
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[13]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 27 DNLID 881
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[14]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 28 DNLID 885
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[15]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 29 DNLID 889
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[1]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 30 DNLID 893
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[2]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 31 DNLID 897
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[3]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 32 DNLID 901
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[4]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 33 DNLID 905
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[5]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 34 DNLID 909
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[6]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 35 DNLID 913
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[7]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 36 DNLID 917
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[8]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 37 DNLID 921
+[2026-01-21 17:55:06.512] [miter_logger] [info] dpath.b_reg.out[9]$_DFFE_PP_.
+[2026-01-21 17:55:06.512] [miter_logger] [info] Q.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 38 DNLID 37
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 39 DNLID 36
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 1.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 40 DNLID 35
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 2.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 41 DNLID 34
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 3.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 42 DNLID 33
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 4.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 43 DNLID 32
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 5.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 44 DNLID 31
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 6.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 45 DNLID 30
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 7.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 46 DNLID 29
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 8.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 47 DNLID 28
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 9.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 48 DNLID 27
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 10.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 49 DNLID 26
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 11.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 50 DNLID 25
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 12.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 51 DNLID 24
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 13.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 52 DNLID 23
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 14.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 53 DNLID 22
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 15.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 54 DNLID 21
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 16.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 55 DNLID 20
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 17.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 56 DNLID 19
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 18.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 57 DNLID 18
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 19.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 58 DNLID 17
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 20.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 59 DNLID 16
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 21.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 60 DNLID 15
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 22.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 61 DNLID 14
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 23.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 62 DNLID 13
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 24.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 63 DNLID 12
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 25.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 64 DNLID 11
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 26.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 65 DNLID 10
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 27.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 66 DNLID 9
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 28.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 67 DNLID 8
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 29.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 68 DNLID 7
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 30.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 69 DNLID 6
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_msg.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 31.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 70 DNLID 2
+[2026-01-21 17:55:06.512] [miter_logger] [info] req_val.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 71 DNLID 3
+[2026-01-21 17:55:06.512] [miter_logger] [info] reset.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] VARID 72 DNLID 4
+[2026-01-21 17:55:06.512] [miter_logger] [info] resp_rdy.
+[2026-01-21 17:55:06.512] [miter_logger] [info] bit: 0.
+[2026-01-21 17:55:06.512] [miter_logger] [info] 
+
+[2026-01-21 17:55:06.512] [miter_logger] [info] Building miter expression
+[2026-01-21 17:55:06.512] [miter_logger] [info] Finished building miter expression
+[2026-01-21 17:55:06.513] [miter_logger] [info] Started Glucose solving
+[2026-01-21 17:55:06.523] [miter_logger] [info] Finished Glucose solving: UNSAT
+[2026-01-21 17:55:06.523] [miter_logger] [info] Circuits are IDENTICAL

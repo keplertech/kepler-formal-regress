@@ -1,0 +1,95 @@
+OpenROAD 701085d1e57df45a6aee387c04309628e0233ba8 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db ./results/sky130hd/gcd/base/2_floorplan.odb
+source /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/sky130hd/setRC.tcl
+global_placement -skip_io -density 0.6 -pad_left 0 -pad_right 0
+[INFO GPL-0005] Execute conjugate gradient initial placement.
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: (  1.380  2.720 ) ( 78.200 76.160 ) um
+[INFO GPL-0032] Initializing region: Top-level
+[INFO GPL-0006] Number of instances:               314
+[INFO GPL-0007] Movable instances:                 242
+[INFO GPL-0008] Fixed instances:                    72
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                    278
+[INFO GPL-0011] Number of pins:                    855
+[INFO GPL-0012] Die BBox:  (  0.000  0.000 ) ( 79.495 79.495 ) um
+[INFO GPL-0013] Core BBox: (  1.380  2.720 ) ( 78.200 76.160 ) um
+[INFO GPL-0016] Core area:                    5641.661 um^2
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                  5641.661 um^2
+[INFO GPL-0017] Fixed instances area:           90.086 um^2
+[INFO GPL-0018] Movable instances area:       2618.381 um^2
+[INFO GPL-0019] Utilization:                    47.165 %
+[INFO GPL-0020] Standard cells area:          2618.381 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0033] Initializing Nesterov region: Top-level
+[INFO GPL-0023] Placement target density:       0.6000
+[INFO GPL-0024] Movable insts average area:     10.820 um^2
+[INFO GPL-0025] Ideal bin area:                 18.033 um^2
+[INFO GPL-0026] Ideal bin count:                   312
+[INFO GPL-0027] Total bin area:               5641.661 um^2
+[INFO GPL-0028] Bin count (X, Y):          16 ,     16
+[INFO GPL-0029] Bin size (W * H):       4.801 *  4.590 um
+[INFO GPL-0030] Number of bins:                    256
+[INFO GPL-0007] Execute nesterov global placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.9598 |  6.501770e+02 |   +0.00% |  2.91e-14 |      
+       10 |   0.9598 |  5.416250e+02 |  -16.70% |  4.74e-14 |      
+       20 |   0.9598 |  5.402400e+02 |   -0.26% |  7.72e-14 |      
+       30 |   0.9598 |  5.404330e+02 |   +0.04% |  1.26e-13 |      
+       40 |   0.9598 |  5.404750e+02 |   +0.01% |  2.05e-13 |      
+       50 |   0.9598 |  5.405500e+02 |   +0.01% |  3.33e-13 |      
+       60 |   0.9598 |  5.410050e+02 |   +0.08% |  5.43e-13 |      
+       70 |   0.9598 |  5.417610e+02 |   +0.14% |  8.85e-13 |      
+       80 |   0.9598 |  5.427640e+02 |   +0.19% |  1.44e-12 |      
+       90 |   0.9598 |  5.443440e+02 |   +0.29% |  2.35e-12 |      
+      100 |   0.9598 |  5.465730e+02 |   +0.41% |  3.82e-12 |      
+      110 |   0.9598 |  5.493720e+02 |   +0.51% |  6.23e-12 |      
+      120 |   0.9598 |  5.526230e+02 |   +0.59% |  1.01e-11 |      
+      130 |   0.9598 |  5.560520e+02 |   +0.62% |  1.65e-11 |      
+      140 |   0.9598 |  5.708050e+02 |   +2.65% |  2.69e-11 |      
+      150 |   0.9415 |  6.409770e+02 |  +12.29% |  4.38e-11 |      
+      160 |   0.9182 |  8.303890e+02 |  +29.55% |  7.14e-11 |      
+      170 |   0.8758 |  1.011440e+03 |  +21.80% |  1.16e-10 |      
+      180 |   0.8572 |  1.107835e+03 |   +9.53% |  1.90e-10 |      
+      190 |   0.8174 |  1.251781e+03 |  +12.99% |  3.09e-10 |      
+      200 |   0.7860 |  1.382113e+03 |  +10.41% |  5.03e-10 |      
+      210 |   0.7478 |  1.572796e+03 |  +13.80% |  8.19e-10 |      
+      220 |   0.7020 |  1.705863e+03 |   +8.46% |  1.33e-09 |      
+      230 |   0.6577 |  1.889102e+03 |  +10.74% |  2.17e-09 |      
+      240 |   0.6125 |  2.028966e+03 |   +7.40% |  3.54e-09 |      
+      250 |   0.5635 |  2.171606e+03 |   +7.03% |  5.77e-09 |      
+      260 |   0.5068 |  2.296555e+03 |   +5.75% |  9.39e-09 |      
+      270 |   0.4560 |  2.437319e+03 |   +6.13% |  1.53e-08 |      
+      280 |   0.3989 |  2.545418e+03 |   +4.44% |  2.49e-08 |      
+      290 |   0.3510 |  2.638404e+03 |   +3.65% |  4.06e-08 |      
+      300 |   0.3060 |  2.718278e+03 |   +3.03% |  6.10e-08 |      
+      310 |   0.2711 |  2.765088e+03 |   +1.72% |  8.99e-08 |      
+      320 |   0.2318 |  2.829120e+03 |   +2.32% |  1.32e-07 |      
+      330 |   0.2006 |  2.881172e+03 |   +1.84% |  1.95e-07 |      
+      340 |   0.1771 |  2.934767e+03 |   +1.86% |  2.87e-07 |      
+      350 |   0.1485 |  2.973189e+03 |   +1.31% |  4.23e-07 |      
+      360 |   0.1211 |  2.993253e+03 |   +0.67% |  6.23e-07 |      
+      368 |   0.0996 |  3.006713e+03 |          |  8.84e-07 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 368
+[INFO GPL-1002] Placed Cell Area             2618.3806
+[INFO GPL-1003] Available Free Area          5551.5744
+[INFO GPL-1004] Minimum Feasible Density        0.4800 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.5241
+[INFO GPL-1008]     - For 80% usage of free space: 0.5896
+[INFO GPL-1009]     - For 50% usage of free space: 0.9433
+[INFO GPL-1014] Final placement area: 2618.38 (+0.00%)
+write_db ./results/sky130hd/gcd/base/3_1_place_gp_skip_io.odb
+Elapsed time: 0:00.29[h:]min:sec. CPU time: user 1.59 sys 0.03 (550%). Peak memory: 114868KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_1_place_gp_skip_io               0            112 e81a509ec3e488949d9e
