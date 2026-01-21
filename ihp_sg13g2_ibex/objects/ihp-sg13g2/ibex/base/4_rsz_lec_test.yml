@@ -1,0 +1,7 @@
+format: verilog
+input_paths:
+  - ./results/ihp-sg13g2/ibex/base/4_before_rsz_lec.v
+  - ./results/ihp-sg13g2/ibex/base/4_after_rsz_lec.v
+liberty_files:
+ - ./sg13g2_stdcell_typ_1p20V_25C.lib
+log_file: ./logs/ihp-sg13g2/ibex/base/4_rsz_lec_check.log
