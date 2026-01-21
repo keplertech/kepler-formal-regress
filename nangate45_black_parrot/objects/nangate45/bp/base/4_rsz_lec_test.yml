@@ -1,0 +1,12 @@
+format: verilog
+input_paths:
+  - ./results/nangate45/bp/base/4_before_rsz_lec.v
+  - ./results/nangate45/bp/base/4_after_rsz_lec.v
+liberty_files:
+ - ./lib/NangateOpenCellLibrary_typical.lib
+ - ./lib/fakeram45_512x64.lib
+ - ./lib/fakeram45_256x95.lib
+ - ./lib/fakeram45_64x7.lib
+ - ./lib/fakeram45_64x15.lib
+ - ./lib/fakeram45_64x96.lib
+log_file: ./logs/nangate45/bp/base/4_rsz_lec_check.log

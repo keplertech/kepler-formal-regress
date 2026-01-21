@@ -1,0 +1,357 @@
+
+==========================================================================
+resizer report_tns
+--------------------------------------------------------------------------
+tns max -687.83
+
+==========================================================================
+resizer report_wns
+--------------------------------------------------------------------------
+wns max -9.63
+
+==========================================================================
+resizer report_worst_slack
+--------------------------------------------------------------------------
+worst slack max -9.63
+
+==========================================================================
+resizer report_clock_min_period
+--------------------------------------------------------------------------
+CLK period_min = 15.63 fmax = 63.99
+
+==========================================================================
+resizer report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.ram_addr_r[0]$_SDFFCE_PP0N_
+            (rising edge-triggered flip-flop clocked by CLK)
+Endpoint: multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem
+          (rising edge-triggered flip-flop clocked by CLK)
+Path Group: CLK
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock CLK (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.ram_addr_r[0]$_SDFFCE_PP0N_/CK (DFF_X1)
+     2    4.69    0.02    0.07    0.07 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.ram_addr_r[0]$_SDFFCE_PP0N_/QN (DFF_X1)
+                                         multi_top.me.genblk1_0__bp_cce_top.bp_cce/_00028_ (net)
+                  0.02    0.00    0.07 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/_15382_/B1 (OAI21_X1)
+     1    5.00    0.01    0.02    0.09 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/_15382_/ZN (OAI21_X1)
+                                         multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.addr_i[0] (net)
+                  0.02    0.00    0.09 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem/addr_in[0] (fakeram45_256x95)
+                                  0.09   data arrival time
+
+                  0.00    0.00    0.00   clock CLK (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem/clk (fakeram45_256x95)
+                          0.05    0.05   library hold time
+                                  0.05   data required time
+-----------------------------------------------------------------------------
+                                  0.05   data required time
+                                 -0.09   data arrival time
+-----------------------------------------------------------------------------
+                                  0.04   slack (MET)
+
+
+
+==========================================================================
+resizer report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: reset_i (input port clocked by CLK)
+Endpoint: multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem
+          (rising edge-triggered flip-flop clocked by CLK)
+Path Group: CLK
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock CLK (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          3.42    3.42 ^ input external delay
+     1    2.89    0.00    0.00    3.42 ^ reset_i (in)
+                                         reset_i (net)
+                  0.00    0.00    3.42 ^ input9941/A (CLKBUF_X3)
+     1   30.03    0.02    0.04    3.46 ^ input9941/Z (CLKBUF_X3)
+                                         net9940 (net)
+                  0.03    0.01    3.48 ^ place41354/A (BUF_X8)
+     2   55.76    0.01    0.03    3.51 ^ place41354/Z (BUF_X8)
+                                         net41353 (net)
+                  0.05    0.04    3.55 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/_08732_/A (INV_X1)
+     2   12.19    0.02    0.03    3.58 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/_08732_/ZN (INV_X1)
+                                         multi_top.me.genblk1_0__bp_cce_top.bp_cce/_02954_ (net)
+                  0.02    0.00    3.58 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/_14458_/A (OAI21_X4)
+     2   10.45    0.02    0.03    3.61 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/_14458_/ZN (OAI21_X4)
+                                         multi_top.me.genblk1_0__bp_cce_top.bp_cce/_01746_ (net)
+                  0.02    0.00    3.61 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/_15609_/A1 (NOR2_X4)
+     9   49.05    0.01    0.02    3.63 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/_15609_/ZN (NOR2_X4)
+                                         multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.w_i (net)
+                  0.02    0.02    3.65 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/place36073/A (BUF_X2)
+    18   90.81    0.05    0.09    3.74 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/place36073/Z (BUF_X2)
+                                         multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/net36072 (net)
+                 49.14    0.00    3.74 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/place36072/A (BUF_X8)
+    71  355.00    0.72   11.84   15.58 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/place36072/Z (BUF_X8)
+                                         multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/net36071 (net)
+                  1.09    0.00   15.58 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem/w_mask_in[0] (fakeram45_256x95)
+                                 15.58   data arrival time
+
+                  0.00    6.00    6.00   clock CLK (rise edge)
+                          0.00    6.00   clock network delay (ideal)
+                          0.00    6.00   clock reconvergence pessimism
+                                  6.00 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem/clk (fakeram45_256x95)
+                         -0.05    5.95   library setup time
+                                  5.95   data required time
+-----------------------------------------------------------------------------
+                                  5.95   data required time
+                                -15.58   data arrival time
+-----------------------------------------------------------------------------
+                                 -9.63   slack (VIOLATED)
+
+
+
+==========================================================================
+resizer report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: reset_i (input port clocked by CLK)
+Endpoint: multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem
+          (rising edge-triggered flip-flop clocked by CLK)
+Path Group: CLK
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock CLK (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          3.42    3.42 ^ input external delay
+     1    2.89    0.00    0.00    3.42 ^ reset_i (in)
+                                         reset_i (net)
+                  0.00    0.00    3.42 ^ input9941/A (CLKBUF_X3)
+     1   30.03    0.02    0.04    3.46 ^ input9941/Z (CLKBUF_X3)
+                                         net9940 (net)
+                  0.03    0.01    3.48 ^ place41354/A (BUF_X8)
+     2   55.76    0.01    0.03    3.51 ^ place41354/Z (BUF_X8)
+                                         net41353 (net)
+                  0.05    0.04    3.55 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/_08732_/A (INV_X1)
+     2   12.19    0.02    0.03    3.58 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/_08732_/ZN (INV_X1)
+                                         multi_top.me.genblk1_0__bp_cce_top.bp_cce/_02954_ (net)
+                  0.02    0.00    3.58 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/_14458_/A (OAI21_X4)
+     2   10.45    0.02    0.03    3.61 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/_14458_/ZN (OAI21_X4)
+                                         multi_top.me.genblk1_0__bp_cce_top.bp_cce/_01746_ (net)
+                  0.02    0.00    3.61 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/_15609_/A1 (NOR2_X4)
+     9   49.05    0.01    0.02    3.63 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/_15609_/ZN (NOR2_X4)
+                                         multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.w_i (net)
+                  0.02    0.02    3.65 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/place36073/A (BUF_X2)
+    18   90.81    0.05    0.09    3.74 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/place36073/Z (BUF_X2)
+                                         multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/net36072 (net)
+                 49.14    0.00    3.74 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/place36072/A (BUF_X8)
+    71  355.00    0.72   11.84   15.58 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/place36072/Z (BUF_X8)
+                                         multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/net36071 (net)
+                  1.09    0.00   15.58 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem/w_mask_in[0] (fakeram45_256x95)
+                                 15.58   data arrival time
+
+                  0.00    6.00    6.00   clock CLK (rise edge)
+                          0.00    6.00   clock network delay (ideal)
+                          0.00    6.00   clock reconvergence pessimism
+                                  6.00 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem/clk (fakeram45_256x95)
+                         -0.05    5.95   library setup time
+                                  5.95   data required time
+-----------------------------------------------------------------------------
+                                  5.95   data required time
+                                -15.58   data arrival time
+-----------------------------------------------------------------------------
+                                 -9.63   slack (VIOLATED)
+
+
+
+==========================================================================
+resizer report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+max slew
+
+Pin                                    Limit    Slew   Slack
+------------------------------------------------------------
+multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/place36072/Z    0.20    0.72   -0.53 (VIOLATED)
+
+
+==========================================================================
+resizer max_slew_check_slack
+--------------------------------------------------------------------------
+-0.5254204869270325
+
+==========================================================================
+resizer max_slew_check_limit
+--------------------------------------------------------------------------
+0.1985349953174591
+
+==========================================================================
+resizer max_slew_check_slack_limit
+--------------------------------------------------------------------------
+-2.6465
+
+==========================================================================
+resizer max_fanout_check_slack
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+resizer max_fanout_check_limit
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+resizer max_capacitance_check_slack
+--------------------------------------------------------------------------
+0.04012564569711685
+
+==========================================================================
+resizer max_capacitance_check_limit
+--------------------------------------------------------------------------
+26.702899932861328
+
+==========================================================================
+resizer max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.0015
+
+==========================================================================
+resizer max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 1
+
+==========================================================================
+resizer max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+resizer max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+resizer setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 72
+
+==========================================================================
+resizer hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+resizer report_checks -path_delay max reg to reg
+--------------------------------------------------------------------------
+Startpoint: multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.pc_state[1]$_SDFF_PP0_
+            (rising edge-triggered flip-flop clocked by CLK)
+Endpoint: multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem
+          (rising edge-triggered flip-flop clocked by CLK)
+Path Group: CLK
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock CLK (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.pc_state[1]$_SDFF_PP0_/CK (DFF_X1)
+   0.08    0.08 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.pc_state[1]$_SDFF_PP0_/QN (DFF_X1)
+   0.05    0.12 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/_15616_/CO (HA_X1)
+   0.04    0.16 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/_14458_/ZN (OAI21_X4)
+   0.02    0.18 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/_15609_/ZN (NOR2_X4)
+   0.10    0.28 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/place36073/Z (BUF_X2)
+  11.84   12.12 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/place36072/Z (BUF_X8)
+   0.00   12.12 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem/w_mask_in[0] (fakeram45_256x95)
+          12.12   data arrival time
+
+   6.00    6.00   clock CLK (rise edge)
+   0.00    6.00   clock network delay (ideal)
+   0.00    6.00   clock reconvergence pessimism
+           6.00 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem/clk (fakeram45_256x95)
+  -0.05    5.95   library setup time
+           5.95   data required time
+---------------------------------------------------------
+           5.95   data required time
+         -12.12   data arrival time
+---------------------------------------------------------
+          -6.17   slack (VIOLATED)
+
+
+
+==========================================================================
+resizer report_checks -path_delay min reg to reg
+--------------------------------------------------------------------------
+Startpoint: multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.ram_addr_r[0]$_SDFFCE_PP0N_
+            (rising edge-triggered flip-flop clocked by CLK)
+Endpoint: multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem
+          (rising edge-triggered flip-flop clocked by CLK)
+Path Group: CLK
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock CLK (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.ram_addr_r[0]$_SDFFCE_PP0N_/CK (DFF_X1)
+   0.07    0.07 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.ram_addr_r[0]$_SDFFCE_PP0N_/QN (DFF_X1)
+   0.02    0.09 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/_15382_/ZN (OAI21_X1)
+   0.00    0.09 v multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem/addr_in[0] (fakeram45_256x95)
+           0.09   data arrival time
+
+   0.00    0.00   clock CLK (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00   clock reconvergence pessimism
+           0.00 ^ multi_top.me.genblk1_0__bp_cce_top.bp_cce/pc_inst_ram.cce_inst_ram.macro_mem/mem/clk (fakeram45_256x95)
+   0.05    0.05   library hold time
+           0.05   data required time
+---------------------------------------------------------
+           0.05   data required time
+          -0.09   data arrival time
+---------------------------------------------------------
+           0.04   slack (MET)
+
+
+
+==========================================================================
+resizer critical path target clock latency max path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+resizer critical path target clock latency min path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+resizer critical path source clock latency min path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+resizer critical path delay
+--------------------------------------------------------------------------
+15.5777
+
+==========================================================================
+resizer critical path slack
+--------------------------------------------------------------------------
+-9.6277
+
+==========================================================================
+resizer slack div critical path delay
+--------------------------------------------------------------------------
+-61.804374
+
+==========================================================================
+resizer report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             3.87e-02   9.03e-04   2.50e-03   4.21e-02  29.5%
+Combinational          1.11e-02   2.40e-02   4.75e-03   3.98e-02  27.9%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  4.52e-02   0.00e+00   1.54e-02   6.07e-02  42.6%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  9.50e-02   2.49e-02   2.27e-02   1.43e-01 100.0%
+                          66.6%      17.5%      15.9%

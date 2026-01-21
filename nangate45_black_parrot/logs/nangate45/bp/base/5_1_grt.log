@@ -1,0 +1,159 @@
+OpenROAD 701085d1e57df45a6aee387c04309628e0233ba8 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_liberty /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_512x64.lib
+read_liberty /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_256x95.lib
+read_liberty /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_64x7.lib
+read_liberty /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_64x15.lib
+read_liberty /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_64x96.lib
+read_db ./results/nangate45/bp/base/4_cts.odb
+source /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/setRC.tcl
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+
+Units:                2000
+Number of layers:     21
+Number of macros:     140
+Number of vias:       46
+Number of viarulegen: 19
+
+[INFO DRT-0150] Reading design.
+[WARNING DRT-0120] Large net multi_top.me.network/_12796_ has 1085 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/_12804_ has 544 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_00941_ has 544 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_02752_ has 544 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_02777_ has 544 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_02783_ has 546 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_02853_ has 544 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_02868_ has 544 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_02872_ has 544 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_03339_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_04541_ has 544 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_1__efi2_fi9_coherence_network_channel_node.bmr/_0021_ has 545 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_1__efi2_fi9_coherence_network_channel_node.bmr/_0026_ has 544 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_1__efi2_fi9_coherence_network_channel_node.bmr/_0047_ has 545 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_1__efi2_fi9_coherence_network_channel_node.bmr/_0051_ has 545 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_1__efi2_fi9_coherence_network_channel_node.bmr/_0799_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/cce_lce_data_cmd_network.rof_1__efi2_fi9_coherence_network_channel_node.bmr/_2060_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_cce_data_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_01697_ has 541 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_cce_data_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_01735_ has 541 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_cce_data_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_01811_ has 541 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_cce_data_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_01815_ has 541 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_cce_data_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_02073_ has 540 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_cce_data_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_03270_ has 541 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_cce_data_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_04985_ has 541 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_cce_data_resp_network.rof_1__efi2_fi7_coherence_network_channel_node.bmr/_0017_ has 541 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_cce_data_resp_network.rof_1__efi2_fi7_coherence_network_channel_node.bmr/_0037_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_cce_data_resp_network.rof_1__efi2_fi7_coherence_network_channel_node.bmr/_0038_ has 541 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_cce_data_resp_network.rof_1__efi2_fi7_coherence_network_channel_node.bmr/_0163_ has 541 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_01729_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_01763_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_01843_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_01847_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_02121_ has 542 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_03322_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_0__fi2_efi3_coherence_network_channel_node.bmr/_05029_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_1__efi2_fi5_coherence_network_channel_node.bmr/_01864_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_1__efi2_fi5_coherence_network_channel_node.bmr/_01910_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_1__efi2_fi5_coherence_network_channel_node.bmr/_01973_ has 542 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_1__efi2_fi5_coherence_network_channel_node.bmr/_02166_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_1__efi2_fi5_coherence_network_channel_node.bmr/_02184_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_1__efi2_fi5_coherence_network_channel_node.bmr/_03982_ has 543 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net multi_top.me.network/lce_lce_tr_resp_network.rof_1__efi2_fi5_coherence_network_channel_node.bmr/_05187_ has 543 pins which may impact routing performance. Consider optimization.
+
+Design:                   black_parrot
+Die area:                 ( 0 0 ) ( 2700000 2600000 )
+Number of track patterns: 20
+Number of DEF vias:       0
+Number of components:     259699
+Number of terminals:      1200
+Number of snets:          2
+Number of nets:           281171
+
+[INFO DRT-0167] List of default vias:
+  Layer via2
+    default via: via2_5
+  Layer via3
+    default via: via3_2
+  Layer via4
+    default via: via4_0
+  Layer via5
+    default via: via5_0
+  Layer via6
+    default via: via6_0
+  Layer via7
+    default via: via7_0
+  Layer via8
+    default via: via8_0
+  Layer via9
+    default via: via9_0
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+  Complete 100000 instances.
+  Complete 200000 instances.
+[INFO DRT-0164] Number of unique instances = 160.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0018]   Complete 100000 insts.
+[INFO DRT-0018]   Complete 200000 insts.
+[INFO DRT-0024]   Complete active.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete metal1.
+[INFO DRT-0024]   Complete via1.
+[INFO DRT-0024]   Complete metal2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete metal3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete metal4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete metal5.
+[INFO DRT-0024]   Complete via5.
+[INFO DRT-0024]   Complete metal6.
+[INFO DRT-0024]   Complete via6.
+[INFO DRT-0024]   Complete metal7.
+[INFO DRT-0024]   Complete via7.
+[INFO DRT-0024]   Complete metal8.
+[INFO DRT-0024]   Complete via8.
+[INFO DRT-0024]   Complete metal9.
+[INFO DRT-0024]   Complete via9.
+[INFO DRT-0024]   Complete metal10.
+[INFO DRT-0033] active shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] metal1 shape region query size = 4012668.
+[INFO DRT-0033] via1 shape region query size = 56778.
+[INFO DRT-0033] metal2 shape region query size = 37876.
+[INFO DRT-0033] via2 shape region query size = 56778.
+[INFO DRT-0033] metal3 shape region query size = 47972.
+[INFO DRT-0033] via3 shape region query size = 56778.
+[INFO DRT-0033] metal4 shape region query size = 36579.
+[INFO DRT-0033] via4 shape region query size = 57348.
+[INFO DRT-0033] metal5 shape region query size = 23952.
+[INFO DRT-0033] via5 shape region query size = 79017.
+[INFO DRT-0033] metal6 shape region query size = 14475.
+[INFO DRT-0033] via6 shape region query size = 25506.
+[INFO DRT-0033] metal7 shape region query size = 4280.
+[INFO DRT-0033] via7 shape region query size = 0.
+[INFO DRT-0033] metal8 shape region query size = 0.
+[INFO DRT-0033] via8 shape region query size = 0.
+[INFO DRT-0033] metal9 shape region query size = 0.
+[INFO DRT-0033] via9 shape region query size = 0.
+[INFO DRT-0033] metal10 shape region query size = 0.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0076]   Complete 1000 pins.
+[INFO DRT-0076]   Complete 2000 pins.
+[INFO DRT-0076]   Complete 3000 pins.
+[INFO DRT-0078]   Complete 3919 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0081]   Complete 141 unique inst patterns.
+[INFO DRT-0082]   Complete 10000 groups.
+[INFO DRT-0082]   Complete 20000 groups.
+[INFO DRT-0082]   Complete 30000 groups.
+[INFO DRT-0082]   Complete 40000 groups.
+[INFO DRT-0082]   Complete 50000 groups.
+[INFO DRT-0082]   Complete 60000 groups.
+[INFO DRT-0082]   Complete 70000 groups.
+[INFO DRT-0082]   Complete 80000 groups.
+[INFO DRT-0082]   Complete 90000 groups.
+[INFO DRT-0082]   Complete 100000 groups.

@@ -1,0 +1,20 @@
+OpenROAD 701085d1e57df45a6aee387c04309628e0233ba8 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_liberty /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_512x64.lib
+read_liberty /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_256x95.lib
+read_liberty /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_64x7.lib
+read_liberty /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_64x15.lib
+read_liberty /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_64x96.lib
+read_db ./results/nangate45/bp/base/2_2_floorplan_macro.odb
+source /home/nanocoh/dev/ORFS-K/try/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/setRC.tcl
+[INFO ODB-0303] The initial 913 rows (6390087 sites) were cut with 24 shapes for a total of 2795 rows (5051956 sites).
+[INFO TAP-0004] Inserted 1826 endcaps.
+[INFO TAP-0005] Inserted 3868 tapcells.
+write_db ./results/nangate45/bp/base/2_3_floorplan_tapcell.odb
+Elapsed time: 0:01.13[h:]min:sec. CPU time: user 0.95 sys 0.17 (99%). Peak memory: 382108KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_3_floorplan_tapcell              1            373 bcab35bcd027d97a966d
