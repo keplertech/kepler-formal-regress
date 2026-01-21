@@ -1,0 +1,51 @@
+OpenROAD v2.0-28015-g701085d1e5 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 64 thread(s).
+source ./platforms/asap7/liberty_suppressions.tcl
+read_liberty ./platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty ./platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty ./platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty ./platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty ./platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db ./results/asap7/aes/base/3_3_place_gp.odb
+source ./platforms/asap7/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     17755
+     1000 |     +0.0% |       0 |       0 |             0 |     16755
+     2000 |     +0.0% |       0 |       0 |             0 |     15755
+     3000 |     +0.0% |       0 |       0 |             0 |     14755
+     4000 |     +0.0% |       0 |       0 |             0 |     13755
+     5000 |     +0.0% |       0 |       0 |             0 |     12755
+     6000 |     +0.0% |       0 |       0 |             0 |     11755
+     7000 |     +0.0% |       0 |       0 |             0 |     10755
+     8000 |     +0.0% |       0 |       0 |             0 |      9755
+     9000 |     +0.0% |       0 |       0 |             0 |      8755
+    10000 |     +0.0% |       0 |       0 |             0 |      7755
+    11000 |     +0.0% |       0 |       0 |             0 |      6755
+    12000 |     +0.0% |       0 |       0 |             0 |      5755
+    13000 |     +0.0% |       0 |       0 |             0 |      4755
+    14000 |     +0.0% |       0 |       0 |             0 |      3755
+    15000 |     +0.0% |       0 |       0 |             0 |      2755
+    16000 |     +0.0% |       0 |       0 |             0 |      1755
+    17000 |     +0.0% |       0 |       0 |             0 |       755
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 1859 um^2 44% utilization.
+Instance count before 17937, after 17937
+Pin count before 56124, after 56124
+write_db ./results/asap7/aes/base/3_4_place_resized.odb
+Elapsed time: 0:05.13[h:]min:sec. CPU time: user 7.03 sys 10.58 (343%). Peak memory: 270532KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_4_place_resized                  5            264 76b18793041ee91c1ae8

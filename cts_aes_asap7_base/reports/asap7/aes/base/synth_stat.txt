@@ -1,0 +1,63 @@
+Found gzip magic in file `./platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz', decompressing using zlib.
+Found gzip magic in file `./platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz', decompressing using zlib.
+Found gzip magic in file `./platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz', decompressing using zlib.
+Found gzip magic in file `./platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz', decompressing using zlib.
+
+20. Printing statistics.
+
+=== aes_cipher_top ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    15849        - wires
+    16230        - wire bits
+       10        - public wires
+      391        - public wire bits
+        7        - ports
+      388        - port bits
+    15693  1683.64 cells
+      253   22.132   AND2x2_ASAP7_75t_R
+        1    0.146   AND2x4_ASAP7_75t_R
+      151   13.209   AND3x1_ASAP7_75t_R
+        1    0.102   AND4x1_ASAP7_75t_R
+        1    0.117   AND5x1_ASAP7_75t_R
+     1681  147.054   AO21x1_ASAP7_75t_R
+        3    0.437   AO221x1_ASAP7_75t_R
+       11    1.443   AO22x1_ASAP7_75t_R
+        5    1.166   AO31x2_ASAP7_75t_R
+      104   18.196   AOI211x1_ASAP7_75t_R
+     2402  280.169   AOI21x1_ASAP7_75t_R
+       11    2.245   AOI221x1_ASAP7_75t_R
+       39    5.686   AOI22x1_ASAP7_75t_R
+      948   69.109   BUFx2_ASAP7_75t_R
+      150   13.122   BUFx3_ASAP7_75t_R
+       11    1.123   BUFx4_ASAP7_75t_R
+        7    0.816   BUFx4f_ASAP7_75t_R
+        5    0.583   BUFx5_ASAP7_75t_R
+        8    1.166   BUFx6f_ASAP7_75t_R
+      562  163.879   DFFHQNx1_ASAP7_75t_R
+      278   36.479   HAxp5_ASAP7_75t_R
+     1170   51.176   INVx1_ASAP7_75t_R
+        9    0.525   INVx2_ASAP7_75t_R
+     1881   164.55   NAND2x1_ASAP7_75t_R
+       18    2.624   NAND2x2_ASAP7_75t_R
+      139   22.293   NAND3x1_ASAP7_75t_R
+        1    0.292   NAND3x2_ASAP7_75t_R
+     1710  149.591   NOR2x1_ASAP7_75t_R
+       13    1.895   NOR2x2_ASAP7_75t_R
+       38    6.094   NOR3x1_ASAP7_75t_R
+        8    0.933   OA211x2_ASAP7_75t_R
+      574   58.582   OA21x2_ASAP7_75t_R
+        5    0.729   OA22x2_ASAP7_75t_R
+     2497   291.25   OAI21x1_ASAP7_75t_R
+       62     9.04   OAI22x1_ASAP7_75t_R
+       34    2.974   OR2x2_ASAP7_75t_R
+       27    2.362   OR3x1_ASAP7_75t_R
+      150   24.057   XNOR2x2_ASAP7_75t_R
+        1    0.175   XOR2x1_ASAP7_75t_R
+      724  116.115   XOR2x2_ASAP7_75t_R
+
+   Chip area for module '\aes_cipher_top': 1683.640080
+     of which used for sequential elements: 163.879200 (9.73%)
+

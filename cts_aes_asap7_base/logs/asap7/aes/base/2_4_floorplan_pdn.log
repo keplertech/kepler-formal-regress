@@ -1,0 +1,18 @@
+OpenROAD v2.0-28015-g701085d1e5 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 64 thread(s).
+source ./platforms/asap7/liberty_suppressions.tcl
+read_liberty ./platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty ./platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty ./platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty ./platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty ./platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db ./results/asap7/aes/base/2_3_floorplan_tapcell.odb
+source ./platforms/asap7/setRC.tcl
+[INFO PDN-0001] Inserting grid: top
+write_db ./results/asap7/aes/base/2_4_floorplan_pdn.odb
+Elapsed time: 0:01.04[h:]min:sec. CPU time: user 0.98 sys 0.05 (100%). Peak memory: 225860KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_4_floorplan_pdn                  1            220 1ccfa8c4c13b8a5fd5ac
