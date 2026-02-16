@@ -1,0 +1,16 @@
+OpenROAD f9c91ab39bdd6c7c9d36e563fd398e544eaf48d7 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_liberty /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_256x32.lib
+read_liberty /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_64x64.lib
+read_db ./results/nangate45/mempool_group/base/2_2_floorplan_macro.odb
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/setRC.tcl
+[INFO TAP-0004] Inserted 1538 endcaps.
+[INFO TAP-0005] Inserted 3086 tapcells.
+write_db ./results/nangate45/mempool_group/base/2_3_floorplan_tapcell.odb
+Elapsed time: 0:00.58[h:]min:sec. CPU time: user 0.48 sys 0.09 (98%). Peak memory: 254504KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_3_floorplan_tapcell              0            248 ed5b1b31a3b60d795491

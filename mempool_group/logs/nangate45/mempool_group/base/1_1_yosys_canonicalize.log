@@ -1,0 +1,60 @@
+Yosys 0.61+0 (git sha1 77005b69a, g++ 11.4.0-1ubuntu1~22.04 -fPIC -O3)
+Using ABC speed script.
+Extracting clock period from SDC file: ./results/nangate45/mempool_group/base/clock_period.txt
+1. Executing Liberty frontend: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+2. Executing Liberty frontend: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_256x32.lib
+3. Executing Liberty frontend: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_64x64.lib
+4. Executing Liberty frontend: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+5. Executing Liberty frontend: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_256x32.lib
+6. Executing Liberty frontend: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_64x64.lib
+7. Executing SLANG frontend.
+../OpenROAD-flow-scripts-KF/flow/designs/src/mempool_group/rtl/tcdm_adapter.sv:171:27: warning: unsized integer in concat; using a width of 1 [-Wunsized-concat]
+        unique_core_id = {'0, in_meta_i.tile_id, in_meta_i.ini_addr[IniAddrWidth-2:0]};
+                          ^~
+  in instance: mempool_group.gen_tiles[0].i_tile.i_tile.i_snitch_core_axi_adapter
+../OpenROAD-flow-scripts-KF/flow/designs/src/mempool_group/rtl/snitch/src/snitch_axi_adapter.sv:162:33: warning: unsized integer in concat; using a width of 1 [-Wunsized-concat]
+    assign axi_req_o.w.data  = {'0, write_data_ext_out.data.data} << ($bits(data_t) * write_data_ext_out.shift);
+                                ^~
+  in instance: mempool_group.gen_tiles[0].i_tile.i_tile.i_snitch_core_axi_adapter
+../OpenROAD-flow-scripts-KF/flow/designs/src/mempool_group/rtl/snitch/src/snitch_axi_adapter.sv:163:33: warning: unsized integer in concat; using a width of 1 [-Wunsized-concat]
+    assign axi_req_o.w.strb  = {'0, write_data_ext_out.data.strb} << ($bits(strb_t) * write_data_ext_out.shift);
+                                ^~
+../OpenROAD-flow-scripts-KF/flow/designs/src/mempool_group/rtl/snitch/src/snitch.sv:234:44: warning: cannot refer to element 2 of 'logic[1:0][31:0]' [-Windex-oob]
+  assign acc_qdata_argc_o = {{32{gpr_rdata[2][31]}}, gpr_rdata[2]};
+                                           ^
+../OpenROAD-flow-scripts-KF/flow/designs/src/mempool_group/rtl/snitch/src/snitch.sv:234:64: warning: cannot refer to element 2 of 'logic[1:0][31:0]' [-Windex-oob]
+  assign acc_qdata_argc_o = {{32{gpr_rdata[2][31]}}, gpr_rdata[2]};
+                                                               ^
+../OpenROAD-flow-scripts-KF/flow/designs/src/mempool_group/rtl/snitch/src/snitch.sv:1450:30: warning: cannot refer to element 2 of 'logic[1:0][31:0]' [-Windex-oob]
+      RegRd: opb = gpr_rdata[2];
+                             ^
+../OpenROAD-flow-scripts-KF/flow/designs/src/mempool_group/rtl/latch_scm.sv:114:3: warning: latch not inferred for variable '\k' driven from always_latch procedure
+  always_latch begin : latch_wdata
+  ^
+../OpenROAD-flow-scripts-KF/flow/designs/src/mempool_group/rtl/latch_scm.sv:114:3: warning: latch not inferred for variable '\k' driven from always_latch procedure
+  always_latch begin : latch_wdata
+  ^
+7.1. Executing UNDRIVEN pass. (resolve undriven signals)
+7.2. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+7.3. Executing TRIBUF pass.
+7.4. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+7.5. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+7.6. Executing PROC_INIT pass (extract init attributes).
+7.7. Executing PROC_ROM pass (convert switches to ROMs).
+7.8. Executing PROC_MUX pass (convert decision trees to multiplexers).
+7.9. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+7.10. Executing OPT_EXPR pass (perform const folding).
+8. Executing HIERARCHY pass (managing design hierarchy).
+8.1. Analyzing design hierarchy..
+8.2. Analyzing design hierarchy..
+9. Executing OPT_CLEAN pass (remove unused cells and wires).
+10. Executing RTLIL backend.
+End of script. Logfile hash: 4122e6a19f, CPU: user 8.31s system 0.10s, MEM: 191.38 MB peak
+Yosys 0.61+0 (git sha1 77005b69a, g++ 11.4.0-1ubuntu1~22.04 -fPIC -O3)
+Time spent: 45% 2x read_slang (3 sec), 44% 1x proc_rmdead (3 sec), ...
+Top level design units:
+    mempool_group
+
+
+Build succeeded: 0 errors, 8 warnings
+Elapsed time: 0:08.42[h:]min:sec. CPU time: user 8.39 sys 0.10 (100%). Peak memory: 196176KB.

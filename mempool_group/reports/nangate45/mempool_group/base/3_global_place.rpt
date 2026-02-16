@@ -1,0 +1,957 @@
+
+==========================================================================
+global place report_tns
+--------------------------------------------------------------------------
+tns max -11121.72
+
+==========================================================================
+global place report_wns
+--------------------------------------------------------------------------
+wns max -2.20
+
+==========================================================================
+global place report_worst_slack
+--------------------------------------------------------------------------
+worst slack max -2.20
+
+==========================================================================
+global place report_clock_min_period
+--------------------------------------------------------------------------
+clk_i period_min = 4.21 fmax = 237.31
+vclk_i period_min = 5.16 fmax = 193.80
+
+==========================================================================
+global place report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: rst_ni (input port clocked by vclk_i)
+Endpoint: gen_tiles[0].i_tile.i_tile/gen_cores[2].gen_mempool_cc.riscv_core.i_snitch_ipu.i_div.op_b_q[24]$_DFFE_PN0P_
+          (removal check against rising-edge clock clk_i)
+Path Group: asynchronous
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock vclk_i (rise edge)
+                          0.07    0.07   clock network delay (ideal)
+                          0.90    0.97 ^ input external delay
+     1    4.68    0.00    0.00    0.97 ^ rst_ni (in)
+                                         rst_ni (net)
+                  0.00    0.00    0.97 ^ input1386/A (BUF_X1)
+     1    2.24    0.01    0.02    0.99 ^ input1386/Z (BUF_X1)
+                                         net1385 (net)
+                  0.01    0.00    0.99 ^ place60221/A (BUF_X2)
+     2   58.39    0.05    0.07    1.06 ^ place60221/Z (BUF_X2)
+                                         net60220 (net)
+                  0.08    0.05    1.11 ^ place60220/A (BUF_X1)
+     2    6.22    0.02    0.04    1.15 ^ place60220/Z (BUF_X1)
+                                         net60219 (net)
+                  0.02    0.00    1.15 ^ gen_tiles[0].i_tile.i_tile/gen_cores[2].gen_mempool_cc.riscv_core.i_snitch_ipu.i_div.op_b_q[24]$_DFFE_PN0P_/RN (DFFR_X1)
+                                  1.15   data arrival time
+
+                  0.00    0.00    0.00   clock clk_i (rise edge)
+                          0.07    0.07   clock network delay (ideal)
+                          0.06    0.13   clock uncertainty
+                          0.00    0.13   clock reconvergence pessimism
+                                  0.13 ^ gen_tiles[0].i_tile.i_tile/gen_cores[2].gen_mempool_cc.riscv_core.i_snitch_ipu.i_div.op_b_q[24]$_DFFE_PN0P_/CK (DFFR_X1)
+                          0.20    0.33   library removal time
+                                  0.33   data required time
+-----------------------------------------------------------------------------
+                                  0.33   data required time
+                                 -1.15   data arrival time
+-----------------------------------------------------------------------------
+                                  0.82   slack (MET)
+
+
+Startpoint: gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/i_lookup.g_sets[1].gen_scm.i_tag.CG_CELL_WORD_ITER[3].CG_Inst.clk_en$_DLATCH_N_
+            (negative level-sensitive latch clocked by clk_i)
+Endpoint: gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/_13128_
+          (rising clock gating-check end-point clocked by clk_i)
+Path Group: gated clock
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    1.50    1.50   clock clk_i (fall edge)
+                          0.07    1.57   clock network delay (ideal)
+                  0.00    0.00    1.57 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/i_lookup.g_sets[1].gen_scm.i_tag.CG_CELL_WORD_ITER[3].CG_Inst.clk_en$_DLATCH_N_/GN (DLL_X1)
+     1    0.92    0.01    0.04    1.61 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/i_lookup.g_sets[1].gen_scm.i_tag.CG_CELL_WORD_ITER[3].CG_Inst.clk_en$_DLATCH_N_/Q (DLL_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/i_lookup.g_sets[1].gen_scm.i_tag.CG_CELL_WORD_ITER[3].CG_Inst.clk_en (net)
+                  0.01    0.00    1.61 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/_13128_/A1 (AND2_X1)
+                                  1.61   data arrival time
+
+                  0.00    1.50    1.50   clock clk_i (fall edge)
+                          0.07    1.57   clock network delay (ideal)
+                          0.06    1.63   clock uncertainty
+                          0.00    1.63   clock reconvergence pessimism
+                                  1.63 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/_13128_/A2 (AND2_X1)
+                          0.00    1.63   clock gating hold time
+                                  1.63   data required time
+-----------------------------------------------------------------------------
+                                  1.63   data required time
+                                 -1.61   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.02   slack (VIOLATED)
+
+
+Startpoint: gen_tiles[0].i_tile.i_tile/axi_mst_slice.i_reg_r.spill_register_flushable_i.gen_spill_reg.b_full_q$_DFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by clk_i)
+Endpoint: gen_tiles[0].i_tile.i_tile/axi_mst_slice.i_reg_r.spill_register_flushable_i.gen_spill_reg.a_full_q$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by clk_i)
+Path Group: clk_i
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk_i (rise edge)
+                          0.07    0.07   clock network delay (ideal)
+                  0.00    0.00    0.07 ^ gen_tiles[0].i_tile.i_tile/axi_mst_slice.i_reg_r.spill_register_flushable_i.gen_spill_reg.b_full_q$_DFFE_PN0P_/CK (DFFR_X1)
+     1    1.75    0.01    0.07    0.14 ^ gen_tiles[0].i_tile.i_tile/axi_mst_slice.i_reg_r.spill_register_flushable_i.gen_spill_reg.b_full_q$_DFFE_PN0P_/QN (DFFR_X1)
+                                         gen_tiles[0].i_tile.i_tile/_00066_ (net)
+                  0.01    0.00    0.14 ^ gen_tiles[0].i_tile.i_tile/_28006_/B1 (OAI21_X1)
+     1    1.26    0.01    0.01    0.15 v gen_tiles[0].i_tile.i_tile/_28006_/ZN (OAI21_X1)
+                                         gen_tiles[0].i_tile.i_tile/_01427_ (net)
+                  0.01    0.00    0.15 v gen_tiles[0].i_tile.i_tile/axi_mst_slice.i_reg_r.spill_register_flushable_i.gen_spill_reg.a_full_q$_DFFE_PN0P_/D (DFFR_X1)
+                                  0.15   data arrival time
+
+                  0.00    0.00    0.00   clock clk_i (rise edge)
+                          0.07    0.07   clock network delay (ideal)
+                          0.06    0.13   clock uncertainty
+                          0.00    0.13   clock reconvergence pessimism
+                                  0.13 ^ gen_tiles[0].i_tile.i_tile/axi_mst_slice.i_reg_r.spill_register_flushable_i.gen_spill_reg.a_full_q$_DFFE_PN0P_/CK (DFFR_X1)
+                          0.00    0.13   library hold time
+                                  0.13   data required time
+-----------------------------------------------------------------------------
+                                  0.13   data required time
+                                 -0.15   data arrival time
+-----------------------------------------------------------------------------
+                                  0.02   slack (MET)
+
+
+Startpoint: gen_tiles[0].i_tile.i_tile/gen_tcdm_registers[3].i_tcdm_slave_resp_register.spill_register_flushable_i.gen_spill_reg.b_full_q$_DFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by clk_i)
+Endpoint: tcdm_slave_northeast_resp_valid_o (output port clocked by vclk_i)
+Path Group: vclk_i
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk_i (rise edge)
+                          0.07    0.07   clock network delay (ideal)
+                  0.00    0.00    0.07 ^ gen_tiles[0].i_tile.i_tile/gen_tcdm_registers[3].i_tcdm_slave_resp_register.spill_register_flushable_i.gen_spill_reg.b_full_q$_DFFE_PN0P_/CK (DFFR_X1)
+     2    2.17    0.01    0.10    0.17 ^ gen_tiles[0].i_tile.i_tile/gen_tcdm_registers[3].i_tcdm_slave_resp_register.spill_register_flushable_i.gen_spill_reg.b_full_q$_DFFE_PN0P_/Q (DFFR_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_tcdm_registers[3].i_tcdm_slave_resp_register.spill_register_flushable_i.gen_spill_reg.b_full_q (net)
+                  0.01    0.00    0.17 ^ gen_tiles[0].i_tile.i_tile/_38383_/A1 (OR2_X1)
+     2    2.42    0.01    0.03    0.20 ^ gen_tiles[0].i_tile.i_tile/_38383_/ZN (OR2_X1)
+                                         net2234 (net)
+                  0.01    0.00    0.20 ^ output2235/A (BUF_X1)
+     1    1.89    0.01    0.02    0.22 ^ output2235/Z (BUF_X1)
+                                         tcdm_slave_northeast_resp_valid_o (net)
+                  0.01    0.00    0.22 ^ tcdm_slave_northeast_resp_valid_o (out)
+                                  0.22   data arrival time
+
+                  0.00    0.00    0.00   clock vclk_i (rise edge)
+                          0.07    0.07   clock network delay (ideal)
+                          0.06    0.13   clock uncertainty
+                          0.00    0.13   clock reconvergence pessimism
+                         -2.55   -2.42   output external delay
+                                 -2.42   data required time
+-----------------------------------------------------------------------------
+                                 -2.42   data required time
+                                 -0.22   data arrival time
+-----------------------------------------------------------------------------
+                                  2.64   slack (MET)
+
+
+
+==========================================================================
+global place report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: rst_ni (input port clocked by vclk_i)
+Endpoint: gen_tiles[0].i_tile.i_tile/gen_tcdm_registers[2].i_tcdm_master_resp_register.i_fifo.i_fifo_v3.mem_q[28]$_DFFE_PN0P_
+          (recovery check against rising-edge clock clk_i)
+Path Group: asynchronous
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock vclk_i (rise edge)
+                          0.07    0.07   clock network delay (ideal)
+                          0.90    0.97 ^ input external delay
+     1    4.68    0.00    0.00    0.97 ^ rst_ni (in)
+                                         rst_ni (net)
+                  0.00    0.00    0.97 ^ input1386/A (BUF_X1)
+     1    2.24    0.01    0.02    0.99 ^ input1386/Z (BUF_X1)
+                                         net1385 (net)
+                  0.01    0.00    0.99 ^ place60221/A (BUF_X2)
+     2   58.39    0.05    0.07    1.06 ^ place60221/Z (BUF_X2)
+                                         net60220 (net)
+                  0.08    0.05    1.11 ^ place60220/A (BUF_X1)
+     2    6.22    0.02    0.04    1.15 ^ place60220/Z (BUF_X1)
+                                         net60219 (net)
+                  0.02    0.00    1.15 ^ place60219/A (BUF_X4)
+     4   41.84    0.02    0.04    1.19 ^ place60219/Z (BUF_X4)
+                                         net60218 (net)
+                  0.03    0.02    1.21 ^ gen_tiles[0].i_tile.i_tile/place60218/A (BUF_X8)
+     5   44.05    0.01    0.03    1.24 ^ gen_tiles[0].i_tile.i_tile/place60218/Z (BUF_X8)
+                                         gen_tiles[0].i_tile.i_tile/net60217 (net)
+                  0.03    0.02    1.26 ^ gen_tiles[0].i_tile.i_tile/place60217/A (BUF_X4)
+    12   70.68    0.03    0.04    1.30 ^ gen_tiles[0].i_tile.i_tile/place60217/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/net60216 (net)
+                  0.06    0.04    1.35 ^ gen_tiles[0].i_tile.i_tile/place60216/A (BUF_X2)
+     8   43.42    0.05    0.07    1.41 ^ gen_tiles[0].i_tile.i_tile/place60216/Z (BUF_X2)
+                                         gen_tiles[0].i_tile.i_tile/net60215 (net)
+                  0.05    0.00    1.41 ^ gen_tiles[0].i_tile.i_tile/place60174/A (BUF_X1)
+    14   31.31    0.07    0.10    1.52 ^ gen_tiles[0].i_tile.i_tile/place60174/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60173 (net)
+                  0.07    0.00    1.52 ^ gen_tiles[0].i_tile.i_tile/place60173/A (BUF_X1)
+    12   29.25    0.07    0.10    1.62 ^ gen_tiles[0].i_tile.i_tile/place60173/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60172 (net)
+                  0.07    0.00    1.62 ^ gen_tiles[0].i_tile.i_tile/place60172/A (BUF_X1)
+     9   26.58    0.06    0.09    1.71 ^ gen_tiles[0].i_tile.i_tile/place60172/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60171 (net)
+                  0.06    0.00    1.71 ^ gen_tiles[0].i_tile.i_tile/place60165/A (BUF_X1)
+    16   38.09    0.09    0.12    1.83 ^ gen_tiles[0].i_tile.i_tile/place60165/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60164 (net)
+                  0.09    0.00    1.83 ^ gen_tiles[0].i_tile.i_tile/place60164/A (BUF_X1)
+    13   29.18    0.07    0.10    1.93 ^ gen_tiles[0].i_tile.i_tile/place60164/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60163 (net)
+                  0.07    0.00    1.93 ^ gen_tiles[0].i_tile.i_tile/place60163/A (BUF_X1)
+    16   36.48    0.08    0.11    2.05 ^ gen_tiles[0].i_tile.i_tile/place60163/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60162 (net)
+                  0.08    0.00    2.05 ^ gen_tiles[0].i_tile.i_tile/place60162/A (BUF_X1)
+    16   36.51    0.08    0.12    2.17 ^ gen_tiles[0].i_tile.i_tile/place60162/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60161 (net)
+                  0.08    0.00    2.17 ^ gen_tiles[0].i_tile.i_tile/gen_tcdm_registers[2].i_tcdm_master_resp_register.i_fifo.i_fifo_v3.mem_q[28]$_DFFE_PN0P_/RN (DFFR_X1)
+                                  2.17   data arrival time
+
+                  0.00    3.00    3.00   clock clk_i (rise edge)
+                          0.07    3.07   clock network delay (ideal)
+                         -0.06    3.01   clock uncertainty
+                          0.00    3.01   clock reconvergence pessimism
+                                  3.01 ^ gen_tiles[0].i_tile.i_tile/gen_tcdm_registers[2].i_tcdm_master_resp_register.i_fifo.i_fifo_v3.mem_q[28]$_DFFE_PN0P_/CK (DFFR_X1)
+                          0.04    3.05   library recovery time
+                                  3.05   data required time
+-----------------------------------------------------------------------------
+                                  3.05   data required time
+                                 -2.17   data arrival time
+-----------------------------------------------------------------------------
+                                  0.88   slack (MET)
+
+
+Startpoint: gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/gen_array[3].gen_latch.i_clk_gate.clk_en$_DLATCH_P_
+            (positive level-sensitive latch clocked by clk_i)
+Endpoint: gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/_7456_
+          (falling clock gating-check end-point clocked by clk_i)
+Path Group: gated clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk_i (rise edge)
+                          0.07    0.07   clock network delay (ideal)
+                          1.09    1.16   time given to startpoint
+                  0.01    0.00    1.16 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/gen_array[3].gen_latch.i_clk_gate.clk_en$_DLATCH_P_/D (DLH_X1)
+     1    1.73    0.01    0.06    1.22 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/gen_array[3].gen_latch.i_clk_gate.clk_en$_DLATCH_P_/Q (DLH_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/gen_array[3].gen_latch.i_clk_gate.clk_en (net)
+                  0.01    0.00    1.22 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/_7455_/A (INV_X1)
+     1    1.84    0.01    0.01    1.24 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/_7455_/ZN (INV_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/_3526_ (net)
+                  0.01    0.00    1.24 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/_7456_/A2 (NOR2_X1)
+                                  1.24   data arrival time
+
+                  0.00    1.50    1.50   clock clk_i (fall edge)
+                          0.07    1.57   clock network delay (ideal)
+                         -0.06    1.51   clock uncertainty
+                          0.00    1.51   clock reconvergence pessimism
+                                  1.51 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/_7456_/A1 (NOR2_X1)
+                          0.00    1.51   clock gating setup time
+                                  1.51   data required time
+-----------------------------------------------------------------------------
+                                  1.51   data required time
+                                 -1.24   data arrival time
+-----------------------------------------------------------------------------
+                                  0.27   slack (MET)
+
+
+Startpoint: gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/data[22]$_DLATCH_P_
+            (positive level-sensitive latch clocked by clk_i')
+Endpoint: gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/sb_q[27]$_DFF_PP0_
+          (rising edge-triggered flip-flop clocked by clk_i)
+Path Group: clk_i
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    1.50    1.50   clock clk_i' (rise edge)
+                          0.07    1.57   clock network delay (ideal)
+                  0.00    0.00    1.57 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/data[22]$_DLATCH_P_/G (DLH_X1)
+     1    2.09    0.01    0.05    1.62 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/data[22]$_DLATCH_P_/Q (DLH_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/data[22] (net)
+                  0.01    0.00    1.62 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_5027_/B2 (AOI22_X1)
+     1    2.24    0.01    0.02    1.64 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_5027_/ZN (AOI22_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_1279_ (net)
+                  0.01    0.00    1.64 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_5028_/A (INV_X1)
+     1    2.13    0.01    0.02    1.66 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_5028_/ZN (INV_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_1280_ (net)
+                  0.01    0.00    1.66 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_5029_/A (AOI221_X1)
+     2    2.19    0.02    0.01    1.67 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_5029_/ZN (AOI221_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_1281_ (net)
+                  0.02    0.00    1.67 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7614_/B (MUX2_X1)
+     1    1.51    0.01    0.06    1.73 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7614_/Z (MUX2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_3667_ (net)
+                  0.01    0.00    1.73 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7615_/B1 (OAI21_X1)
+     1   10.44    0.06    0.07    1.81 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7615_/ZN (OAI21_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_3668_ (net)
+                  0.06    0.00    1.81 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7616_/A2 (NOR2_X1)
+     1    1.86    0.01    0.01    1.82 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7616_/ZN (NOR2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_3669_ (net)
+                  0.01    0.00    1.82 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7623_/A (AOI21_X1)
+     1   15.18    0.08    0.11    1.93 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7623_/ZN (AOI21_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/in_cache_data[54] (net)
+                  0.08    0.00    1.94 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/_13236_/B (MUX2_X2)
+     1   29.19    0.03    0.08    2.01 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/_13236_/Z (MUX2_X2)
+                                         gen_tiles[0].i_tile.i_tile/snitch_inst_data[54] (net)
+                  0.04    0.01    2.02 ^ gen_tiles[0].i_tile.i_tile/place50673/A (BUF_X8)
+     1   33.15    0.01    0.03    2.05 ^ gen_tiles[0].i_tile.i_tile/place50673/Z (BUF_X8)
+                                         gen_tiles[0].i_tile.i_tile/net50672 (net)
+                  0.02    0.01    2.07 ^ gen_tiles[0].i_tile.i_tile/place50672/A (BUF_X8)
+     1   35.86    0.01    0.03    2.10 ^ gen_tiles[0].i_tile.i_tile/place50672/Z (BUF_X8)
+                                         gen_tiles[0].i_tile.i_tile/net50671 (net)
+                  0.02    0.02    2.11 ^ gen_tiles[0].i_tile.i_tile/place50671/A (BUF_X8)
+     7   57.43    0.01    0.03    2.14 ^ gen_tiles[0].i_tile.i_tile/place50671/Z (BUF_X8)
+                                         gen_tiles[0].i_tile.i_tile/net50670 (net)
+                  0.04    0.03    2.17 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_09491_/A (INV_X1)
+     3   13.18    0.02    0.03    2.21 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_09491_/ZN (INV_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_02334_ (net)
+                  0.02    0.00    2.21 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_09667_/A2 (NOR2_X1)
+     3   25.79    0.12    0.15    2.36 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_09667_/ZN (NOR2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_02508_ (net)
+                  0.12    0.00    2.37 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_09668_/A2 (NAND2_X1)
+     2    5.09    0.03    0.04    2.40 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_09668_/ZN (NAND2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_02509_ (net)
+                  0.03    0.00    2.40 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place48630/A (BUF_X2)
+     9   51.79    0.03    0.06    2.46 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place48630/Z (BUF_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/net48629 (net)
+                  0.03    0.01    2.47 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place48629/A (BUF_X2)
+     5   12.85    0.01    0.04    2.51 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place48629/Z (BUF_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/net48628 (net)
+                  0.01    0.00    2.51 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_11704_/B2 (OAI22_X1)
+     1    6.55    0.05    0.07    2.58 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_11704_/ZN (OAI22_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_04419_ (net)
+                  0.05    0.00    2.58 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place48213/A (BUF_X4)
+     1    8.99    0.01    0.03    2.61 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place48213/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/net48212 (net)
+                  0.01    0.00    2.61 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_11726_/A1 (NOR3_X4)
+     2   19.39    0.01    0.01    2.63 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_11726_/ZN (NOR3_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.acc_req_d[48] (net)
+                  0.01    0.01    2.63 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12520_/A3 (OR4_X1)
+     1    5.67    0.02    0.12    2.76 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12520_/ZN (OR4_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05195_ (net)
+                  0.02    0.00    2.76 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12521_/B2 (OAI21_X1)
+     1    1.54    0.02    0.04    2.79 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12521_/ZN (OAI21_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05196_ (net)
+                  0.02    0.00    2.79 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12522_/A4 (AND4_X1)
+     2    5.03    0.02    0.07    2.86 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12522_/ZN (AND4_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05197_ (net)
+                  0.02    0.00    2.86 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13517_/A2 (NAND2_X2)
+     2    7.67    0.02    0.02    2.88 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13517_/ZN (NAND2_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_06133_ (net)
+                  0.02    0.00    2.88 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place44530/A (BUF_X1)
+     2    7.01    0.01    0.04    2.92 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place44530/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/net44529 (net)
+                  0.01    0.00    2.92 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13538_/A1 (NOR3_X4)
+     4   10.28    0.03    0.04    2.97 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13538_/ZN (NOR3_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_06148_ (net)
+                  0.03    0.00    2.97 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13539_/A2 (NOR2_X2)
+     1    4.34    0.01    0.01    2.98 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13539_/ZN (NOR2_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_06149_ (net)
+                  0.01    0.00    2.98 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13540_/A (XNOR2_X2)
+     1    3.38    0.01    0.04    3.02 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13540_/ZN (XNOR2_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_00157_ (net)
+                  0.01    0.00    3.02 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_17763_/A (HA_X1)
+     3   11.15    0.02    0.07    3.09 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_17763_/S (HA_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_00160_ (net)
+                  0.02    0.00    3.09 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12568_/B2 (AOI21_X4)
+     1    6.75    0.02    0.04    3.12 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12568_/ZN (AOI21_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05243_ (net)
+                  0.02    0.00    3.12 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12570_/B1 (OAI21_X4)
+     1    5.95    0.01    0.02    3.14 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12570_/ZN (OAI21_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05245_ (net)
+                  0.01    0.00    3.14 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12571_/B2 (AOI21_X4)
+     7   21.14    0.04    0.05    3.19 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12571_/ZN (AOI21_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05246_ (net)
+                  0.04    0.00    3.19 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12772_/A1 (NAND2_X2)
+     3    6.81    0.02    0.02    3.22 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12772_/ZN (NAND2_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05447_ (net)
+                  0.02    0.00    3.22 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12775_/A1 (OR4_X2)
+     1    3.43    0.02    0.08    3.29 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12775_/ZN (OR4_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05450_ (net)
+                  0.02    0.00    3.29 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12779_/A1 (AND4_X4)
+     2    5.31    0.01    0.03    3.33 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12779_/ZN (AND4_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05454_ (net)
+                  0.01    0.00    3.33 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12780_/A2 (NOR2_X1)
+     1    3.32    0.02    0.04    3.36 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12780_/ZN (NOR2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05455_ (net)
+                  0.02    0.00    3.36 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12822_/A2 (NAND4_X1)
+     1    3.74    0.03    0.04    3.40 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12822_/ZN (NAND4_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05497_ (net)
+                  0.03    0.00    3.40 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12863_/A2 (OR4_X4)
+     2    5.14    0.02    0.10    3.50 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12863_/ZN (OR4_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05538_ (net)
+                  0.02    0.00    3.50 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12875_/A4 (OR4_X4)
+     1    3.71    0.02    0.11    3.61 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12875_/ZN (OR4_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05550_ (net)
+                  0.02    0.00    3.61 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12876_/A1 (OR2_X4)
+     1    2.41    0.01    0.04    3.65 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12876_/ZN (OR2_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05551_ (net)
+                  0.01    0.00    3.65 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12879_/A (MUX2_X2)
+     1    7.25    0.01    0.06    3.71 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12879_/Z (MUX2_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05554_ (net)
+                  0.01    0.00    3.71 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12880_/S (MUX2_X1)
+     2    8.10    0.02    0.07    3.78 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12880_/Z (MUX2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05555_ (net)
+                  0.02    0.00    3.78 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12881_/B1 (AOI22_X4)
+     2   12.31    0.02    0.03    3.80 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12881_/ZN (AOI22_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05556_ (net)
+                  0.02    0.00    3.80 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13724_/B2 (OAI22_X4)
+     2    7.53    0.03    0.05    3.85 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13724_/ZN (OAI22_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_06322_ (net)
+                  0.03    0.00    3.85 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_17569_/A2 (NAND2_X1)
+     1    4.40    0.02    0.02    3.88 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_17569_/ZN (NAND2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_02168_ (net)
+                  0.02    0.00    3.88 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_17571_/A1 (NOR2_X1)
+     1    6.71    0.04    0.05    3.93 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_17571_/ZN (NOR2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_core_mux[1].gen_tcdm_shim.i_tcdm_shim.data_qvalid_i (net)
+                  0.04    0.00    3.93 ^ gen_tiles[0].i_tile.i_tile/place37979/A (BUF_X4)
+     2    9.95    0.01    0.03    3.96 ^ gen_tiles[0].i_tile.i_tile/place37979/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/net37978 (net)
+                  0.01    0.00    3.96 ^ gen_tiles[0].i_tile.i_tile/_22925_/A1 (NAND2_X1)
+     2    3.04    0.01    0.02    3.98 v gen_tiles[0].i_tile.i_tile/_22925_/ZN (NAND2_X1)
+                                         gen_tiles[0].i_tile.i_tile/_05955_ (net)
+                  0.01    0.00    3.98 v gen_tiles[0].i_tile.i_tile/_40285_/A1 (NOR2_X1)
+     1   15.18    0.07    0.09    4.07 ^ gen_tiles[0].i_tile.i_tile/_40285_/ZN (NOR2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_core_mux[1].gen_tcdm_shim.i_tcdm_shim.i_snitch_addr_demux.i_req_demux.oup_valid_o[1] (net)
+                  0.07    0.00    4.07 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/place37623/A (BUF_X4)
+     4   26.94    0.02    0.04    4.11 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/place37623/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/net37622 (net)
+                  0.02    0.01    4.12 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/place37622/A (BUF_X2)
+     2    3.65    0.01    0.03    4.15 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/place37622/Z (BUF_X2)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/net37621 (net)
+                  0.01    0.00    4.15 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_11608_/A3 (NAND3_X1)
+     2    5.75    0.02    0.03    4.18 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/_11608_/ZN (NAND3_X1)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/_04207_ (net)
+                  0.02    0.00    4.18 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/place37457/A (BUF_X2)
+     3    6.39    0.01    0.03    4.21 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/place37457/Z (BUF_X2)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/net37456 (net)
+                  0.01    0.00    4.21 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/_12434_/B2 (OAI21_X1)
+     2    3.89    0.03    0.04    4.26 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_12434_/ZN (OAI21_X1)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/_04894_ (net)
+                  0.03    0.00    4.26 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_12555_/A3 (OR4_X2)
+     2    5.12    0.01    0.04    4.29 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_12555_/ZN (OR4_X2)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/_04993_ (net)
+                  0.01    0.00    4.29 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23427_/B (OAI211_X2)
+     2    3.31    0.02    0.03    4.32 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23427_/ZN (OAI211_X2)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/_03760_ (net)
+                  0.02    0.00    4.32 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23428_/A4 (NOR4_X1)
+     1    2.38    0.05    0.09    4.41 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23428_/ZN (NOR4_X1)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/_03761_ (net)
+                  0.05    0.00    4.41 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23438_/A1 (NOR4_X1)
+     1   12.70    0.02    0.04    4.45 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23438_/ZN (NOR4_X1)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/_03771_ (net)
+                  0.02    0.00    4.45 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/place35576/A (BUF_X4)
+     1    4.03    0.01    0.03    4.48 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/place35576/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/net35575 (net)
+                  0.01    0.00    4.48 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23439_/A4 (NOR4_X2)
+     1   20.10    0.12    0.16    4.64 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23439_/ZN (NOR4_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_core_mux[0].gen_tcdm_shim.i_tcdm_shim.i_snitch_addr_demux.i_req_demux.oup_ready_i[1] (net)
+                  0.12    0.01    4.65 ^ gen_tiles[0].i_tile.i_tile/place35466/A (BUF_X4)
+     1    3.88    0.01    0.03    4.68 ^ gen_tiles[0].i_tile.i_tile/place35466/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/net35465 (net)
+                  0.01    0.00    4.68 ^ gen_tiles[0].i_tile.i_tile/_39785_/A1 (NOR3_X1)
+     1    1.95    0.01    0.01    4.69 v gen_tiles[0].i_tile.i_tile/_39785_/ZN (NOR3_X1)
+                                         gen_tiles[0].i_tile.i_tile/_16884_ (net)
+                  0.01    0.00    4.69 v gen_tiles[0].i_tile.i_tile/_39788_/A3 (OR4_X1)
+     1    1.96    0.02    0.11    4.80 v gen_tiles[0].i_tile.i_tile/_39788_/ZN (OR4_X1)
+                                         gen_tiles[0].i_tile.i_tile/_16887_ (net)
+                  0.02    0.00    4.80 v gen_tiles[0].i_tile.i_tile/_39793_/A (OAI221_X1)
+     1    3.99    0.05    0.03    4.83 ^ gen_tiles[0].i_tile.i_tile/_39793_/ZN (OAI221_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_core_mux[0].gen_tcdm_shim.i_tcdm_shim.data_qready_o (net)
+                  0.05    0.00    4.83 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place35238/A (BUF_X4)
+     1   23.63    0.02    0.04    4.87 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place35238/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/net35237 (net)
+                  0.02    0.01    4.88 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_13729_/A1 (NAND2_X1)
+     2    3.77    0.01    0.02    4.90 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_13729_/ZN (NAND2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_06327_ (net)
+                  0.01    0.00    4.90 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place35159/A (BUF_X1)
+     1    2.85    0.01    0.03    4.93 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place35159/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/net35158 (net)
+                  0.01    0.00    4.93 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17355_/A (OAI21_X1)
+     1    1.95    0.02    0.02    4.95 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17355_/ZN (OAI21_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_02029_ (net)
+                  0.02    0.00    4.95 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17356_/A (OAI21_X1)
+     2    4.98    0.01    0.03    4.98 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17356_/ZN (OAI21_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_02030_ (net)
+                  0.01    0.00    4.98 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17594_/C1 (AOI211_X2)
+     1    6.99    0.05    0.05    5.03 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17594_/ZN (AOI211_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_02184_ (net)
+                  0.05    0.00    5.03 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place34991/A (BUF_X4)
+     2   10.50    0.01    0.03    5.06 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place34991/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/net34990 (net)
+                  0.01    0.00    5.06 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place34990/A (BUF_X8)
+    15   31.92    0.01    0.03    5.09 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place34990/Z (BUF_X8)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/net34989 (net)
+                  0.01    0.00    5.09 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17679_/A4 (NAND4_X1)
+     1    1.93    0.03    0.03    5.12 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17679_/ZN (NAND4_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_02251_ (net)
+                  0.03    0.00    5.12 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17680_/B2 (AOI22_X1)
+     1    1.56    0.02    0.05    5.17 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17680_/ZN (AOI22_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/sb_d[27] (net)
+                  0.02    0.00    5.17 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/sb_q[27]$_DFF_PP0_/D (DFFR_X1)
+                                  5.17   data arrival time
+
+                  0.00    3.00    3.00   clock clk_i (rise edge)
+                          0.07    3.07   clock network delay (ideal)
+                         -0.06    3.01   clock uncertainty
+                          0.00    3.01   clock reconvergence pessimism
+                                  3.01 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/sb_q[27]$_DFF_PP0_/CK (DFFR_X1)
+                         -0.04    2.97   library setup time
+                                  2.97   data required time
+-----------------------------------------------------------------------------
+                                  2.97   data required time
+                                 -5.17   data arrival time
+-----------------------------------------------------------------------------
+                                 -2.20   slack (VIOLATED)
+
+
+Startpoint: tcdm_slave_bypass_resp_ready_i (input port clocked by vclk_i)
+Endpoint: tcdm_master_bypass_resp_ready_o (output port clocked by vclk_i)
+Path Group: vclk_i
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock vclk_i (rise edge)
+                          0.07    0.07   clock network delay (ideal)
+                          2.55    2.62 ^ input external delay
+     1    0.06    0.00    0.00    2.62 ^ tcdm_slave_bypass_resp_ready_i (in)
+                                         tcdm_slave_bypass_resp_ready_i (net)
+                  0.00    0.00    2.62 ^ tcdm_master_bypass_resp_ready_o (out)
+                                  2.62   data arrival time
+
+                  0.00    3.00    3.00   clock vclk_i (rise edge)
+                          0.07    3.07   clock network delay (ideal)
+                         -0.06    3.01   clock uncertainty
+                          0.00    3.01   clock reconvergence pessimism
+                         -2.55    0.46   output external delay
+                                  0.46   data required time
+-----------------------------------------------------------------------------
+                                  0.46   data required time
+                                 -2.62   data arrival time
+-----------------------------------------------------------------------------
+                                 -2.16   slack (VIOLATED)
+
+
+
+==========================================================================
+global place report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: rst_ni (input port clocked by vclk_i)
+Endpoint: gen_tiles[0].i_tile.i_tile/gen_tcdm_registers[2].i_tcdm_master_resp_register.i_fifo.i_fifo_v3.mem_q[28]$_DFFE_PN0P_
+          (recovery check against rising-edge clock clk_i)
+Path Group: asynchronous
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock vclk_i (rise edge)
+                          0.07    0.07   clock network delay (ideal)
+                          0.90    0.97 ^ input external delay
+     1    4.68    0.00    0.00    0.97 ^ rst_ni (in)
+                                         rst_ni (net)
+                  0.00    0.00    0.97 ^ input1386/A (BUF_X1)
+     1    2.24    0.01    0.02    0.99 ^ input1386/Z (BUF_X1)
+                                         net1385 (net)
+                  0.01    0.00    0.99 ^ place60221/A (BUF_X2)
+     2   58.39    0.05    0.07    1.06 ^ place60221/Z (BUF_X2)
+                                         net60220 (net)
+                  0.08    0.05    1.11 ^ place60220/A (BUF_X1)
+     2    6.22    0.02    0.04    1.15 ^ place60220/Z (BUF_X1)
+                                         net60219 (net)
+                  0.02    0.00    1.15 ^ place60219/A (BUF_X4)
+     4   41.84    0.02    0.04    1.19 ^ place60219/Z (BUF_X4)
+                                         net60218 (net)
+                  0.03    0.02    1.21 ^ gen_tiles[0].i_tile.i_tile/place60218/A (BUF_X8)
+     5   44.05    0.01    0.03    1.24 ^ gen_tiles[0].i_tile.i_tile/place60218/Z (BUF_X8)
+                                         gen_tiles[0].i_tile.i_tile/net60217 (net)
+                  0.03    0.02    1.26 ^ gen_tiles[0].i_tile.i_tile/place60217/A (BUF_X4)
+    12   70.68    0.03    0.04    1.30 ^ gen_tiles[0].i_tile.i_tile/place60217/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/net60216 (net)
+                  0.06    0.04    1.35 ^ gen_tiles[0].i_tile.i_tile/place60216/A (BUF_X2)
+     8   43.42    0.05    0.07    1.41 ^ gen_tiles[0].i_tile.i_tile/place60216/Z (BUF_X2)
+                                         gen_tiles[0].i_tile.i_tile/net60215 (net)
+                  0.05    0.00    1.41 ^ gen_tiles[0].i_tile.i_tile/place60174/A (BUF_X1)
+    14   31.31    0.07    0.10    1.52 ^ gen_tiles[0].i_tile.i_tile/place60174/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60173 (net)
+                  0.07    0.00    1.52 ^ gen_tiles[0].i_tile.i_tile/place60173/A (BUF_X1)
+    12   29.25    0.07    0.10    1.62 ^ gen_tiles[0].i_tile.i_tile/place60173/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60172 (net)
+                  0.07    0.00    1.62 ^ gen_tiles[0].i_tile.i_tile/place60172/A (BUF_X1)
+     9   26.58    0.06    0.09    1.71 ^ gen_tiles[0].i_tile.i_tile/place60172/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60171 (net)
+                  0.06    0.00    1.71 ^ gen_tiles[0].i_tile.i_tile/place60165/A (BUF_X1)
+    16   38.09    0.09    0.12    1.83 ^ gen_tiles[0].i_tile.i_tile/place60165/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60164 (net)
+                  0.09    0.00    1.83 ^ gen_tiles[0].i_tile.i_tile/place60164/A (BUF_X1)
+    13   29.18    0.07    0.10    1.93 ^ gen_tiles[0].i_tile.i_tile/place60164/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60163 (net)
+                  0.07    0.00    1.93 ^ gen_tiles[0].i_tile.i_tile/place60163/A (BUF_X1)
+    16   36.48    0.08    0.11    2.05 ^ gen_tiles[0].i_tile.i_tile/place60163/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60162 (net)
+                  0.08    0.00    2.05 ^ gen_tiles[0].i_tile.i_tile/place60162/A (BUF_X1)
+    16   36.51    0.08    0.12    2.17 ^ gen_tiles[0].i_tile.i_tile/place60162/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/net60161 (net)
+                  0.08    0.00    2.17 ^ gen_tiles[0].i_tile.i_tile/gen_tcdm_registers[2].i_tcdm_master_resp_register.i_fifo.i_fifo_v3.mem_q[28]$_DFFE_PN0P_/RN (DFFR_X1)
+                                  2.17   data arrival time
+
+                  0.00    3.00    3.00   clock clk_i (rise edge)
+                          0.07    3.07   clock network delay (ideal)
+                         -0.06    3.01   clock uncertainty
+                          0.00    3.01   clock reconvergence pessimism
+                                  3.01 ^ gen_tiles[0].i_tile.i_tile/gen_tcdm_registers[2].i_tcdm_master_resp_register.i_fifo.i_fifo_v3.mem_q[28]$_DFFE_PN0P_/CK (DFFR_X1)
+                          0.04    3.05   library recovery time
+                                  3.05   data required time
+-----------------------------------------------------------------------------
+                                  3.05   data required time
+                                 -2.17   data arrival time
+-----------------------------------------------------------------------------
+                                  0.88   slack (MET)
+
+
+Startpoint: gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/gen_array[3].gen_latch.i_clk_gate.clk_en$_DLATCH_P_
+            (positive level-sensitive latch clocked by clk_i)
+Endpoint: gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/_7456_
+          (falling clock gating-check end-point clocked by clk_i)
+Path Group: gated clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock clk_i (rise edge)
+                          0.07    0.07   clock network delay (ideal)
+                          1.09    1.16   time given to startpoint
+                  0.01    0.00    1.16 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/gen_array[3].gen_latch.i_clk_gate.clk_en$_DLATCH_P_/D (DLH_X1)
+     1    1.73    0.01    0.06    1.22 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/gen_array[3].gen_latch.i_clk_gate.clk_en$_DLATCH_P_/Q (DLH_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/gen_array[3].gen_latch.i_clk_gate.clk_en (net)
+                  0.01    0.00    1.22 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/_7455_/A (INV_X1)
+     1    1.84    0.01    0.01    1.24 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/_7455_/ZN (INV_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/_3526_ (net)
+                  0.01    0.00    1.24 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/_7456_/A2 (NOR2_X1)
+                                  1.24   data arrival time
+
+                  0.00    1.50    1.50   clock clk_i (fall edge)
+                          0.07    1.57   clock network delay (ideal)
+                         -0.06    1.51   clock uncertainty
+                          0.00    1.51   clock reconvergence pessimism
+                                  1.51 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[2].i_snitch_icache_l0/_7456_/A1 (NOR2_X1)
+                          0.00    1.51   clock gating setup time
+                                  1.51   data required time
+-----------------------------------------------------------------------------
+                                  1.51   data required time
+                                 -1.24   data arrival time
+-----------------------------------------------------------------------------
+                                  0.27   slack (MET)
+
+
+Startpoint: gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/data[22]$_DLATCH_P_
+            (positive level-sensitive latch clocked by clk_i')
+Endpoint: gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/sb_q[27]$_DFF_PP0_
+          (rising edge-triggered flip-flop clocked by clk_i)
+Path Group: clk_i
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    1.50    1.50   clock clk_i' (rise edge)
+                          0.07    1.57   clock network delay (ideal)
+                  0.00    0.00    1.57 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/data[22]$_DLATCH_P_/G (DLH_X1)
+     1    2.09    0.01    0.05    1.62 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/data[22]$_DLATCH_P_/Q (DLH_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/data[22] (net)
+                  0.01    0.00    1.62 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_5027_/B2 (AOI22_X1)
+     1    2.24    0.01    0.02    1.64 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_5027_/ZN (AOI22_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_1279_ (net)
+                  0.01    0.00    1.64 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_5028_/A (INV_X1)
+     1    2.13    0.01    0.02    1.66 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_5028_/ZN (INV_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_1280_ (net)
+                  0.01    0.00    1.66 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_5029_/A (AOI221_X1)
+     2    2.19    0.02    0.01    1.67 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_5029_/ZN (AOI221_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_1281_ (net)
+                  0.02    0.00    1.67 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7614_/B (MUX2_X1)
+     1    1.51    0.01    0.06    1.73 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7614_/Z (MUX2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_3667_ (net)
+                  0.01    0.00    1.73 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7615_/B1 (OAI21_X1)
+     1   10.44    0.06    0.07    1.81 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7615_/ZN (OAI21_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_3668_ (net)
+                  0.06    0.00    1.81 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7616_/A2 (NOR2_X1)
+     1    1.86    0.01    0.01    1.82 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7616_/ZN (NOR2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_3669_ (net)
+                  0.01    0.00    1.82 v gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7623_/A (AOI21_X1)
+     1   15.18    0.08    0.11    1.93 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/gen_prefetcher[1].i_snitch_icache_l0/_7623_/ZN (AOI21_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/in_cache_data[54] (net)
+                  0.08    0.00    1.94 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/_13236_/B (MUX2_X2)
+     1   29.19    0.03    0.08    2.01 ^ gen_tiles[0].i_tile.i_tile/gen_caches[0].i_snitch_icache/_13236_/Z (MUX2_X2)
+                                         gen_tiles[0].i_tile.i_tile/snitch_inst_data[54] (net)
+                  0.04    0.01    2.02 ^ gen_tiles[0].i_tile.i_tile/place50673/A (BUF_X8)
+     1   33.15    0.01    0.03    2.05 ^ gen_tiles[0].i_tile.i_tile/place50673/Z (BUF_X8)
+                                         gen_tiles[0].i_tile.i_tile/net50672 (net)
+                  0.02    0.01    2.07 ^ gen_tiles[0].i_tile.i_tile/place50672/A (BUF_X8)
+     1   35.86    0.01    0.03    2.10 ^ gen_tiles[0].i_tile.i_tile/place50672/Z (BUF_X8)
+                                         gen_tiles[0].i_tile.i_tile/net50671 (net)
+                  0.02    0.02    2.11 ^ gen_tiles[0].i_tile.i_tile/place50671/A (BUF_X8)
+     7   57.43    0.01    0.03    2.14 ^ gen_tiles[0].i_tile.i_tile/place50671/Z (BUF_X8)
+                                         gen_tiles[0].i_tile.i_tile/net50670 (net)
+                  0.04    0.03    2.17 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_09491_/A (INV_X1)
+     3   13.18    0.02    0.03    2.21 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_09491_/ZN (INV_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_02334_ (net)
+                  0.02    0.00    2.21 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_09667_/A2 (NOR2_X1)
+     3   25.79    0.12    0.15    2.36 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_09667_/ZN (NOR2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_02508_ (net)
+                  0.12    0.00    2.37 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_09668_/A2 (NAND2_X1)
+     2    5.09    0.03    0.04    2.40 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_09668_/ZN (NAND2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_02509_ (net)
+                  0.03    0.00    2.40 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place48630/A (BUF_X2)
+     9   51.79    0.03    0.06    2.46 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place48630/Z (BUF_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/net48629 (net)
+                  0.03    0.01    2.47 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place48629/A (BUF_X2)
+     5   12.85    0.01    0.04    2.51 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place48629/Z (BUF_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/net48628 (net)
+                  0.01    0.00    2.51 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_11704_/B2 (OAI22_X1)
+     1    6.55    0.05    0.07    2.58 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_11704_/ZN (OAI22_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_04419_ (net)
+                  0.05    0.00    2.58 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place48213/A (BUF_X4)
+     1    8.99    0.01    0.03    2.61 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place48213/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/net48212 (net)
+                  0.01    0.00    2.61 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_11726_/A1 (NOR3_X4)
+     2   19.39    0.01    0.01    2.63 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_11726_/ZN (NOR3_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.acc_req_d[48] (net)
+                  0.01    0.01    2.63 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12520_/A3 (OR4_X1)
+     1    5.67    0.02    0.12    2.76 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12520_/ZN (OR4_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05195_ (net)
+                  0.02    0.00    2.76 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12521_/B2 (OAI21_X1)
+     1    1.54    0.02    0.04    2.79 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12521_/ZN (OAI21_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05196_ (net)
+                  0.02    0.00    2.79 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12522_/A4 (AND4_X1)
+     2    5.03    0.02    0.07    2.86 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12522_/ZN (AND4_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05197_ (net)
+                  0.02    0.00    2.86 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13517_/A2 (NAND2_X2)
+     2    7.67    0.02    0.02    2.88 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13517_/ZN (NAND2_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_06133_ (net)
+                  0.02    0.00    2.88 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place44530/A (BUF_X1)
+     2    7.01    0.01    0.04    2.92 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/place44530/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/net44529 (net)
+                  0.01    0.00    2.92 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13538_/A1 (NOR3_X4)
+     4   10.28    0.03    0.04    2.97 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13538_/ZN (NOR3_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_06148_ (net)
+                  0.03    0.00    2.97 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13539_/A2 (NOR2_X2)
+     1    4.34    0.01    0.01    2.98 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13539_/ZN (NOR2_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_06149_ (net)
+                  0.01    0.00    2.98 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13540_/A (XNOR2_X2)
+     1    3.38    0.01    0.04    3.02 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13540_/ZN (XNOR2_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_00157_ (net)
+                  0.01    0.00    3.02 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_17763_/A (HA_X1)
+     3   11.15    0.02    0.07    3.09 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_17763_/S (HA_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_00160_ (net)
+                  0.02    0.00    3.09 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12568_/B2 (AOI21_X4)
+     1    6.75    0.02    0.04    3.12 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12568_/ZN (AOI21_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05243_ (net)
+                  0.02    0.00    3.12 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12570_/B1 (OAI21_X4)
+     1    5.95    0.01    0.02    3.14 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12570_/ZN (OAI21_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05245_ (net)
+                  0.01    0.00    3.14 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12571_/B2 (AOI21_X4)
+     7   21.14    0.04    0.05    3.19 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12571_/ZN (AOI21_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05246_ (net)
+                  0.04    0.00    3.19 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12772_/A1 (NAND2_X2)
+     3    6.81    0.02    0.02    3.22 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12772_/ZN (NAND2_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05447_ (net)
+                  0.02    0.00    3.22 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12775_/A1 (OR4_X2)
+     1    3.43    0.02    0.08    3.29 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12775_/ZN (OR4_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05450_ (net)
+                  0.02    0.00    3.29 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12779_/A1 (AND4_X4)
+     2    5.31    0.01    0.03    3.33 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12779_/ZN (AND4_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05454_ (net)
+                  0.01    0.00    3.33 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12780_/A2 (NOR2_X1)
+     1    3.32    0.02    0.04    3.36 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12780_/ZN (NOR2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05455_ (net)
+                  0.02    0.00    3.36 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12822_/A2 (NAND4_X1)
+     1    3.74    0.03    0.04    3.40 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12822_/ZN (NAND4_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05497_ (net)
+                  0.03    0.00    3.40 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12863_/A2 (OR4_X4)
+     2    5.14    0.02    0.10    3.50 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12863_/ZN (OR4_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05538_ (net)
+                  0.02    0.00    3.50 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12875_/A4 (OR4_X4)
+     1    3.71    0.02    0.11    3.61 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12875_/ZN (OR4_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05550_ (net)
+                  0.02    0.00    3.61 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12876_/A1 (OR2_X4)
+     1    2.41    0.01    0.04    3.65 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12876_/ZN (OR2_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05551_ (net)
+                  0.01    0.00    3.65 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12879_/A (MUX2_X2)
+     1    7.25    0.01    0.06    3.71 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12879_/Z (MUX2_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05554_ (net)
+                  0.01    0.00    3.71 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12880_/S (MUX2_X1)
+     2    8.10    0.02    0.07    3.78 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12880_/Z (MUX2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05555_ (net)
+                  0.02    0.00    3.78 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12881_/B1 (AOI22_X4)
+     2   12.31    0.02    0.03    3.80 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_12881_/ZN (AOI22_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_05556_ (net)
+                  0.02    0.00    3.80 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13724_/B2 (OAI22_X4)
+     2    7.53    0.03    0.05    3.85 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_13724_/ZN (OAI22_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_06322_ (net)
+                  0.03    0.00    3.85 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_17569_/A2 (NAND2_X1)
+     1    4.40    0.02    0.02    3.88 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_17569_/ZN (NAND2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_02168_ (net)
+                  0.02    0.00    3.88 v gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_17571_/A1 (NOR2_X1)
+     1    6.71    0.04    0.05    3.93 ^ gen_tiles[0].i_tile.i_tile/gen_cores[1].gen_mempool_cc.riscv_core.i_snitch/_17571_/ZN (NOR2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_core_mux[1].gen_tcdm_shim.i_tcdm_shim.data_qvalid_i (net)
+                  0.04    0.00    3.93 ^ gen_tiles[0].i_tile.i_tile/place37979/A (BUF_X4)
+     2    9.95    0.01    0.03    3.96 ^ gen_tiles[0].i_tile.i_tile/place37979/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/net37978 (net)
+                  0.01    0.00    3.96 ^ gen_tiles[0].i_tile.i_tile/_22925_/A1 (NAND2_X1)
+     2    3.04    0.01    0.02    3.98 v gen_tiles[0].i_tile.i_tile/_22925_/ZN (NAND2_X1)
+                                         gen_tiles[0].i_tile.i_tile/_05955_ (net)
+                  0.01    0.00    3.98 v gen_tiles[0].i_tile.i_tile/_40285_/A1 (NOR2_X1)
+     1   15.18    0.07    0.09    4.07 ^ gen_tiles[0].i_tile.i_tile/_40285_/ZN (NOR2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_core_mux[1].gen_tcdm_shim.i_tcdm_shim.i_snitch_addr_demux.i_req_demux.oup_valid_o[1] (net)
+                  0.07    0.00    4.07 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/place37623/A (BUF_X4)
+     4   26.94    0.02    0.04    4.11 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/place37623/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/net37622 (net)
+                  0.02    0.01    4.12 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/place37622/A (BUF_X2)
+     2    3.65    0.01    0.03    4.15 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/place37622/Z (BUF_X2)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/net37621 (net)
+                  0.01    0.00    4.15 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_11608_/A3 (NAND3_X1)
+     2    5.75    0.02    0.03    4.18 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/_11608_/ZN (NAND3_X1)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/_04207_ (net)
+                  0.02    0.00    4.18 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/place37457/A (BUF_X2)
+     3    6.39    0.01    0.03    4.21 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/place37457/Z (BUF_X2)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/net37456 (net)
+                  0.01    0.00    4.21 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/_12434_/B2 (OAI21_X1)
+     2    3.89    0.03    0.04    4.26 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_12434_/ZN (OAI21_X1)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/_04894_ (net)
+                  0.03    0.00    4.26 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_12555_/A3 (OR4_X2)
+     2    5.12    0.01    0.04    4.29 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_12555_/ZN (OR4_X2)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/_04993_ (net)
+                  0.01    0.00    4.29 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23427_/B (OAI211_X2)
+     2    3.31    0.02    0.03    4.32 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23427_/ZN (OAI211_X2)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/_03760_ (net)
+                  0.02    0.00    4.32 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23428_/A4 (NOR4_X1)
+     1    2.38    0.05    0.09    4.41 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23428_/ZN (NOR4_X1)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/_03761_ (net)
+                  0.05    0.00    4.41 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23438_/A1 (NOR4_X1)
+     1   12.70    0.02    0.04    4.45 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23438_/ZN (NOR4_X1)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/_03771_ (net)
+                  0.02    0.00    4.45 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/place35576/A (BUF_X4)
+     1    4.03    0.01    0.03    4.48 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/place35576/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/i_local_req_interco/net35575 (net)
+                  0.01    0.00    4.48 v gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23439_/A4 (NOR4_X2)
+     1   20.10    0.12    0.16    4.64 ^ gen_tiles[0].i_tile.i_tile/i_local_req_interco/_23439_/ZN (NOR4_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_core_mux[0].gen_tcdm_shim.i_tcdm_shim.i_snitch_addr_demux.i_req_demux.oup_ready_i[1] (net)
+                  0.12    0.01    4.65 ^ gen_tiles[0].i_tile.i_tile/place35466/A (BUF_X4)
+     1    3.88    0.01    0.03    4.68 ^ gen_tiles[0].i_tile.i_tile/place35466/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/net35465 (net)
+                  0.01    0.00    4.68 ^ gen_tiles[0].i_tile.i_tile/_39785_/A1 (NOR3_X1)
+     1    1.95    0.01    0.01    4.69 v gen_tiles[0].i_tile.i_tile/_39785_/ZN (NOR3_X1)
+                                         gen_tiles[0].i_tile.i_tile/_16884_ (net)
+                  0.01    0.00    4.69 v gen_tiles[0].i_tile.i_tile/_39788_/A3 (OR4_X1)
+     1    1.96    0.02    0.11    4.80 v gen_tiles[0].i_tile.i_tile/_39788_/ZN (OR4_X1)
+                                         gen_tiles[0].i_tile.i_tile/_16887_ (net)
+                  0.02    0.00    4.80 v gen_tiles[0].i_tile.i_tile/_39793_/A (OAI221_X1)
+     1    3.99    0.05    0.03    4.83 ^ gen_tiles[0].i_tile.i_tile/_39793_/ZN (OAI221_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_core_mux[0].gen_tcdm_shim.i_tcdm_shim.data_qready_o (net)
+                  0.05    0.00    4.83 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place35238/A (BUF_X4)
+     1   23.63    0.02    0.04    4.87 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place35238/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/net35237 (net)
+                  0.02    0.01    4.88 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_13729_/A1 (NAND2_X1)
+     2    3.77    0.01    0.02    4.90 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_13729_/ZN (NAND2_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_06327_ (net)
+                  0.01    0.00    4.90 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place35159/A (BUF_X1)
+     1    2.85    0.01    0.03    4.93 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place35159/Z (BUF_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/net35158 (net)
+                  0.01    0.00    4.93 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17355_/A (OAI21_X1)
+     1    1.95    0.02    0.02    4.95 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17355_/ZN (OAI21_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_02029_ (net)
+                  0.02    0.00    4.95 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17356_/A (OAI21_X1)
+     2    4.98    0.01    0.03    4.98 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17356_/ZN (OAI21_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_02030_ (net)
+                  0.01    0.00    4.98 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17594_/C1 (AOI211_X2)
+     1    6.99    0.05    0.05    5.03 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17594_/ZN (AOI211_X2)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_02184_ (net)
+                  0.05    0.00    5.03 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place34991/A (BUF_X4)
+     2   10.50    0.01    0.03    5.06 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place34991/Z (BUF_X4)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/net34990 (net)
+                  0.01    0.00    5.06 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place34990/A (BUF_X8)
+    15   31.92    0.01    0.03    5.09 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/place34990/Z (BUF_X8)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/net34989 (net)
+                  0.01    0.00    5.09 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17679_/A4 (NAND4_X1)
+     1    1.93    0.03    0.03    5.12 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17679_/ZN (NAND4_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_02251_ (net)
+                  0.03    0.00    5.12 v gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17680_/B2 (AOI22_X1)
+     1    1.56    0.02    0.05    5.17 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/_17680_/ZN (AOI22_X1)
+                                         gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/sb_d[27] (net)
+                  0.02    0.00    5.17 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/sb_q[27]$_DFF_PP0_/D (DFFR_X1)
+                                  5.17   data arrival time
+
+                  0.00    3.00    3.00   clock clk_i (rise edge)
+                          0.07    3.07   clock network delay (ideal)
+                         -0.06    3.01   clock uncertainty
+                          0.00    3.01   clock reconvergence pessimism
+                                  3.01 ^ gen_tiles[0].i_tile.i_tile/gen_cores[0].gen_mempool_cc.riscv_core.i_snitch/sb_q[27]$_DFF_PP0_/CK (DFFR_X1)
+                         -0.04    2.97   library setup time
+                                  2.97   data required time
+-----------------------------------------------------------------------------
+                                  2.97   data required time
+                                 -5.17   data arrival time
+-----------------------------------------------------------------------------
+                                 -2.20   slack (VIOLATED)
+
+
+Startpoint: tcdm_slave_bypass_resp_ready_i (input port clocked by vclk_i)
+Endpoint: tcdm_master_bypass_resp_ready_o (output port clocked by vclk_i)
+Path Group: vclk_i
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock vclk_i (rise edge)
+                          0.07    0.07   clock network delay (ideal)
+                          2.55    2.62 ^ input external delay
+     1    0.06    0.00    0.00    2.62 ^ tcdm_slave_bypass_resp_ready_i (in)
+                                         tcdm_slave_bypass_resp_ready_i (net)
+                  0.00    0.00    2.62 ^ tcdm_master_bypass_resp_ready_o (out)
+                                  2.62   data arrival time
+
+                  0.00    3.00    3.00   clock vclk_i (rise edge)
+                          0.07    3.07   clock network delay (ideal)
+                         -0.06    3.01   clock uncertainty
+                          0.00    3.01   clock reconvergence pessimism
+                         -2.55    0.46   output external delay
+                                  0.46   data required time
+-----------------------------------------------------------------------------
+                                  0.46   data required time
+                                 -2.62   data arrival time
+-----------------------------------------------------------------------------
+                                 -2.16   slack (VIOLATED)
+
+
+
+==========================================================================
+global place report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             3.08e-02   1.91e-03   1.15e-03   3.39e-02  38.1%
+Combinational          2.12e-02   2.98e-02   4.17e-03   5.51e-02  61.9%
+Clock                  1.39e-11   1.95e-10   1.72e-06   1.72e-06   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  5.20e-02   3.17e-02   5.33e-03   8.90e-02 100.0%
+                          58.4%      35.6%       6.0%

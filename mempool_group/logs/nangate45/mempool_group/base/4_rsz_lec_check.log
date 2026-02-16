@@ -1,0 +1,205 @@
+[2026-02-16 16:55:11.545] [miter_logger] [info] MiterStrategy::run starting
+[2026-02-16 16:55:11.545] [miter_logger] [info] Collecting POs for design 0: mempool_group
+
+[2026-02-16 16:55:11.756] [miter_logger] [info] Collected 42988 POs for design 0
+
+[2026-02-16 16:55:11.758] [miter_logger] [info] Collecting POs for design 1: mempool_group
+
+[2026-02-16 16:55:11.957] [miter_logger] [info] Collected 42988 POs for design 1
+
+[2026-02-16 16:55:11.957] [miter_logger] [info] normalizeInputs: starting
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157559..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157557..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157556..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157555..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157553..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157552..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157550..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157549..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157548..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157547..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157540..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157539..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157538..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157537..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157532..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157531..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157528..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157527..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157524..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157518..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157516..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157515..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157546..
+[2026-02-16 16:55:11.982] [miter_logger] [info] diff0 input: 157558..
+[2026-02-16 16:55:11.983] [miter_logger] [info] diff0 input: 157536..
+[2026-02-16 16:55:11.983] [miter_logger] [info] diff0 input: 157526..
+[2026-02-16 16:55:11.983] [miter_logger] [info] diff0 input: 157525..
+[2026-02-16 16:55:11.983] [miter_logger] [info] diff0 input: 157551..
+[2026-02-16 16:55:11.984] [miter_logger] [info] diff0 input: 157521..
+[2026-02-16 16:55:11.984] [miter_logger] [info] diff0 input: 157545..
+[2026-02-16 16:55:11.984] [miter_logger] [info] diff0 input: 157541..
+[2026-02-16 16:55:11.984] [miter_logger] [info] diff0 input: 157533..
+[2026-02-16 16:55:11.984] [miter_logger] [info] diff0 input: 157542..
+[2026-02-16 16:55:11.984] [miter_logger] [info] diff0 input: 157534..
+[2026-02-16 16:55:11.985] [miter_logger] [info] diff0 input: 157519..
+[2026-02-16 16:55:11.985] [miter_logger] [info] diff0 input: 157535..
+[2026-02-16 16:55:11.985] [miter_logger] [info] diff0 input: 157514..
+[2026-02-16 16:55:11.985] [miter_logger] [info] diff0 input: 157523..
+[2026-02-16 16:55:11.985] [miter_logger] [info] diff0 input: 157517..
+[2026-02-16 16:55:11.985] [miter_logger] [info] diff0 input: 157529..
+[2026-02-16 16:55:11.986] [miter_logger] [info] diff0 input: 157530..
+[2026-02-16 16:55:11.986] [miter_logger] [info] diff0 input: 157543..
+[2026-02-16 16:55:11.986] [miter_logger] [info] diff0 input: 157522..
+[2026-02-16 16:55:11.986] [miter_logger] [info] diff0 input: 157520..
+[2026-02-16 16:55:11.986] [miter_logger] [info] diff0 input: 157554..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff0 input: 157544..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157665..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157664..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157662..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157659..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157658..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157656..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157655..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157651..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157647..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157644..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157643..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157641..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157640..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157637..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157650..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157635..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157634..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157631..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157629..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157627..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157626..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157624..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157623..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157621..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157628..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157625..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157639..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157642..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157646..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157653..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157654..
+[2026-02-16 16:55:11.987] [miter_logger] [info] diff1 input: 157661..
+[2026-02-16 16:55:11.988] [miter_logger] [info] diff1 input: 157652..
+[2026-02-16 16:55:11.988] [miter_logger] [info] diff1 input: 157660..
+[2026-02-16 16:55:11.988] [miter_logger] [info] diff1 input: 157638..
+[2026-02-16 16:55:11.988] [miter_logger] [info] diff1 input: 157657..
+[2026-02-16 16:55:11.988] [miter_logger] [info] diff1 input: 157630..
+[2026-02-16 16:55:11.989] [miter_logger] [info] diff1 input: 157633..
+[2026-02-16 16:55:11.989] [miter_logger] [info] diff1 input: 157649..
+[2026-02-16 16:55:11.989] [miter_logger] [info] diff1 input: 157648..
+[2026-02-16 16:55:11.989] [miter_logger] [info] diff1 input: 157663..
+[2026-02-16 16:55:11.989] [miter_logger] [info] diff1 input: 157620..
+[2026-02-16 16:55:11.990] [miter_logger] [info] diff1 input: 157632..
+[2026-02-16 16:55:11.990] [miter_logger] [info] diff1 input: 157645..
+[2026-02-16 16:55:11.991] [miter_logger] [info] diff1 input: 157636..
+[2026-02-16 16:55:11.991] [miter_logger] [info] diff1 input: 157622..
+[2026-02-16 16:55:12.000] [miter_logger] [info] size of common inputs: 30897
+[2026-02-16 16:55:12.001] [miter_logger] [info] size of diff0 inputs: 46
+[2026-02-16 16:55:12.001] [miter_logger] [info] size of diff1 inputs: 46
+[2026-02-16 16:55:12.004] [miter_logger] [info] normalizeOutputs: starting
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157557..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157555..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157554..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157553..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157551..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157548..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157545..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157544..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157543..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157542..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157539..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157538..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157537..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157536..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157535..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157534..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157531..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157530..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157528..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157527..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157526..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157525..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157523..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157522..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157520..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157518..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157517..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157515..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157514..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.035] [miter_logger] [info] Will ignore the analysis for: 157529..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.036] [miter_logger] [info] Will ignore the analysis for: 157519..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.036] [miter_logger] [info] Will ignore the analysis for: 157549..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.036] [miter_logger] [info] Will ignore the analysis for: 157547..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.037] [miter_logger] [info] Will ignore the analysis for: 157546..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.037] [miter_logger] [info] Will ignore the analysis for: 157550..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.038] [miter_logger] [info] Will ignore the analysis for: 157556..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.038] [miter_logger] [info] Will ignore the analysis for: 157524..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.039] [miter_logger] [info] Will ignore the analysis for: 157533..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.039] [miter_logger] [info] Will ignore the analysis for: 157521..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.039] [miter_logger] [info] Will ignore the analysis for: 157558..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.039] [miter_logger] [info] Will ignore the analysis for: 157559..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.039] [miter_logger] [info] Will ignore the analysis for: 157541..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.040] [miter_logger] [info] Will ignore the analysis for: 157552..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.040] [miter_logger] [info] Will ignore the analysis for: 157532..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157540..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157516..0.6 from netlist 0 as it does not exist in netlist 1
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157664..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157662..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157660..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157659..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157654..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157648..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157647..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157646..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157644..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157643..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157642..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157641..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157639..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157635..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157634..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157633..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157632..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157631..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157630..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157628..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157625..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157624..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157620..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157656..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.042] [miter_logger] [info] Will ignore the analysis for: 157622..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.043] [miter_logger] [info] Will ignore the analysis for: 157621..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.043] [miter_logger] [info] Will ignore the analysis for: 157636..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.043] [miter_logger] [info] Will ignore the analysis for: 157661..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.043] [miter_logger] [info] Will ignore the analysis for: 157651..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.043] [miter_logger] [info] Will ignore the analysis for: 157627..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.044] [miter_logger] [info] Will ignore the analysis for: 157629..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.044] [miter_logger] [info] Will ignore the analysis for: 157626..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.045] [miter_logger] [info] Will ignore the analysis for: 157652..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.046] [miter_logger] [info] Will ignore the analysis for: 157645..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.046] [miter_logger] [info] Will ignore the analysis for: 157658..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.047] [miter_logger] [info] Will ignore the analysis for: 157638..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.047] [miter_logger] [info] Will ignore the analysis for: 157623..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.047] [miter_logger] [info] Will ignore the analysis for: 157665..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.048] [miter_logger] [info] Will ignore the analysis for: 157657..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.048] [miter_logger] [info] Will ignore the analysis for: 157649..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.048] [miter_logger] [info] Will ignore the analysis for: 157663..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.048] [miter_logger] [info] Will ignore the analysis for: 157655..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.048] [miter_logger] [info] Will ignore the analysis for: 157653..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.050] [miter_logger] [info] Will ignore the analysis for: 157640..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.050] [miter_logger] [info] Will ignore the analysis for: 157650..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.050] [miter_logger] [info] Will ignore the analysis for: 157637..0.6 from netlist 1 as it does not exist in netlist 0
+[2026-02-16 16:55:12.065] [miter_logger] [info] size of common outputs: 42942
+[2026-02-16 16:55:12.065] [miter_logger] [info] size of diff0 outputs: 46
+[2026-02-16 16:55:12.065] [miter_logger] [info] size of diff1 outputs: 46
+[2026-02-16 16:55:12.069] [miter_logger] [info] size of PIs in circuit 0: 30943
+[2026-02-16 16:55:12.069] [miter_logger] [info] size of PIs in circuit 1: 30943
+[2026-02-16 16:55:12.069] [miter_logger] [info] size of POs in circuit 0: 42942
+[2026-02-16 16:55:12.069] [miter_logger] [info] size of POs in circuit 1: 42942

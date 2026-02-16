@@ -1,0 +1,21 @@
+OpenROAD f9c91ab39bdd6c7c9d36e563fd398e544eaf48d7 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_liberty /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_256x32.lib
+read_liberty /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lib/fakeram45_64x64.lib
+[INFO ODB-0227] LEF file: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef, created 22 layers, 27 vias
+[INFO ODB-0227] LEF file: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef, created 135 library cells
+[INFO ODB-0227] LEF file: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lef/fakeram45_256x32.lef, created 1 library cells
+[INFO ODB-0227] LEF file: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/lef/fakeram45_64x64.lef, created 1 library cells
+link_design mempool_group
+[WARNING STA-0345] current scale 1e-06 does not match library scale 1e-03.
+[WARNING STA-0345] power scale 1e-03 does not match library scale 1e-09.
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/nangate45/setRC.tcl
+write_db ./results/nangate45/mempool_group/base/1_synth.odb
+write_sdc -no_timestamp ./results/nangate45/mempool_group/base/1_synth.sdc
+Elapsed time: 0:01.78[h:]min:sec. CPU time: user 1.63 sys 0.13 (98%). Peak memory: 474128KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+1_synth                            1            463 83b325ab0d87cb028a47
