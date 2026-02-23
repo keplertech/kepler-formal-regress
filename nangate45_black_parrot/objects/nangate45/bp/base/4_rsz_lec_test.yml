@@ -10,4 +10,5 @@ liberty_files:
  - ./lib/fakeram45_64x15.lib
  - ./lib/fakeram45_64x96.lib
 cnf_export: true
+cnf_export_path: ./cnf_export.cnf
 log_file: ./logs/nangate45/bp/base/4_rsz_lec_check.log
