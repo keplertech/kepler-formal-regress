@@ -977,26 +977,6 @@ module I2cGpioExpanderTop (io_address_0_PAD,
  wire delaynet_1_clk_core;
  wire delaynet_2_clk_core;
 
- bondpad_70x70 IO_BOND_sg13g2_IOPadIOVdd_west_4 (.pad(IOVDD));
- bondpad_70x70 IO_BOND_sg13g2_IOPadIOVss_west_3 (.pad(IOVSS));
- bondpad_70x70 IO_BOND_sg13g2_IOPadVdd_east_0 (.pad(VDD));
- bondpad_70x70 IO_BOND_sg13g2_IOPadVss_east_1 (.pad(VSS));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_address_0 (.pad(io_address_0_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_address_1 (.pad(io_address_1_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_address_2 (.pad(io_address_2_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_clock (.pad(io_clock_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_gpio_0 (.pad(io_gpio_0_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_gpio_1 (.pad(io_gpio_1_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_gpio_2 (.pad(io_gpio_2_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_gpio_3 (.pad(io_gpio_3_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_gpio_4 (.pad(io_gpio_4_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_gpio_5 (.pad(io_gpio_5_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_gpio_6 (.pad(io_gpio_6_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_gpio_7 (.pad(io_gpio_7_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_i2c_interrupt (.pad(io_i2c_interrupt_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_i2c_scl (.pad(io_i2c_scl_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_i2c_sda (.pad(io_i2c_sda_PAD));
- bondpad_70x70 IO_BOND_sg13g2_IOPad_io_reset (.pad(io_reset_PAD));
  sg13g2_Corner IO_CORNER_NORTH_EAST_INST ();
  sg13g2_Corner IO_CORNER_NORTH_WEST_INST ();
  sg13g2_Corner IO_CORNER_SOUTH_EAST_INST ();
