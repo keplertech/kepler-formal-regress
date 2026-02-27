@@ -1,0 +1,45 @@
+OpenROAD 6975124cf258e3be0db86bd2e59246b7f0e9f0c7 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_slow_1p08V_125C.lib
+read_liberty -corner typ /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_fast_1p32V_m40C.lib
+read_db ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/1_synth.odb
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/setRC.tcl
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+number instances in verilog is 452
+[INFO IFP-0001] Added 29 rows of 229 site CoreSite.
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/make_tracks.tcl
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/fastroute.tcl
+Repair tie lo fanout...
+[INFO RSZ-0042] Inserted 1 tie sg13g2_tielo instances.
+Repair tie hi fanout...
+[INFO RSZ-0042] Inserted 78 tie sg13g2_tiehi instances.
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,buffer,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove 
+[INFO RSZ-0098] No setup violations found
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1uA
+ power 1pW
+ distance 1um
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 8486 um^2 70% utilization.
+write_db ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/2_1_floorplan.odb
+write_sdc -no_timestamp ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/2_1_floorplan.sdc
+Elapsed time: 0:00.38[h:]min:sec. CPU time: user 0.33 sys 0.14 (121%). Peak memory: 123604KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_1_floorplan                      0            120 72b13d5b8b45806e8c4e

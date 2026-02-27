@@ -1,0 +1,183 @@
+
+==========================================================================
+floorplan final report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+floorplan final report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+floorplan final report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 11.24
+
+==========================================================================
+floorplan final report_clock_min_period
+--------------------------------------------------------------------------
+clock period_min = 8.76 fmax = 114.11
+
+==========================================================================
+floorplan final report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: io_i2c_scl_read_buffercc/buffers_0$_SDFF_PN1_
+            (rising edge-triggered flip-flop clocked by clock)
+Endpoint: io_i2c_scl_read_buffercc/buffers_1$_SDFF_PN1_
+          (rising edge-triggered flip-flop clocked by clock)
+Path Group: clock
+Path Type: min
+Corner: fast
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.25    0.00    0.00   clock clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.25    0.00    0.00 ^ io_i2c_scl_read_buffercc/buffers_0$_SDFF_PN1_/CLK (sg13g2_dfrbpq_1)
+     1    0.00    0.01    0.16    0.16 v io_i2c_scl_read_buffercc/buffers_0$_SDFF_PN1_/Q (sg13g2_dfrbpq_1)
+                                         io_i2c_scl_read_buffercc/buffers_0 (net)
+                  0.01    0.00    0.16 v io_i2c_scl_read_buffercc/_4_/A_N (sg13g2_nand2b_1)
+     1    0.00    0.02    0.04    0.20 v io_i2c_scl_read_buffercc/_4_/Y (sg13g2_nand2b_1)
+                                         io_i2c_scl_read_buffercc/_1_ (net)
+                  0.02    0.00    0.20 v io_i2c_scl_read_buffercc/buffers_1$_SDFF_PN1_/D (sg13g2_dfrbpq_1)
+                                  0.20   data arrival time
+
+                  0.25    0.00    0.00   clock clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.15    0.15   clock uncertainty
+                          0.00    0.15   clock reconvergence pessimism
+                                  0.15 ^ io_i2c_scl_read_buffercc/buffers_1$_SDFF_PN1_/CLK (sg13g2_dfrbpq_1)
+                          0.02    0.17   library hold time
+                                  0.17   data required time
+-----------------------------------------------------------------------------
+                                  0.17   data required time
+                                 -0.20   data arrival time
+-----------------------------------------------------------------------------
+                                  0.04   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: io_rsp_valid (input port clocked by clock)
+Endpoint: io_rsp_ready (output port clocked by clock)
+Path Group: clock
+Path Type: max
+Corner: slow
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.25    0.00    0.00   clock clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          4.00    4.00 ^ input external delay
+     2    0.01    0.00    0.00    4.00 ^ io_rsp_valid (in)
+                                         io_rsp_valid (net)
+                  0.00    0.00    4.00 ^ _420_/A (sg13g2_inv_1)
+     2    0.01    0.03    0.04    4.04 v _420_/Y (sg13g2_inv_1)
+                                         _128_ (net)
+                  0.03    0.00    4.04 v _433_/C (sg13g2_nor3_1)
+     3    0.01    0.25    0.22    4.26 ^ _433_/Y (sg13g2_nor3_1)
+                                         _139_ (net)
+                  0.25    0.00    4.26 ^ _434_/A (sg13g2_buf_1)
+    10    0.04    0.25    0.35    4.61 ^ _434_/X (sg13g2_buf_1)
+                                         io_rsp_ready (net)
+                  0.25    0.00    4.61 ^ io_rsp_ready (out)
+                                  4.61   data arrival time
+
+                  0.25   20.00   20.00   clock clock (rise edge)
+                          0.00   20.00   clock network delay (ideal)
+                         -0.15   19.85   clock uncertainty
+                          0.00   19.85   clock reconvergence pessimism
+                         -4.00   15.85   output external delay
+                                 15.85   data required time
+-----------------------------------------------------------------------------
+                                 15.85   data required time
+                                 -4.61   data arrival time
+-----------------------------------------------------------------------------
+                                 11.24   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: io_rsp_valid (input port clocked by clock)
+Endpoint: io_rsp_ready (output port clocked by clock)
+Path Group: clock
+Path Type: max
+Corner: slow
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.25    0.00    0.00   clock clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          4.00    4.00 ^ input external delay
+     2    0.01    0.00    0.00    4.00 ^ io_rsp_valid (in)
+                                         io_rsp_valid (net)
+                  0.00    0.00    4.00 ^ _420_/A (sg13g2_inv_1)
+     2    0.01    0.03    0.04    4.04 v _420_/Y (sg13g2_inv_1)
+                                         _128_ (net)
+                  0.03    0.00    4.04 v _433_/C (sg13g2_nor3_1)
+     3    0.01    0.25    0.22    4.26 ^ _433_/Y (sg13g2_nor3_1)
+                                         _139_ (net)
+                  0.25    0.00    4.26 ^ _434_/A (sg13g2_buf_1)
+    10    0.04    0.25    0.35    4.61 ^ _434_/X (sg13g2_buf_1)
+                                         io_rsp_ready (net)
+                  0.25    0.00    4.61 ^ io_rsp_ready (out)
+                                  4.61   data arrival time
+
+                  0.25   20.00   20.00   clock clock (rise edge)
+                          0.00   20.00   clock network delay (ideal)
+                         -0.15   19.85   clock uncertainty
+                          0.00   19.85   clock reconvergence pessimism
+                         -4.00   15.85   output external delay
+                                 15.85   data required time
+-----------------------------------------------------------------------------
+                                 15.85   data required time
+                                 -4.61   data arrival time
+-----------------------------------------------------------------------------
+                                 11.24   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_power
+--------------------------------------------------------------------------
+Corner: slow
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             1.61e-04   5.68e-06   1.72e-07   1.67e-04  78.3%
+Combinational          2.65e-05   1.95e-05   2.41e-07   4.62e-05  21.7%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  1.87e-04   2.51e-05   4.12e-07   2.13e-04 100.0%
+                          88.0%      11.8%       0.2%
+Corner: typ
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             2.04e-04   7.47e-06   8.58e-08   2.11e-04  78.1%
+Combinational          3.35e-05   2.56e-05   7.63e-08   5.91e-05  21.9%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  2.37e-04   3.31e-05   1.62e-07   2.71e-04 100.0%
+                          87.7%      12.2%       0.1%
+Corner: fast
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             2.68e-04   9.73e-06   1.12e-07   2.78e-04  78.7%
+Combinational          4.16e-05   3.33e-05   1.47e-07   7.51e-05  21.3%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  3.10e-04   4.30e-05   2.59e-07   3.53e-04 100.0%
+                          87.7%      12.2%       0.1%

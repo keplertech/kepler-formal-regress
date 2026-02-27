@@ -1,0 +1,65 @@
+OpenROAD 6975124cf258e3be0db86bd2e59246b7f0e9f0c7 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_slow_1p08V_125C.lib
+read_liberty -corner typ /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_fast_1p32V_m40C.lib
+read_db ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/6_1_fill.odb
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/setRC.tcl
+write_db ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/6_final.odb
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation I2cDeviceCtrl (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 2189 rc segments
+[INFO RCX-0439] Coupling Cap extraction I2cDeviceCtrl ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 46% of 3617 wires extracted
+[INFO RCX-0442] 100% of 3617 wires extracted
+[INFO RCX-0045] Extract 644 nets, 2831 rsegs, 2831 caps, 3747 ccs
+[INFO RCX-0443] 642 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+########## IR report #################
+Net              : VDD
+Corner           : fast
+Total power      : 4.69e-04 W
+Supply voltage   : 1.20e+00 V
+Worstcase voltage: 1.20e+00 V
+Average voltage  : 1.20e+00 V
+Average IR drop  : 5.59e-04 V
+Worstcase IR drop: 4.32e-03 V
+Percentage drop  : 0.36 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+########## IR report #################
+Net              : VSS
+Corner           : fast
+Total power      : 4.69e-04 W
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 8.93e-04 V
+Average voltage  : 1.35e-04 V
+Average IR drop  : 1.35e-04 V
+Worstcase IR drop: 8.93e-04 V
+Percentage drop  : 0.07 %
+######################################
+Cell type report:                       Count       Area
+  Fill cell                               519    3077.22
+  Clock buffer                             17     391.91
+  Timing Repair Buffer                     82     595.12
+  Inverter                                 13      76.20
+  Clock inverter                            2      10.89
+  Sequential cell                          78    3821.13
+  Multi-Input combinational cell          397    4076.96
+  Total                                  1108   12049.43
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 8972 um^2 74% utilization.
+Elapsed time: 0:01.44[h:]min:sec. CPU time: user 1.69 sys 0.38 (144%). Peak memory: 178372KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+6_report                           1            174                  N/A

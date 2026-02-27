@@ -1,0 +1,36 @@
+Yosys 0.62+0 (git sha1 776b4d06a, g++ 11.4.0-1ubuntu1~22.04.2 -fPIC -O3)
+Using ABC speed script.
+Extracting clock period from SDC file: ./results/ihp-sg13g2/i2c-gpio-expander/base/clock_period.txt
+Setting clock period to 20000
+1. Executing Liberty frontend: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+2. Executing Liberty frontend: ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_typ.lib
+3. Executing Liberty frontend: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_io_typ_1p2V_3p3V_25C.lib
+4. Executing Liberty frontend: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+5. Executing Liberty frontend: ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_typ.lib
+6. Executing Liberty frontend: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_io_typ_1p2V_3p3V_25C.lib
+7. Executing Verilog-2005 frontend: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/designs/ihp-sg13g2/i2c-gpio-expander/I2cGpioExpanderTop.v
+8. Executing Verilog-2005 frontend: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/designs/ihp-sg13g2/i2c-gpio-expander/I2cGpioExpander.v
+9. Executing Verilog-2005 frontend: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/cells_clkgate.v
+10. Executing HIERARCHY pass (managing design hierarchy).
+11. Executing AST frontend in derive mode using pre-parsed AST for module `\I2cGpioExpanderTop'.
+11.1. Analyzing design hierarchy..
+11.2. Executing AST frontend in derive mode using pre-parsed AST for module `\I2cGpioExpander'.
+11.3. Analyzing design hierarchy..
+11.4. Executing AST frontend in derive mode using pre-parsed AST for module `\InterruptCtrl'.
+11.5. Executing AST frontend in derive mode using pre-parsed AST for module `\GpioCtrl'.
+11.6. Analyzing design hierarchy..
+11.7. Executing AST frontend in derive mode using pre-parsed AST for module `\BufferCC'.
+11.8. Analyzing design hierarchy..
+11.9. Analyzing design hierarchy..
+12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module I2cGpioExpander because it contains processes (run 'proc' command first).
+Warning: Ignoring module I2cGpioExpanderTop because it contains processes (run 'proc' command first).
+Warning: Ignoring module BufferCC because it contains processes (run 'proc' command first).
+Warning: Ignoring module GpioCtrl because it contains processes (run 'proc' command first).
+Warning: Ignoring module InterruptCtrl because it contains processes (run 'proc' command first).
+13. Executing RTLIL backend.
+Warnings: 5 unique messages, 5 total
+End of script. Logfile hash: 4f1f4bf390, CPU: user 0.03s system 0.01s, MEM: 23.41 MB peak
+Yosys 0.62+0 (git sha1 776b4d06a, g++ 11.4.0-1ubuntu1~22.04.2 -fPIC -O3)
+Time spent: 58% 8x read_liberty (0 sec), 16% 6x read_verilog (0 sec), ...
+Elapsed time: 0:00.09[h:]min:sec. CPU time: user 0.08 sys 0.01 (98%). Peak memory: 27776KB.

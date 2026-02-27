@@ -1,0 +1,690 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+UNITS
+    DATABASE MICRONS 1000 ;
+END UNITS
+
+VIA I2cDeviceCtrl_via1_2_1840_440_1_4_410_410
+  VIARULE via1Array ;
+  CUTSIZE 0.19 0.19 ;
+  LAYERS Metal1 Via1 Metal2 ;
+  CUTSPACING 0.22 0.22 ;
+  ENCLOSURE 0.05 0.125 0.005 0.05 ;
+  ROWCOL 1 4 ;
+END I2cDeviceCtrl_via1_2_1840_440_1_4_410_410
+
+VIA I2cDeviceCtrl_via2_3_1840_440_1_4_410_410
+  VIARULE via2Array ;
+  CUTSIZE 0.19 0.19 ;
+  LAYERS Metal2 Via2 Metal3 ;
+  CUTSPACING 0.22 0.22 ;
+  ENCLOSURE 0.005 0.05 0.05 0.005 ;
+  ROWCOL 1 4 ;
+END I2cDeviceCtrl_via2_3_1840_440_1_4_410_410
+
+VIA I2cDeviceCtrl_via3_4_1840_440_1_4_410_410
+  VIARULE via3Array ;
+  CUTSIZE 0.19 0.19 ;
+  LAYERS Metal3 Via3 Metal4 ;
+  CUTSPACING 0.22 0.22 ;
+  ENCLOSURE 0.05 0.005 0.21 0.05 ;
+  ROWCOL 1 4 ;
+END I2cDeviceCtrl_via3_4_1840_440_1_4_410_410
+
+VIA I2cDeviceCtrl_via4_5_3000_3000_6_6_480_480
+  VIARULE via4Array ;
+  CUTSIZE 0.19 0.19 ;
+  LAYERS Metal4 Via4 Metal5 ;
+  CUTSPACING 0.29 0.29 ;
+  ENCLOSURE 0.205 0.05 0.05 0.205 ;
+  ROWCOL 6 6 ;
+END I2cDeviceCtrl_via4_5_3000_3000_6_6_480_480
+
+VIA I2cDeviceCtrl_via4_5_3000_1840_4_6_480_480
+  VIARULE via4Array ;
+  CUTSIZE 0.19 0.19 ;
+  LAYERS Metal4 Via4 Metal5 ;
+  CUTSPACING 0.29 0.29 ;
+  ENCLOSURE 0.205 0.05 0.05 0.105 ;
+  ROWCOL 4 6 ;
+END I2cDeviceCtrl_via4_5_3000_1840_4_6_480_480
+
+VIA I2cDeviceCtrl_via4_5_1840_3000_6_4_480_480
+  VIARULE via4Array ;
+  CUTSIZE 0.19 0.19 ;
+  LAYERS Metal4 Via4 Metal5 ;
+  CUTSPACING 0.29 0.29 ;
+  ENCLOSURE 0.105 0.05 0.05 0.205 ;
+  ROWCOL 6 4 ;
+END I2cDeviceCtrl_via4_5_1840_3000_6_4_480_480
+
+VIA I2cDeviceCtrl_via4_5_1840_1840_4_4_480_480
+  VIARULE via4Array ;
+  CUTSIZE 0.19 0.19 ;
+  LAYERS Metal4 Via4 Metal5 ;
+  CUTSPACING 0.29 0.29 ;
+  ENCLOSURE 0.105 0.05 0.05 0.105 ;
+  ROWCOL 4 4 ;
+END I2cDeviceCtrl_via4_5_1840_1840_4_4_480_480
+
+MACRO I2cDeviceCtrl
+  FOREIGN I2cDeviceCtrl 0 0 ;
+  CLASS BLOCK ;
+  SIZE 147.84 BY 147.42 ;
+  PIN IOVDD
+    USE POWER ;
+    DIRECTION INOUT ;
+  END IOVDD
+  PIN IOVSS
+    USE GROUND ;
+    DIRECTION INOUT ;
+  END IOVSS
+  PIN clock
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  26.36 0 26.56 0.72 ;
+    END
+  END clock
+  PIN io_cmd_payload_data[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 57.02 147.84 57.22 ;
+    END
+  END io_cmd_payload_data[0]
+  PIN io_cmd_payload_data[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 43.58 147.84 43.78 ;
+    END
+  END io_cmd_payload_data[1]
+  PIN io_cmd_payload_data[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 37.82 147.84 38.02 ;
+    END
+  END io_cmd_payload_data[2]
+  PIN io_cmd_payload_data[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  107 0 107.2 0.72 ;
+    END
+  END io_cmd_payload_data[3]
+  PIN io_cmd_payload_data[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  102.8 0 103 0.72 ;
+    END
+  END io_cmd_payload_data[4]
+  PIN io_cmd_payload_data[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  105.32 0 105.52 0.72 ;
+    END
+  END io_cmd_payload_data[5]
+  PIN io_cmd_payload_data[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 25.34 147.84 25.54 ;
+    END
+  END io_cmd_payload_data[6]
+  PIN io_cmd_payload_data[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 26.3 147.84 26.5 ;
+    END
+  END io_cmd_payload_data[7]
+  PIN io_cmd_payload_read
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  86 0 86.2 0.72 ;
+    END
+  END io_cmd_payload_read
+  PIN io_cmd_payload_reg
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  96.08 0 96.28 0.72 ;
+    END
+  END io_cmd_payload_reg
+  PIN io_cmd_ready
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  60.8 0 61 0.72 ;
+    END
+  END io_cmd_ready
+  PIN io_cmd_valid
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  59.12 0 59.32 0.72 ;
+    END
+  END io_cmd_valid
+  PIN io_config_clockDivider[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 63.74 0.72 63.94 ;
+    END
+  END io_config_clockDivider[0]
+  PIN io_config_clockDivider[10]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 92.54 0.72 92.74 ;
+    END
+  END io_config_clockDivider[10]
+  PIN io_config_clockDivider[11]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 95.42 0.72 95.62 ;
+    END
+  END io_config_clockDivider[11]
+  PIN io_config_clockDivider[12]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  60.8 146.7 61 147.42 ;
+    END
+  END io_config_clockDivider[12]
+  PIN io_config_clockDivider[13]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  55.76 146.7 55.96 147.42 ;
+    END
+  END io_config_clockDivider[13]
+  PIN io_config_clockDivider[14]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  49.88 146.7 50.08 147.42 ;
+    END
+  END io_config_clockDivider[14]
+  PIN io_config_clockDivider[15]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  44.84 146.7 45.04 147.42 ;
+    END
+  END io_config_clockDivider[15]
+  PIN io_config_clockDivider[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 67.58 0.72 67.78 ;
+    END
+  END io_config_clockDivider[1]
+  PIN io_config_clockDivider[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 76.22 0.72 76.42 ;
+    END
+  END io_config_clockDivider[2]
+  PIN io_config_clockDivider[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 84.86 0.72 85.06 ;
+    END
+  END io_config_clockDivider[3]
+  PIN io_config_clockDivider[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  33.92 146.7 34.12 147.42 ;
+    END
+  END io_config_clockDivider[4]
+  PIN io_config_clockDivider[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  33.08 146.7 33.28 147.42 ;
+    END
+  END io_config_clockDivider[5]
+  PIN io_config_clockDivider[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 98.3 0.72 98.5 ;
+    END
+  END io_config_clockDivider[6]
+  PIN io_config_clockDivider[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 106.94 0.72 107.14 ;
+    END
+  END io_config_clockDivider[7]
+  PIN io_config_clockDivider[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 93.5 0.72 93.7 ;
+    END
+  END io_config_clockDivider[8]
+  PIN io_config_clockDivider[9]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 94.46 0.72 94.66 ;
+    END
+  END io_config_clockDivider[9]
+  PIN io_config_deviceAddr[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 42.62 147.84 42.82 ;
+    END
+  END io_config_deviceAddr[0]
+  PIN io_config_deviceAddr[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 36.86 147.84 37.06 ;
+    END
+  END io_config_deviceAddr[1]
+  PIN io_config_deviceAddr[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  106.16 0 106.36 0.72 ;
+    END
+  END io_config_deviceAddr[2]
+  PIN io_config_deviceAddr[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  101.96 0 102.16 0.72 ;
+    END
+  END io_config_deviceAddr[3]
+  PIN io_config_deviceAddr[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  103.64 0 103.84 0.72 ;
+    END
+  END io_config_deviceAddr[4]
+  PIN io_config_deviceAddr[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  112.04 0 112.24 0.72 ;
+    END
+  END io_config_deviceAddr[5]
+  PIN io_config_deviceAddr[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 30.14 147.84 30.34 ;
+    END
+  END io_config_deviceAddr[6]
+  PIN io_config_timeout[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 89.66 147.84 89.86 ;
+    END
+  END io_config_timeout[0]
+  PIN io_config_timeout[10]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 87.74 147.84 87.94 ;
+    END
+  END io_config_timeout[10]
+  PIN io_config_timeout[11]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 93.5 147.84 93.7 ;
+    END
+  END io_config_timeout[11]
+  PIN io_config_timeout[12]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  96.92 146.7 97.12 147.42 ;
+    END
+  END io_config_timeout[12]
+  PIN io_config_timeout[13]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  90.2 146.7 90.4 147.42 ;
+    END
+  END io_config_timeout[13]
+  PIN io_config_timeout[14]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  81.8 146.7 82 147.42 ;
+    END
+  END io_config_timeout[14]
+  PIN io_config_timeout[15]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  94.4 146.7 94.6 147.42 ;
+    END
+  END io_config_timeout[15]
+  PIN io_config_timeout[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 105.98 147.84 106.18 ;
+    END
+  END io_config_timeout[1]
+  PIN io_config_timeout[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 94.46 147.84 94.66 ;
+    END
+  END io_config_timeout[2]
+  PIN io_config_timeout[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 97.34 147.84 97.54 ;
+    END
+  END io_config_timeout[3]
+  PIN io_config_timeout[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 104.06 147.84 104.26 ;
+    END
+  END io_config_timeout[4]
+  PIN io_config_timeout[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 106.94 147.84 107.14 ;
+    END
+  END io_config_timeout[5]
+  PIN io_config_timeout[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 105.02 147.84 105.22 ;
+    END
+  END io_config_timeout[6]
+  PIN io_config_timeout[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 96.38 147.84 96.58 ;
+    END
+  END io_config_timeout[7]
+  PIN io_config_timeout[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 88.7 147.84 88.9 ;
+    END
+  END io_config_timeout[8]
+  PIN io_config_timeout[9]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 90.62 147.84 90.82 ;
+    END
+  END io_config_timeout[9]
+  PIN io_i2c_interrupts[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  147.12 123.26 147.84 123.46 ;
+    END
+  END io_i2c_interrupts[0]
+  PIN io_i2c_scl_read
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 51.26 0.72 51.46 ;
+    END
+  END io_i2c_scl_read
+  PIN io_i2c_scl_write
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  24.68 0 24.88 0.72 ;
+    END
+  END io_i2c_scl_write
+  PIN io_i2c_sda_read
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 49.34 0.72 49.54 ;
+    END
+  END io_i2c_sda_read
+  PIN io_i2c_sda_write
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  104.48 0 104.68 0.72 ;
+    END
+  END io_i2c_sda_write
+  PIN io_interrupts[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  122.96 146.7 123.16 147.42 ;
+    END
+  END io_interrupts[0]
+  PIN io_rsp_payload_data[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 35.9 0.72 36.1 ;
+    END
+  END io_rsp_payload_data[0]
+  PIN io_rsp_payload_data[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 37.82 0.72 38.02 ;
+    END
+  END io_rsp_payload_data[1]
+  PIN io_rsp_payload_data[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 25.34 0.72 25.54 ;
+    END
+  END io_rsp_payload_data[2]
+  PIN io_rsp_payload_data[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 36.86 0.72 37.06 ;
+    END
+  END io_rsp_payload_data[3]
+  PIN io_rsp_payload_data[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  45.68 0 45.88 0.72 ;
+    END
+  END io_rsp_payload_data[4]
+  PIN io_rsp_payload_data[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  38.12 0 38.32 0.72 ;
+    END
+  END io_rsp_payload_data[5]
+  PIN io_rsp_payload_data[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 24.38 0.72 24.58 ;
+    END
+  END io_rsp_payload_data[6]
+  PIN io_rsp_payload_data[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  46.52 0 46.72 0.72 ;
+    END
+  END io_rsp_payload_data[7]
+  PIN io_rsp_payload_error
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  58.28 0 58.48 0.72 ;
+    END
+  END io_rsp_payload_error
+  PIN io_rsp_ready
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  22.16 0 22.36 0.72 ;
+    END
+  END io_rsp_ready
+  PIN io_rsp_valid
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT  66.68 0 66.88 0.72 ;
+    END
+  END io_rsp_valid
+  PIN reset
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT  0 50.3 0.72 50.5 ;
+    END
+  END reset
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal5 ;
+        RECT  6.22 69.38 141.14 71.22 ;
+      LAYER Metal4 ;
+        RECT  69.2 6.4 71.04 141.02 ;
+      LAYER Metal5 ;
+        RECT  6.22 138.02 141.14 141.02 ;
+        RECT  6.22 6.4 141.14 9.4 ;
+      LAYER Metal4 ;
+        RECT  138.14 6.4 141.14 141.02 ;
+        RECT  6.22 6.4 9.22 141.02 ;
+    END
+  END VDD
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal5 ;
+        RECT  6.22 107.18 141.14 109.02 ;
+        RECT  6.22 31.58 141.14 33.42 ;
+      LAYER Metal4 ;
+        RECT  107 6.4 108.84 141.02 ;
+        RECT  31.4 6.4 33.24 141.02 ;
+      LAYER Metal5 ;
+        RECT  11.22 133.02 136.14 136.02 ;
+        RECT  11.22 11.4 136.14 14.4 ;
+      LAYER Metal4 ;
+        RECT  133.14 11.4 136.14 136.02 ;
+        RECT  11.22 11.4 14.22 136.02 ;
+    END
+  END VSS
+  OBS
+    LAYER Metal1 ;
+     RECT  0 0 147.84 147.42 ;
+    LAYER Metal2 ;
+     RECT  0 0 147.84 147.42 ;
+    LAYER Metal3 ;
+     RECT  0 0 147.84 147.42 ;
+    LAYER Metal4 ;
+     RECT  0 0 147.84 147.42 ;
+    LAYER Metal5 ;
+     RECT  0 0 147.84 147.42 ;
+  END
+END I2cDeviceCtrl
+END LIBRARY

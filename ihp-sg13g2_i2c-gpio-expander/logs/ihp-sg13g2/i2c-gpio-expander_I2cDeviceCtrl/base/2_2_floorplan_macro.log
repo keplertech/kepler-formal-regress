@@ -1,0 +1,15 @@
+OpenROAD 6975124cf258e3be0db86bd2e59246b7f0e9f0c7 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_slow_1p08V_125C.lib
+read_liberty -corner typ /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_fast_1p32V_m40C.lib
+read_db ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/2_1_floorplan.odb
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/setRC.tcl
+No macros found: Skipping macro_placement
+write_db ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/2_2_floorplan_macro.odb
+Elapsed time: 0:00.20[h:]min:sec. CPU time: user 0.17 sys 0.01 (99%). Peak memory: 100836KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_2_floorplan_macro                0             98 72b13d5b8b45806e8c4e

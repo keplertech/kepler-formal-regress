@@ -1,0 +1,9 @@
+format: verilog
+input_paths:
+  - ./results/ihp-sg13g2/i2c-gpio-expander/base/4_before_rsz_lec.v
+  - ./results/ihp-sg13g2/i2c-gpio-expander/base/4_after_rsz_lec.v
+liberty_files:
+ - ./lib/sg13g2_stdcell_typ_1p20V_25C.lib
+ - ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_typ.lib
+ - ./lib/sg13g2_io_typ_1p2V_3p3V_25C.lib
+log_file: ./logs/ihp-sg13g2/i2c-gpio-expander/base/4_rsz_lec_check.log

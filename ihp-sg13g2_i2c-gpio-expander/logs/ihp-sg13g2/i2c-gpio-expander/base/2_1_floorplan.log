@@ -1,0 +1,77 @@
+OpenROAD 6975124cf258e3be0db86bd2e59246b7f0e9f0c7 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_slow_1p08V_125C.lib
+read_liberty -corner slow ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_slow.lib
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_io_slow_1p08V_3p0V_125C.lib
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_fast_1p32V_m40C.lib
+read_liberty -corner fast ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_fast.lib
+[WARNING STA-1140] ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_fast.lib line 1, library I2cDeviceCtrl already exists.
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_io_fast_1p32V_3p6V_m40C.lib
+read_db ./results/ihp-sg13g2/i2c-gpio-expander/base/1_synth.odb
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/setRC.tcl
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There are 2 input ports missing set_input_delay.
+Warning: There are 5 output ports missing set_output_delay.
+Warning: There are 6 unconstrained endpoints.
+number instances in verilog is 721
+[INFO IFP-0001] Added 92 rows of 726 site CoreSite.
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/make_tracks.tcl
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/fastroute.tcl
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/designs/ihp-sg13g2/i2c-gpio-expander/pad.tcl
+[INFO PAD-0116] Creating terminal for io_address_0_PAD on TopMetal2 at (910.000um, 490.000um) - (980.000um, 560.000um)
+[INFO PAD-0116] Creating terminal for io_address_1_PAD on TopMetal2 at (910.000um, 573.000um) - (980.000um, 643.000um)
+[INFO PAD-0116] Creating terminal for io_address_2_PAD on TopMetal2 at (910.000um, 655.000um) - (980.000um, 725.000um)
+[INFO PAD-0116] Creating terminal for io_clock_PAD on TopMetal2 at (326.000um, 70.000um) - (396.000um, 140.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_0_PAD on TopMetal2 at (326.000um, 910.000um) - (396.000um, 980.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_1_PAD on TopMetal2 at (408.000um, 910.000um) - (478.000um, 980.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_2_PAD on TopMetal2 at (490.000um, 910.000um) - (560.000um, 980.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_3_PAD on TopMetal2 at (572.000um, 910.000um) - (642.000um, 980.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_4_PAD on TopMetal2 at (654.000um, 910.000um) - (724.000um, 980.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_5_PAD on TopMetal2 at (70.000um, 326.000um) - (140.000um, 396.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_6_PAD on TopMetal2 at (70.000um, 408.000um) - (140.000um, 478.000um)
+[INFO PAD-0116] Creating terminal for io_gpio_7_PAD on TopMetal2 at (70.000um, 490.000um) - (140.000um, 560.000um)
+[INFO PAD-0116] Creating terminal for io_i2c_interrupt_PAD on TopMetal2 at (654.000um, 70.000um) - (724.000um, 140.000um)
+[INFO PAD-0116] Creating terminal for io_i2c_scl_PAD on TopMetal2 at (490.000um, 70.000um) - (560.000um, 140.000um)
+[INFO PAD-0116] Creating terminal for io_i2c_sda_PAD on TopMetal2 at (572.000um, 70.000um) - (642.000um, 140.000um)
+[INFO PAD-0116] Creating terminal for io_reset_PAD on TopMetal2 at (408.000um, 70.000um) - (478.000um, 140.000um)
+[WARNING PAD-0033] Could not find a block terminal associated with net: "VDD", creating now.
+[INFO PAD-0116] Creating terminal for VDD on TopMetal2 at (910.000um, 326.000um) - (980.000um, 396.000um)
+[WARNING PAD-0033] Could not find a block terminal associated with net: "VSS", creating now.
+[INFO PAD-0116] Creating terminal for VSS on TopMetal2 at (910.000um, 408.000um) - (980.000um, 478.000um)
+[WARNING PAD-0033] Could not find a block terminal associated with net: "IOVSS", creating now.
+[INFO PAD-0116] Creating terminal for IOVSS on TopMetal2 at (70.000um, 573.000um) - (140.000um, 643.000um)
+[WARNING PAD-0033] Could not find a block terminal associated with net: "IOVDD", creating now.
+[INFO PAD-0116] Creating terminal for IOVDD on TopMetal2 at (70.000um, 655.000um) - (140.000um, 725.000um)
+Repair tie lo fanout...
+[INFO RSZ-0042] Inserted 30 tie sg13g2_tielo instances.
+Repair tie hi fanout...
+[INFO RSZ-0042] Inserted 130 tie sg13g2_tiehi instances.
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,buffer,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove 
+[INFO RSZ-0098] No setup violations found
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1uA
+ power 1pW
+ distance 1um
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 34221 um^2 28% utilization.
+write_db ./results/ihp-sg13g2/i2c-gpio-expander/base/2_1_floorplan.odb
+write_sdc -no_timestamp ./results/ihp-sg13g2/i2c-gpio-expander/base/2_1_floorplan.sdc
+Elapsed time: 0:00.29[h:]min:sec. CPU time: user 0.32 sys 0.12 (155%). Peak memory: 124844KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_1_floorplan                      0            121 02ff22c94a9b476f3d66

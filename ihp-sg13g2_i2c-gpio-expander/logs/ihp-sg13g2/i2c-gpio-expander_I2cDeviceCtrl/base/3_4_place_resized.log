@@ -1,0 +1,93 @@
+OpenROAD 6975124cf258e3be0db86bd2e59246b7f0e9f0c7 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_slow_1p08V_125C.lib
+read_liberty -corner typ /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_fast_1p32V_m40C.lib
+read_db ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/3_3_place_gp.odb
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       625
+       10 |     +0.0% |       0 |       0 |             0 |       615
+       20 |     +0.0% |       0 |       0 |             0 |       605
+       30 |     +0.0% |       0 |       0 |             0 |       595
+       40 |     +0.0% |       0 |       0 |             0 |       585
+       50 |     +0.0% |       0 |       0 |             0 |       575
+       60 |     +0.0% |       0 |       0 |             0 |       565
+       70 |     +0.0% |       0 |       0 |             0 |       555
+       80 |     +0.0% |       0 |       0 |             0 |       545
+       90 |     +0.0% |       0 |       0 |             0 |       535
+      100 |     +0.0% |       0 |       0 |             0 |       525
+      110 |     +0.0% |       0 |       0 |             0 |       515
+      120 |     +0.0% |       0 |       0 |             0 |       505
+      130 |     +0.0% |       0 |       0 |             0 |       495
+      140 |     +0.0% |       0 |       0 |             0 |       485
+      150 |     +0.0% |       0 |       0 |             0 |       475
+      160 |     +0.0% |       0 |       0 |             0 |       465
+      170 |     +0.0% |       0 |       0 |             0 |       455
+      180 |     +0.0% |       0 |       0 |             0 |       445
+      190 |     +0.0% |       0 |       0 |             0 |       435
+      200 |     +0.0% |       0 |       0 |             0 |       425
+      210 |     +0.0% |       0 |       0 |             0 |       415
+      220 |     +0.0% |       0 |       0 |             0 |       405
+      230 |     +0.0% |       0 |       0 |             0 |       395
+      240 |     +0.0% |       0 |       0 |             0 |       385
+      250 |     +0.0% |       0 |       0 |             0 |       375
+      260 |     +0.0% |       0 |       0 |             0 |       365
+      270 |     +0.0% |       0 |       0 |             0 |       355
+      280 |     +0.0% |       0 |       0 |             0 |       345
+      290 |     +0.0% |       0 |       0 |             0 |       335
+      300 |     +0.0% |       0 |       0 |             0 |       325
+      310 |     +0.0% |       0 |       0 |             0 |       315
+      320 |     +0.0% |       0 |       0 |             0 |       305
+      330 |     +0.0% |       0 |       0 |             0 |       295
+      340 |     +0.0% |       0 |       0 |             0 |       285
+      350 |     +0.0% |       0 |       0 |             0 |       275
+      360 |     +0.0% |       0 |       0 |             0 |       265
+      370 |     +0.0% |       0 |       0 |             0 |       255
+      380 |     +0.0% |       0 |       0 |             0 |       245
+      390 |     +0.0% |       0 |       0 |             0 |       235
+      400 |     +0.0% |       0 |       0 |             0 |       225
+      410 |     +0.0% |       0 |       0 |             0 |       215
+      420 |     +0.0% |       0 |       0 |             0 |       205
+      430 |     +0.0% |       0 |       0 |             0 |       195
+      440 |     +0.0% |       0 |       0 |             0 |       185
+      450 |     +0.0% |       0 |       0 |             0 |       175
+      460 |     +0.0% |       0 |       0 |             0 |       165
+      470 |     +0.0% |       0 |       0 |             0 |       155
+      480 |     +0.0% |       0 |       0 |             0 |       145
+      490 |     +0.0% |       0 |       0 |             0 |       135
+      500 |     +0.0% |       0 |       0 |             0 |       125
+      510 |     +0.0% |       0 |       0 |             0 |       115
+      520 |     +0.0% |       0 |       0 |             0 |       105
+      530 |     +0.0% |       0 |       0 |             0 |        95
+      540 |     +0.0% |       0 |       0 |             0 |        85
+      550 |     +0.0% |       0 |       0 |             0 |        75
+      560 |     +0.0% |       0 |       0 |             0 |        65
+      570 |     +0.0% |       0 |       0 |             0 |        55
+      580 |     +0.0% |       0 |       0 |             0 |        45
+      590 |     +0.0% |       0 |       0 |             0 |        35
+      600 |     +0.0% |       0 |       0 |             0 |        25
+      610 |     +0.0% |       0 |       0 |             0 |        15
+      620 |     +0.0% |       0 |       0 |             0 |         5
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 8569 um^2 71% utilization.
+Instance count before 570, after 570
+Pin count before 1766, after 1766
+write_db ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/3_4_place_resized.odb
+Elapsed time: 0:00.53[h:]min:sec. CPU time: user 0.65 sys 0.15 (152%). Peak memory: 122980KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_4_place_resized                  0            120 65db6f7777e6c5261585

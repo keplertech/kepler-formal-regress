@@ -1,0 +1,279 @@
+OpenROAD 6975124cf258e3be0db86bd2e59246b7f0e9f0c7 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_slow_1p08V_125C.lib
+read_liberty -corner typ /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_fast_1p32V_m40C.lib
+read_db ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/4_cts.odb
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/setRC.tcl
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Cont
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer TopVia1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer TopVia1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer TopVia2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer TopVia2
+
+Units:                1000
+Number of layers:     15
+Number of macros:     84
+Number of vias:       77
+Number of viarulegen: 6
+
+[INFO DRT-0150] Reading design.
+
+Design:                   I2cDeviceCtrl
+Die area:                 ( 0 0 ) ( 147840 147420 )
+Number of track patterns: 14
+Number of DEF vias:       0
+Number of components:     589
+Number of terminals:      72
+Number of snets:          4
+Number of nets:           642
+
+[INFO DRT-0167] List of default vias:
+  Layer Via2
+    default via: Via2_YX
+  Layer Via3
+    default via: Via3_XY
+  Layer Via4
+    default via: Via4_YX
+  Layer TopVia1
+    default via: TopVia1EWNS
+  Layer TopVia2
+    default via: TopVia2EWNS
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 434.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete GatPoly.
+[INFO DRT-0024]   Complete Cont.
+[INFO DRT-0024]   Complete Metal1.
+[INFO DRT-0024]   Complete Via1.
+[INFO DRT-0024]   Complete Metal2.
+[INFO DRT-0024]   Complete Via2.
+[INFO DRT-0024]   Complete Metal3.
+[INFO DRT-0024]   Complete Via3.
+[INFO DRT-0024]   Complete Metal4.
+[INFO DRT-0024]   Complete Via4.
+[INFO DRT-0024]   Complete Metal5.
+[INFO DRT-0024]   Complete TopVia1.
+[INFO DRT-0024]   Complete TopMetal1.
+[INFO DRT-0024]   Complete TopVia2.
+[INFO DRT-0024]   Complete TopMetal2.
+[INFO DRT-0033] GatPoly shape region query size = 0.
+[INFO DRT-0033] Cont shape region query size = 0.
+[INFO DRT-0033] Metal1 shape region query size = 15237.
+[INFO DRT-0033] Via1 shape region query size = 180.
+[INFO DRT-0033] Metal2 shape region query size = 121.
+[INFO DRT-0033] Via2 shape region query size = 180.
+[INFO DRT-0033] Metal3 shape region query size = 129.
+[INFO DRT-0033] Via3 shape region query size = 180.
+[INFO DRT-0033] Metal4 shape region query size = 84.
+[INFO DRT-0033] Via4 shape region query size = 656.
+[INFO DRT-0033] Metal5 shape region query size = 39.
+[INFO DRT-0033] TopVia1 shape region query size = 0.
+[INFO DRT-0033] TopMetal1 shape region query size = 0.
+[INFO DRT-0033] TopVia2 shape region query size = 0.
+[INFO DRT-0033] TopMetal2 shape region query size = 0.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0076]   Complete 1000 pins.
+[INFO DRT-0076]   Complete 2000 pins.
+[INFO DRT-0078]   Complete 2259 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0079]   Complete 200 unique inst patterns.
+[INFO DRT-0079]   Complete 300 unique inst patterns.
+[INFO DRT-0079]   Complete 400 unique inst patterns.
+[INFO DRT-0081]   Complete 434 unique inst patterns.
+[INFO DRT-0084]   Complete 292 groups.
+#scanned instances     = 589
+#unique  instances     = 434
+#stdCellGenAp          = 19317
+#stdCellValidPlanarAp  = 0
+#stdCellValidViaAp     = 12070
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 1802
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:01:34, elapsed time = 00:00:05, memory = 108.66 (MB), peak = 108.66 (MB)
+Took 6 seconds: pin_access
+global_route -congestion_report_file ./reports/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[INFO GRT-0020] Min routing layer: Metal2
+[INFO GRT-0021] Max routing layer: Metal4
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer Metal1  Track-Pitch = 0.4800  line-2-Via Pitch: 0.3650
+[INFO GRT-0088] Layer Metal2  Track-Pitch = 0.4200  line-2-Via Pitch: 0.4150
+[INFO GRT-0088] Layer Metal3  Track-Pitch = 0.4800  line-2-Via Pitch: 0.4150
+[INFO GRT-0088] Layer Metal4  Track-Pitch = 0.4200  line-2-Via Pitch: 0.4100
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 18 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 17
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+Metal1     Horizontal          0             0          0.00%
+Metal2     Vertical         7542          7014          7.00%
+Metal3     Horizontal       6678          6172          7.58%
+Metal4     Vertical         6651          6144          7.62%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 2945
+[INFO GRT-0198] Via related Steiner nodes: 35
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 3543
+[INFO GRT-0112] Final usage 3D: 12394
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+Metal1               0             0            0.00%             0 /  0 /  0
+Metal2            7014           902           12.86%             0 /  0 /  0
+Metal3            6172           861           13.95%             0 /  0 /  0
+Metal4            6144             2            0.03%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total            19330          1765            9.13%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 18333 um
+[INFO GRT-0014] Routed nets: 642
+[INFO GRT-0303] Global routing runtime = 00:00:00
+estimate_parasitics -global_routing
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       644
+       10 |     +0.0% |       0 |       0 |             0 |       634
+       20 |     +0.0% |       0 |       0 |             0 |       624
+       30 |     +0.0% |       0 |       0 |             0 |       614
+       40 |     +0.0% |       0 |       0 |             0 |       604
+       50 |     +0.0% |       0 |       0 |             0 |       594
+       60 |     +0.0% |       0 |       0 |             0 |       584
+       70 |     +0.0% |       0 |       0 |             0 |       574
+       80 |     +0.0% |       0 |       0 |             0 |       564
+       90 |     +0.0% |       0 |       0 |             0 |       554
+      100 |     +0.0% |       0 |       0 |             0 |       544
+      110 |     +0.0% |       0 |       0 |             0 |       534
+      120 |     +0.0% |       0 |       0 |             0 |       524
+      130 |     +0.0% |       0 |       0 |             0 |       514
+      140 |     +0.0% |       0 |       0 |             0 |       504
+      150 |     +0.0% |       0 |       0 |             0 |       494
+      160 |     +0.0% |       0 |       0 |             0 |       484
+      170 |     +0.0% |       0 |       0 |             0 |       474
+      180 |     +0.0% |       0 |       0 |             0 |       464
+      190 |     +0.0% |       0 |       0 |             0 |       454
+      200 |     +0.0% |       0 |       0 |             0 |       444
+      210 |     +0.0% |       0 |       0 |             0 |       434
+      220 |     +0.0% |       0 |       0 |             0 |       424
+      230 |     +0.0% |       0 |       0 |             0 |       414
+      240 |     +0.0% |       0 |       0 |             0 |       404
+      250 |     +0.0% |       0 |       0 |             0 |       394
+      260 |     +0.0% |       0 |       0 |             0 |       384
+      270 |     +0.0% |       0 |       0 |             0 |       374
+      280 |     +0.0% |       0 |       0 |             0 |       364
+      290 |     +0.0% |       0 |       0 |             0 |       354
+      300 |     +0.0% |       0 |       0 |             0 |       344
+      310 |     +0.0% |       0 |       0 |             0 |       334
+      320 |     +0.0% |       0 |       0 |             0 |       324
+      330 |     +0.0% |       0 |       0 |             0 |       314
+      340 |     +0.0% |       0 |       0 |             0 |       304
+      350 |     +0.0% |       0 |       0 |             0 |       294
+      360 |     +0.0% |       0 |       0 |             0 |       284
+      370 |     +0.0% |       0 |       0 |             0 |       274
+      380 |     +0.0% |       0 |       0 |             0 |       264
+      390 |     +0.0% |       0 |       0 |             0 |       254
+      400 |     +0.0% |       0 |       0 |             0 |       244
+      410 |     +0.0% |       0 |       0 |             0 |       234
+      420 |     +0.0% |       0 |       0 |             0 |       224
+      430 |     +0.0% |       0 |       0 |             0 |       214
+      440 |     +0.0% |       0 |       0 |             0 |       204
+      450 |     +0.0% |       0 |       0 |             0 |       194
+      460 |     +0.0% |       0 |       0 |             0 |       184
+      470 |     +0.0% |       0 |       0 |             0 |       174
+      480 |     +0.0% |       0 |       0 |             0 |       164
+      490 |     +0.0% |       0 |       0 |             0 |       154
+      500 |     +0.0% |       0 |       0 |             0 |       144
+      510 |     +0.0% |       0 |       0 |             0 |       134
+      520 |     +0.0% |       0 |       0 |             0 |       124
+      530 |     +0.0% |       0 |       0 |             0 |       114
+      540 |     +0.0% |       0 |       0 |             0 |       104
+      550 |     +0.0% |       0 |       0 |             0 |        94
+      560 |     +0.0% |       0 |       0 |             0 |        84
+      570 |     +0.0% |       0 |       0 |             0 |        74
+      580 |     +0.0% |       0 |       0 |             0 |        64
+      590 |     +0.0% |       0 |       0 |             0 |        54
+      600 |     +0.0% |       0 |       0 |             0 |        44
+      610 |     +0.0% |       0 |       0 |             0 |        34
+      620 |     +0.0% |       0 |       0 |             0 |        24
+      630 |     +0.0% |       0 |       0 |             0 |        14
+      640 |     +0.0% |       0 |       0 |             0 |         4
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+global_route -start_incremental
+detailed_placement
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL            9705.2 u
+legalized HPWL           9705.2 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file ./reports/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/congestion_post_repair_design.rpt
+Repair setup and hold violations...
+estimate_parasitics -global_routing
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0033] No hold violations found.
+global_route -start_incremental
+detailed_placement
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL            9705.2 u
+legalized HPWL           9705.2 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file ./reports/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/congestion_post_repair_timing.rpt
+global_route -start_incremental
+global_route -end_incremental -congestion_report_file ./reports/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/congestion_post_recover_power.rpt
+Repair antennas...
+[INFO GRT-0012] Found 0 antenna violations.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Estimate parasitics...
+estimate_parasitics -global_routing
+Report metrics stage 5, global route...
+
+==========================================================================
+global route report_design_area
+--------------------------------------------------------------------------
+Design area 8972 um^2 74% utilization.
+[INFO FLW-0007] clock clock period 20.000000
+[INFO FLW-0008] Clock clock period 8.632
+[INFO FLW-0009] Clock clock slack 10.914
+[INFO FLW-0011] Path endpoint path count 94
+write_db ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/5_1_grt.odb
+write_sdc -no_timestamp ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/5_1_grt.sdc
+Elapsed time: 0:06.37[h:]min:sec. CPU time: user 97.81 sys 0.33 (1539%). Peak memory: 202940KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+5_1_grt                            6            198 b903f8715564579467e2

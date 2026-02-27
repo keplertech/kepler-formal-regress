@@ -1,0 +1,96 @@
+OpenROAD 6975124cf258e3be0db86bd2e59246b7f0e9f0c7 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_slow_1p08V_125C.lib
+read_liberty -corner slow ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_slow.lib
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_io_slow_1p08V_3p0V_125C.lib
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_fast_1p32V_m40C.lib
+read_liberty -corner fast ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_fast.lib
+[WARNING STA-1140] ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_fast.lib line 1, library I2cDeviceCtrl already exists.
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_io_fast_1p32V_3p6V_m40C.lib
+read_db ./results/ihp-sg13g2/i2c-gpio-expander/base/3_4_place_resized.odb
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/setRC.tcl
+Placement Analysis
+---------------------------------
+total displacement       2222.4 u
+average displacement        2.6 u
+max displacement            9.4 u
+original HPWL           24914.6 u
+legalized HPWL          26635.9 u
+delta HPWL                    7 %
+
+Detailed placement improvement.
+[INFO DPL-0401] Setting random seed to 1.
+[INFO DPL-0402] Setting maximum displacement 5 1 to 18900 3780 units.
+[INFO DPL-0320] Collected 58 fixed cells.
+[INFO DPL-0318] Collected 860 single height cells.
+[INFO DPL-0321] Collected 0 wide cells.
+[INFO DPL-0322] Image (351360, 351540) - (699840, 699300)
+[INFO DPL-0310] Assigned 860 cells into segments.  Movement in X-direction is 0.000000, movement in Y-direction is 0.000000.
+[INFO DPL-0313] Found 0 cells in wrong regions.
+[INFO DPL-0315] Found 0 row alignment problems.
+[INFO DPL-0314] Found 0 site alignment problems.
+[INFO DPL-0311] Found 0 overlaps between adjacent cells.
+[INFO DPL-0312] Found 0 edge spacing violations and 0 padding violations.
+[INFO DPL-0303] Running algorithm for independent set matching.
+[INFO DPL-0300] Set matching objective is wirelength.
+[INFO DPL-0301] Pass   1 of matching; objective is 2.578609e+07.
+[INFO DPL-0302] End of matching; objective is 2.576798e+07, improvement is 0.07 percent.
+[INFO DPL-0303] Running algorithm for global swaps.
+[INFO DPL-0306] Pass   1 of global swaps; hpwl is 2.540203e+07.
+[INFO DPL-0306] Pass   2 of global swaps; hpwl is 2.535537e+07.
+[INFO DPL-0307] End of global swaps; objective is 2.535537e+07, improvement is 1.60 percent.
+[INFO DPL-0303] Running algorithm for vertical swaps.
+[INFO DPL-0308] Pass   1 of vertical swaps; hpwl is 2.529893e+07.
+[INFO DPL-0309] End of vertical swaps; objective is 2.529893e+07, improvement is 0.22 percent.
+[INFO DPL-0303] Running algorithm for reordering.
+[INFO DPL-0304] Pass   1 of reordering; objective is 2.527861e+07.
+[INFO DPL-0305] End of reordering; objective is 2.527861e+07, improvement is 0.08 percent.
+[INFO DPL-0303] Running algorithm for random improvement.
+[INFO DPL-0324] Random improver is using random generator.
+[INFO DPL-0325] Random improver is using hpwl objective.
+[INFO DPL-0326] Random improver cost string is (a).
+[INFO DPL-0332] End of pass, Generator random called 17200 times.
+[INFO DPL-0335] Generator random, Cumulative attempts 17200, swaps 2516, moves  4430 since last reset.
+[INFO DPL-0333] End of pass, Objective hpwl, Initial cost 2.482561e+07, Scratch cost 2.450422e+07, Incremental cost 2.450422e+07, Mismatch? N
+[INFO DPL-0338] End of pass, Total cost is 2.450422e+07.
+[INFO DPL-0327] Pass   1 of random improver; improvement in cost is 1.29 percent.
+[INFO DPL-0332] End of pass, Generator random called 17200 times.
+[INFO DPL-0335] Generator random, Cumulative attempts 34400, swaps 4952, moves  8945 since last reset.
+[INFO DPL-0333] End of pass, Objective hpwl, Initial cost 2.450422e+07, Scratch cost 2.442022e+07, Incremental cost 2.442022e+07, Mismatch? N
+[INFO DPL-0338] End of pass, Total cost is 2.442022e+07.
+[INFO DPL-0327] Pass   2 of random improver; improvement in cost is 0.34 percent.
+[INFO DPL-0328] End of random improver; improvement is 1.632943 percent.
+[INFO DPL-0380] Cell flipping.
+[INFO DPL-0382] Changed 0 cell orientations for row compatibility.
+[INFO DPL-0383] Performed 243 cell flips.
+[INFO DPL-0384] End of flipping; objective is 2.458354e+07, improvement is 1.19 percent.
+[INFO DPL-0313] Found 0 cells in wrong regions.
+[INFO DPL-0315] Found 0 row alignment problems.
+[INFO DPL-0314] Found 0 site alignment problems.
+[INFO DPL-0311] Found 0 overlaps between adjacent cells.
+[INFO DPL-0312] Found 0 edge spacing violations and 0 padding violations.
+Detailed Improvement Results
+------------------------------------------
+Original HPWL            26635.9 u (   12726.4,    13909.5)
+Final HPWL               25630.3 u (   12148.6,    13481.7)
+Delta HPWL                  -3.8 % (      -4.5,       -3.1)
+
+[INFO DPL-0020] Mirrored 47 instances
+[INFO DPL-0021] HPWL before           25630.3 u
+[INFO DPL-0022] HPWL after            25594.7 u
+[INFO DPL-0023] HPWL delta               -0.1 %
+[INFO FLW-0012] Placement violations .
+estimate_parasitics -placement
+Report metrics stage 3, detailed place...
+
+==========================================================================
+detailed place report_design_area
+--------------------------------------------------------------------------
+Design area 34109 um^2 28% utilization.
+write_db ./results/ihp-sg13g2/i2c-gpio-expander/base/3_5_place_dp.odb
+Elapsed time: 0:00.44[h:]min:sec. CPU time: user 0.43 sys 0.23 (151%). Peak memory: 108952KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_5_place_dp                       0            106 eed8f1a456970d19c119

@@ -1,0 +1,7 @@
+format: verilog
+input_paths:
+  - ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/4_before_rsz_lec.v
+  - ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/4_after_rsz_lec.v
+liberty_files:
+ - /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+log_file: ./logs/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/4_rsz_lec_check.log

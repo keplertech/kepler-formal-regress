@@ -1,0 +1,370 @@
+
+==========================================================================
+detailed place report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+detailed place report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+detailed place report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 11.02
+
+==========================================================================
+detailed place report_clock_min_period
+--------------------------------------------------------------------------
+clock period_min = 8.98 fmax = 111.31
+
+==========================================================================
+detailed place report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: io_i2c_sda_read_buffercc/buffers_0$_SDFF_PN1_
+            (rising edge-triggered flip-flop clocked by clock)
+Endpoint: io_i2c_sda_read_buffercc/buffers_1$_SDFF_PN1_
+          (rising edge-triggered flip-flop clocked by clock)
+Path Group: clock
+Path Type: min
+Corner: fast
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.25    0.00    0.00   clock clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.25    0.00    0.00 ^ io_i2c_sda_read_buffercc/buffers_0$_SDFF_PN1_/CLK (sg13g2_dfrbpq_1)
+     1    0.00    0.01    0.16    0.16 v io_i2c_sda_read_buffercc/buffers_0$_SDFF_PN1_/Q (sg13g2_dfrbpq_1)
+                                         io_i2c_sda_read_buffercc/buffers_0 (net)
+                  0.01    0.00    0.16 v io_i2c_sda_read_buffercc/_4_/A_N (sg13g2_nand2b_1)
+     1    0.00    0.02    0.04    0.20 v io_i2c_sda_read_buffercc/_4_/Y (sg13g2_nand2b_1)
+                                         io_i2c_sda_read_buffercc/_1_ (net)
+                  0.02    0.00    0.20 v io_i2c_sda_read_buffercc/buffers_1$_SDFF_PN1_/D (sg13g2_dfrbpq_1)
+                                  0.20   data arrival time
+
+                  0.25    0.00    0.00   clock clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.15    0.15   clock uncertainty
+                          0.00    0.15   clock reconvergence pessimism
+                                  0.15 ^ io_i2c_sda_read_buffercc/buffers_1$_SDFF_PN1_/CLK (sg13g2_dfrbpq_1)
+                          0.01    0.16   library hold time
+                                  0.16   data required time
+-----------------------------------------------------------------------------
+                                  0.16   data required time
+                                 -0.20   data arrival time
+-----------------------------------------------------------------------------
+                                  0.04   slack (MET)
+
+
+
+==========================================================================
+detailed place report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: io_rsp_valid (input port clocked by clock)
+Endpoint: io_rsp_ready (output port clocked by clock)
+Path Group: clock
+Path Type: max
+Corner: slow
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.25    0.00    0.00   clock clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          4.00    4.00 ^ input external delay
+     1    0.01    0.00    0.00    4.00 ^ io_rsp_valid (in)
+                                         io_rsp_valid (net)
+                  0.00    0.00    4.00 ^ input131/A (sg13g2_buf_1)
+     2    0.01    0.06    0.10    4.10 ^ input131/X (sg13g2_buf_1)
+                                         net130 (net)
+                  0.06    0.00    4.10 ^ _420_/A (sg13g2_inv_1)
+     2    0.01    0.05    0.07    4.17 v _420_/Y (sg13g2_inv_1)
+                                         _128_ (net)
+                  0.05    0.00    4.17 v _433_/C (sg13g2_nor3_1)
+     5    0.02    0.47    0.41    4.59 ^ _433_/Y (sg13g2_nor3_1)
+                                         net144 (net)
+                  0.47    0.00    4.59 ^ output145/A (sg13g2_buf_1)
+     1    0.00    0.06    0.25    4.83 ^ output145/X (sg13g2_buf_1)
+                                         io_rsp_ready (net)
+                  0.06    0.00    4.83 ^ io_rsp_ready (out)
+                                  4.83   data arrival time
+
+                  0.25   20.00   20.00   clock clock (rise edge)
+                          0.00   20.00   clock network delay (ideal)
+                         -0.15   19.85   clock uncertainty
+                          0.00   19.85   clock reconvergence pessimism
+                         -4.00   15.85   output external delay
+                                 15.85   data required time
+-----------------------------------------------------------------------------
+                                 15.85   data required time
+                                 -4.83   data arrival time
+-----------------------------------------------------------------------------
+                                 11.02   slack (MET)
+
+
+
+==========================================================================
+detailed place report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: io_rsp_valid (input port clocked by clock)
+Endpoint: io_rsp_ready (output port clocked by clock)
+Path Group: clock
+Path Type: max
+Corner: slow
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.25    0.00    0.00   clock clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          4.00    4.00 ^ input external delay
+     1    0.01    0.00    0.00    4.00 ^ io_rsp_valid (in)
+                                         io_rsp_valid (net)
+                  0.00    0.00    4.00 ^ input131/A (sg13g2_buf_1)
+     2    0.01    0.06    0.10    4.10 ^ input131/X (sg13g2_buf_1)
+                                         net130 (net)
+                  0.06    0.00    4.10 ^ _420_/A (sg13g2_inv_1)
+     2    0.01    0.05    0.07    4.17 v _420_/Y (sg13g2_inv_1)
+                                         _128_ (net)
+                  0.05    0.00    4.17 v _433_/C (sg13g2_nor3_1)
+     5    0.02    0.47    0.41    4.59 ^ _433_/Y (sg13g2_nor3_1)
+                                         net144 (net)
+                  0.47    0.00    4.59 ^ output145/A (sg13g2_buf_1)
+     1    0.00    0.06    0.25    4.83 ^ output145/X (sg13g2_buf_1)
+                                         io_rsp_ready (net)
+                  0.06    0.00    4.83 ^ io_rsp_ready (out)
+                                  4.83   data arrival time
+
+                  0.25   20.00   20.00   clock clock (rise edge)
+                          0.00   20.00   clock network delay (ideal)
+                         -0.15   19.85   clock uncertainty
+                          0.00   19.85   clock reconvergence pessimism
+                         -4.00   15.85   output external delay
+                                 15.85   data required time
+-----------------------------------------------------------------------------
+                                 15.85   data required time
+                                 -4.83   data arrival time
+-----------------------------------------------------------------------------
+                                 11.02   slack (MET)
+
+
+
+==========================================================================
+detailed place report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+
+==========================================================================
+detailed place max_slew_check_slack
+--------------------------------------------------------------------------
+1.7188783884048462
+
+==========================================================================
+detailed place max_slew_check_limit
+--------------------------------------------------------------------------
+2.5074000358581543
+
+==========================================================================
+detailed place max_slew_check_slack_limit
+--------------------------------------------------------------------------
+0.6855
+
+==========================================================================
+detailed place max_fanout_check_slack
+--------------------------------------------------------------------------
+0.0
+
+==========================================================================
+detailed place max_fanout_check_limit
+--------------------------------------------------------------------------
+8.0
+
+==========================================================================
+detailed place max_fanout_check_slack_limit
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+detailed place max_capacitance_check_slack
+--------------------------------------------------------------------------
+0.24169443547725677
+
+==========================================================================
+detailed place max_capacitance_check_limit
+--------------------------------------------------------------------------
+0.30000001192092896
+
+==========================================================================
+detailed place max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.8056
+
+==========================================================================
+detailed place max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 0
+
+==========================================================================
+detailed place max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+detailed place max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+detailed place setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 0
+
+==========================================================================
+detailed place hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+detailed place report_checks -path_delay max reg to reg
+--------------------------------------------------------------------------
+Startpoint: filter_timer_counter[0]$_SDFF_PN0_
+            (rising edge-triggered flip-flop clocked by clock)
+Endpoint: timeout_value[9]$_SDFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by clock)
+Path Group: clock
+Path Type: max
+Corner: slow
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ filter_timer_counter[0]$_SDFF_PN0_/CLK (sg13g2_dfrbpq_1)
+   0.46    0.46 v filter_timer_counter[0]$_SDFF_PN0_/Q (sg13g2_dfrbpq_1)
+   0.46    0.92 ^ _518_/Y (sg13g2_nor4_2)
+   0.39    1.31 ^ _521_/X (sg13g2_and3_1)
+   0.61    1.92 v _638_/Y (sg13g2_nand3_1)
+   0.43    2.34 v place188/X (sg13g2_buf_1)
+   0.16    2.50 ^ _726_/Y (sg13g2_a21oi_1)
+   0.14    2.64 ^ _727_/X (sg13g2_a21o_1)
+   0.00    2.64 ^ timeout_value[9]$_SDFFE_PN0P_/D (sg13g2_dfrbpq_1)
+           2.64   data arrival time
+
+  20.00   20.00   clock clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.15   19.85   clock uncertainty
+   0.00   19.85   clock reconvergence pessimism
+          19.85 ^ timeout_value[9]$_SDFFE_PN0P_/CLK (sg13g2_dfrbpq_1)
+  -0.15   19.70   library setup time
+          19.70   data required time
+---------------------------------------------------------
+          19.70   data required time
+          -2.64   data arrival time
+---------------------------------------------------------
+          17.05   slack (MET)
+
+
+
+==========================================================================
+detailed place report_checks -path_delay min reg to reg
+--------------------------------------------------------------------------
+Startpoint: io_i2c_sda_read_buffercc/buffers_0$_SDFF_PN1_
+            (rising edge-triggered flip-flop clocked by clock)
+Endpoint: io_i2c_sda_read_buffercc/buffers_1$_SDFF_PN1_
+          (rising edge-triggered flip-flop clocked by clock)
+Path Group: clock
+Path Type: min
+Corner: fast
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ io_i2c_sda_read_buffercc/buffers_0$_SDFF_PN1_/CLK (sg13g2_dfrbpq_1)
+   0.16    0.16 v io_i2c_sda_read_buffercc/buffers_0$_SDFF_PN1_/Q (sg13g2_dfrbpq_1)
+   0.04    0.20 v io_i2c_sda_read_buffercc/_4_/Y (sg13g2_nand2b_1)
+   0.00    0.20 v io_i2c_sda_read_buffercc/buffers_1$_SDFF_PN1_/D (sg13g2_dfrbpq_1)
+           0.20   data arrival time
+
+   0.00    0.00   clock clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.15    0.15   clock uncertainty
+   0.00    0.15   clock reconvergence pessimism
+           0.15 ^ io_i2c_sda_read_buffercc/buffers_1$_SDFF_PN1_/CLK (sg13g2_dfrbpq_1)
+   0.01    0.16   library hold time
+           0.16   data required time
+---------------------------------------------------------
+           0.16   data required time
+          -0.20   data arrival time
+---------------------------------------------------------
+           0.04   slack (MET)
+
+
+
+==========================================================================
+detailed place critical path target clock latency max path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+detailed place critical path target clock latency min path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+detailed place critical path source clock latency min path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+detailed place critical path delay
+--------------------------------------------------------------------------
+4.8336
+
+==========================================================================
+detailed place critical path slack
+--------------------------------------------------------------------------
+11.0164
+
+==========================================================================
+detailed place slack div critical path delay
+--------------------------------------------------------------------------
+227.912943
+
+==========================================================================
+detailed place report_power
+--------------------------------------------------------------------------
+Corner: slow
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             1.61e-04   8.02e-06   1.72e-07   1.69e-04  77.7%
+Combinational          2.33e-05   2.50e-05   2.21e-07   4.85e-05  22.3%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  1.84e-04   3.30e-05   3.92e-07   2.18e-04 100.0%
+                          84.7%      15.2%       0.2%
+Corner: typ
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             2.04e-04   1.04e-05   8.58e-08   2.14e-04  77.7%
+Combinational          2.93e-05   3.23e-05   7.98e-08   6.17e-05  22.3%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  2.33e-04   4.27e-05   1.66e-07   2.76e-04 100.0%
+                          84.5%      15.5%       0.1%
+Corner: fast
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             2.68e-04   1.33e-05   1.12e-07   2.82e-04  78.3%
+Combinational          3.66e-05   4.12e-05   1.45e-07   7.80e-05  21.7%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  3.05e-04   5.45e-05   2.58e-07   3.60e-04 100.0%
+                          84.8%      15.2%       0.1%

@@ -1,0 +1,131 @@
+OpenROAD 6975124cf258e3be0db86bd2e59246b7f0e9f0c7 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_slow_1p08V_125C.lib
+read_liberty -corner slow ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_slow.lib
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_io_slow_1p08V_3p0V_125C.lib
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_fast_1p32V_m40C.lib
+read_liberty -corner fast ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_fast.lib
+[WARNING STA-1140] ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_fast.lib line 1, library I2cDeviceCtrl already exists.
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_io_fast_1p32V_3p6V_m40C.lib
+read_db ./results/ihp-sg13g2/i2c-gpio-expander/base/3_place.odb
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/setRC.tcl
+clock_tree_synthesis -sink_clustering_enable -repair_clock_nets
+[INFO CTS-0050] Root buffer is sg13g2_buf_16.
+[INFO CTS-0051] Sink buffer is sg13g2_buf_16.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sg13g2_buf_16
+[INFO CTS-0049] Characterization buffer is sg13g2_buf_16.
+[INFO CTS-0007] Net "clock" found for clock "clk_core".
+[INFO CTS-0011]  Clock net "clock" for macros has 1 sinks.
+[INFO CTS-0011]  Clock net "clock_regs" for registers has 122 sinks.
+[INFO CTS-0008] TritonCTS found 2 clock nets.
+[INFO CTS-0097] Characterization used 1 buffer(s) types.
+[INFO CTS-0201] 1 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clock.
+[INFO CTS-0028]  Total number of sinks: 1.
+[INFO CTS-0029]  Macro  sinks will be clustered in groups of up to 4 and with maximum cluster diameter of 295.7 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 18900  dbu (18 um).
+[INFO CTS-0023]  Original sink region: [(398160, 519000), (398160, 519000)].
+[INFO CTS-0024]  Normalized sink region: [(21.0667, 27.4603), (21.0667, 27.4603)].
+[INFO CTS-0025]     Width:  0.0000.
+[INFO CTS-0026]     Height: 0.0000.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 1
+    Sub-region size: 0.0000 X 0.0000
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 8.
+[INFO CTS-0035]  Number of sinks covered: 1.
+[INFO CTS-0201] 1 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clock_regs.
+[INFO CTS-0028]  Total number of sinks: 122.
+[INFO CTS-0090]  Sinks will be clustered based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 18900  dbu (18 um).
+[INFO CTS-0023]  Original sink region: [(358080, 546420), (519360, 667380)].
+[INFO CTS-0024]  Normalized sink region: [(18.946, 28.9111), (27.4794, 35.3111)].
+[INFO CTS-0025]     Width:  8.5333.
+[INFO CTS-0026]     Height: 6.4000.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 61
+    Sub-region size: 4.2667 X 6.4000
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 31
+    Sub-region size: 4.2667 X 3.2000
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 3
+    Direction: Horizontal
+    Sinks per sub-region: 16
+    Sub-region size: 2.1333 X 3.2000
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 4
+    Direction: Vertical
+    Sinks per sub-region: 8
+    Sub-region size: 2.1333 X 1.6000
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 5
+    Direction: Horizontal
+    Sinks per sub-region: 4
+    Sub-region size: 1.0667 X 1.6000
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 8.
+[INFO CTS-0035]  Number of sinks covered: 122.
+[INFO CTS-0018]     Created 2 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 2.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 2.
+[INFO CTS-0015]     Created 2 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 1:1..
+[INFO CTS-0017]     Max level of the clock tree: 1.
+[INFO CTS-0018]     Created 49 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 3.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 3.
+[INFO CTS-0015]     Created 49 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 3:6, 4:26..
+[INFO CTS-0017]     Max level of the clock tree: 5.
+[INFO CTS-0124] Clock net "clock"
+[INFO CTS-0125]  Sinks 1
+[INFO CTS-0098] Clock net "clock_regs"
+[INFO CTS-0099]  Sinks 128
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 109.42 um
+[INFO CTS-0102]  Path depth 3 - 3
+[INFO CTS-0207]  Dummy loads inserted 6
+[INFO CTS-0033] Balancing latency for clock clk_core
+[INFO CTS-0036]  inserted 3 delay buffers
+[INFO CTS-0037] Total number of delay buffers: 3
+estimate_parasitics -placement
+Placement Analysis
+---------------------------------
+total displacement       1327.2 u
+average displacement        1.4 u
+max displacement           12.6 u
+original HPWL           27709.4 u
+legalized HPWL          29037.8 u
+delta HPWL                    5 %
+
+estimate_parasitics -placement
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0033] No hold violations found.
+Error: cts.tcl, 85 [2026-02-26 17:55:44.176] [info] [KeplerFormal.cpp:258] KEPLER FORMAL: Run.
+[2026-02-26 17:55:44.177] [info] [KeplerFormal.cpp:259] Input format: VERILOG
+[2026-02-26 17:55:44.177] [info] [KeplerFormal.cpp:260] Netlist 1: ./results/ihp-sg13g2/i2c-gpio-expander/base/4_before_rsz_lec.v
+[2026-02-26 17:55:44.177] [info] [KeplerFormal.cpp:261] Netlist 2: ./results/ihp-sg13g2/i2c-gpio-expander/base/4_after_rsz_lec.v
+[2026-02-26 17:55:44.177] [info] [KeplerFormal.cpp:263] Solver: KISSAT
+[2026-02-26 17:55:44.177] [info] [KeplerFormal.cpp:266] Liberty: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+[2026-02-26 17:55:44.177] [info] [KeplerFormal.cpp:266] Liberty: ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_typ.lib
+[2026-02-26 17:55:44.177] [info] [KeplerFormal.cpp:266] Liberty: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_io_typ_1p2V_3p3V_25C.lib
+[2026-02-26 17:55:44.177] [info] [KeplerFormal.cpp:285] Loading liberty file: /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+[2026-02-26 17:55:44.189] [info] [KeplerFormal.cpp:285] Loading liberty file: ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_typ.lib
+[2026-02-26 17:55:44.190] [critical] [KeplerFormal.cpp:382] Netlist loading failed: cannot add truth tables on Design <I2cDeviceCtrl> that has <15> outputs, but provided <6> truth tables
+child process exited abnormally
+Command exited with non-zero status 1
+Elapsed time: 0:00.88[h:]min:sec. CPU time: user 0.96 sys 0.30 (143%). Peak memory: 141396KB.

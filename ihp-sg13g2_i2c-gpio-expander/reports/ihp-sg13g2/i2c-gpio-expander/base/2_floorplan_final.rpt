@@ -1,0 +1,162 @@
+
+==========================================================================
+floorplan final report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+floorplan final report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+floorplan final report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 8.07
+
+==========================================================================
+floorplan final report_clock_min_period
+--------------------------------------------------------------------------
+clk_core period_min = 11.93 fmax = 83.82
+
+==========================================================================
+floorplan final report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: system_expander.gpioCtrl_1.io_gpio_pins_read_buffercc/buffers_0[0]$_DFF_P_
+            (rising edge-triggered flip-flop clocked by clk_core)
+Endpoint: system_expander.gpioCtrl_1.last[0]$_DFF_P_
+          (rising edge-triggered flip-flop clocked by clk_core)
+Path Group: clk_core
+Path Type: min
+Corner: fast
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.25    0.00    0.00   clock clk_core (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.25    0.00    0.00 ^ system_expander.gpioCtrl_1.io_gpio_pins_read_buffercc/buffers_0[0]$_DFF_P_/CLK (sg13g2_dfrbpq_1)
+     6    0.02    0.04    0.19    0.19 v system_expander.gpioCtrl_1.io_gpio_pins_read_buffercc/buffers_0[0]$_DFF_P_/Q (sg13g2_dfrbpq_1)
+                                         system_expander.gpioCtrl_1.io_gpio_pins_read_buffercc_io_dataOut[0] (net)
+                  0.04    0.00    0.19 v system_expander.gpioCtrl_1.last[0]$_DFF_P_/D (sg13g2_dfrbpq_1)
+                                  0.19   data arrival time
+
+                  0.25    0.00    0.00   clock clk_core (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.15    0.15   clock uncertainty
+                          0.00    0.15   clock reconvergence pessimism
+                                  0.15 ^ system_expander.gpioCtrl_1.last[0]$_DFF_P_/CLK (sg13g2_dfrbpq_1)
+                          0.01    0.16   library hold time
+                                  0.16   data required time
+-----------------------------------------------------------------------------
+                                  0.16   data required time
+                                 -0.19   data arrival time
+-----------------------------------------------------------------------------
+                                  0.03   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: io_i2c_scl_PAD (input port clocked by clk_core)
+Endpoint: system_expander.i2cCtrl
+          (rising edge-triggered flip-flop clocked by clk_core)
+Path Group: clk_core
+Path Type: max
+Corner: slow
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.25    0.00    0.00   clock clk_core (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          4.00    4.00 v input external delay
+     2    5.20    7.13    3.45    7.45 v io_i2c_scl_PAD (inout)
+                                         io_i2c_scl_PAD (net)
+                  7.13    0.00    7.45 v sg13g2_IOPad_io_i2c_scl/pad (sg13g2_IOPadInOut4mA)
+     1    0.00    0.18    4.27   11.72 v sg13g2_IOPad_io_i2c_scl/p2c (sg13g2_IOPadInOut4mA)
+                                         sg13g2_IOPad_io_i2c_scl_p2c (net)
+                  0.13    0.00   11.72 v system_expander.i2cCtrl/io_i2c_scl_read (I2cDeviceCtrl)
+                                 11.72   data arrival time
+
+                  0.25   20.00   20.00   clock clk_core (rise edge)
+                          0.00   20.00   clock network delay (ideal)
+                         -0.15   19.85   clock uncertainty
+                          0.00   19.85   clock reconvergence pessimism
+                                 19.85 ^ system_expander.i2cCtrl/clock (I2cDeviceCtrl)
+                         -0.22   19.63   macro clock tree delay
+                          0.16   19.79   library setup time
+                                 19.79   data required time
+-----------------------------------------------------------------------------
+                                 19.79   data required time
+                                -11.72   data arrival time
+-----------------------------------------------------------------------------
+                                  8.07   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: io_i2c_scl_PAD (input port clocked by clk_core)
+Endpoint: system_expander.i2cCtrl
+          (rising edge-triggered flip-flop clocked by clk_core)
+Path Group: clk_core
+Path Type: max
+Corner: slow
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.25    0.00    0.00   clock clk_core (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          4.00    4.00 v input external delay
+     2    5.20    7.13    3.45    7.45 v io_i2c_scl_PAD (inout)
+                                         io_i2c_scl_PAD (net)
+                  7.13    0.00    7.45 v sg13g2_IOPad_io_i2c_scl/pad (sg13g2_IOPadInOut4mA)
+     1    0.00    0.18    4.27   11.72 v sg13g2_IOPad_io_i2c_scl/p2c (sg13g2_IOPadInOut4mA)
+                                         sg13g2_IOPad_io_i2c_scl_p2c (net)
+                  0.13    0.00   11.72 v system_expander.i2cCtrl/io_i2c_scl_read (I2cDeviceCtrl)
+                                 11.72   data arrival time
+
+                  0.25   20.00   20.00   clock clk_core (rise edge)
+                          0.00   20.00   clock network delay (ideal)
+                         -0.15   19.85   clock uncertainty
+                          0.00   19.85   clock reconvergence pessimism
+                                 19.85 ^ system_expander.i2cCtrl/clock (I2cDeviceCtrl)
+                         -0.22   19.63   macro clock tree delay
+                          0.16   19.79   library setup time
+                                 19.79   data required time
+-----------------------------------------------------------------------------
+                                 19.79   data required time
+                                -11.72   data arrival time
+-----------------------------------------------------------------------------
+                                  8.07   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_power
+--------------------------------------------------------------------------
+Corner: slow
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             1.33e-05   1.53e-07   2.58e-07   1.37e-05  67.8%
+Combinational          5.48e-07   9.61e-07   2.59e-07   1.77e-06   8.8%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    3.48e-06   1.10e-06   1.59e-07   4.73e-06  23.5%
+----------------------------------------------------------------
+Total                  1.73e-05   2.21e-06   6.77e-07   2.02e-05 100.0%
+                          85.7%      11.0%       3.4%
+Corner: fast
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             2.22e-05   2.55e-07   1.26e-07   2.26e-05  70.6%
+Combinational          8.74e-07   1.63e-06   1.63e-07   2.67e-06   8.3%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    4.83e-06   1.86e-06   5.93e-08   6.75e-06  21.1%
+----------------------------------------------------------------
+Total                  2.79e-05   3.75e-06   3.48e-07   3.20e-05 100.0%
+                          87.2%      11.7%       1.1%

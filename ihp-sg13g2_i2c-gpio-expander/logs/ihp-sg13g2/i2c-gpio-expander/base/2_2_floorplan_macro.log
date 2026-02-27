@@ -1,0 +1,33 @@
+OpenROAD 6975124cf258e3be0db86bd2e59246b7f0e9f0c7 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_slow_1p08V_125C.lib
+read_liberty -corner slow ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_slow.lib
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_io_slow_1p08V_3p0V_125C.lib
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_fast_1p32V_m40C.lib
+read_liberty -corner fast ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_fast.lib
+[WARNING STA-1140] ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_fast.lib line 1, library I2cDeviceCtrl already exists.
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_io_fast_1p32V_3p6V_m40C.lib
+read_db ./results/ihp-sg13g2/i2c-gpio-expander/base/2_1_floorplan.odb
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/setRC.tcl
+rtl_macro_placer -max_num_level 2 -halo_width 20 -halo_height 20 -min_ar 0.33 -area_weight 0.1 -wirelength_weight 100.0 -outline_weight 100.0 -boundary_weight 50.0 -notch_weight 50.0 -report_directory ./objects/ihp-sg13g2/i2c-gpio-expander/base/rtlmp -fence_lx 0.0 -fence_ly 0.0 -fence_ux 0.0 -fence_uy 0.0 -target_util 0.75
+Die Area: (0.00, 0.00) (1050.24, 1050.84),  Floorplan Area: (351.36, 351.54) (699.84, 699.30)
+	Number of std cell instances: 861
+	Area of std cell instances: 12426.83
+	Number of macros: 1
+	Area of macros: 21794.57
+	Halo width: 20.00
+	Halo height: 20.00
+	Area of macros with halos: 35204.97
+	Area of std cell instances + Area of macros: 34221.40
+	Floorplan area: 121187.40
+	Design Utilization: 0.28
+	Floorplan Utilization: 0.13
+	Manufacturing Grid: 5
+
+write_db ./results/ihp-sg13g2/i2c-gpio-expander/base/2_2_floorplan_macro.odb
+Elapsed time: 0:01.06[h:]min:sec. CPU time: user 7.82 sys 0.01 (736%). Peak memory: 101584KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_2_floorplan_macro                1             99 f7d6325ce13514671d4b

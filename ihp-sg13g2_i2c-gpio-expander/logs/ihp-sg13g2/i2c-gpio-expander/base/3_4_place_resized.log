@@ -1,0 +1,127 @@
+OpenROAD 6975124cf258e3be0db86bd2e59246b7f0e9f0c7 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 28 thread(s).
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_slow_1p08V_125C.lib
+read_liberty -corner slow ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_slow.lib
+read_liberty -corner slow /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_io_slow_1p08V_3p0V_125C.lib
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_fast_1p32V_m40C.lib
+read_liberty -corner fast ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_fast.lib
+[WARNING STA-1140] ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_fast.lib line 1, library I2cDeviceCtrl already exists.
+read_liberty -corner fast /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/lib/sg13g2_io_fast_1p32V_3p6V_m40C.lib
+read_db ./results/ihp-sg13g2/i2c-gpio-expander/base/3_3_place_gp.odb
+source /home/nanocoh/dev/ORFS-K/OpenROAD-flow-scripts-KF/flow/platforms/ihp-sg13g2/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       917
+       10 |     +0.0% |       0 |       0 |             0 |       907
+       20 |     +0.0% |       0 |       0 |             0 |       897
+       30 |     +0.0% |       0 |       0 |             0 |       887
+       40 |     +0.0% |       0 |       0 |             0 |       877
+       50 |     +0.0% |       0 |       0 |             0 |       867
+       60 |     +0.0% |       0 |       0 |             0 |       857
+       70 |     +0.0% |       0 |       0 |             0 |       847
+       80 |     +0.0% |       0 |       0 |             0 |       837
+       90 |     +0.0% |       0 |       0 |             0 |       827
+      100 |     +0.0% |       0 |       0 |             0 |       817
+      110 |     +0.0% |       0 |       0 |             0 |       807
+      120 |     +0.0% |       0 |       0 |             0 |       797
+      130 |     +0.0% |       0 |       0 |             0 |       787
+      140 |     +0.0% |       0 |       0 |             0 |       777
+      150 |     +0.0% |       0 |       0 |             0 |       767
+      160 |     +0.0% |       0 |       0 |             0 |       757
+      170 |     +0.0% |       0 |       0 |             0 |       747
+      180 |     +0.0% |       0 |       0 |             0 |       737
+      190 |     +0.0% |       0 |       0 |             0 |       727
+      200 |     +0.0% |       0 |       0 |             0 |       717
+      210 |     +0.0% |       0 |       0 |             0 |       707
+      220 |     +0.0% |       0 |       0 |             0 |       697
+      230 |     +0.0% |       0 |       0 |             0 |       687
+      240 |     +0.0% |       0 |       0 |             0 |       677
+      250 |     +0.0% |       0 |       0 |             0 |       667
+      260 |     +0.0% |       0 |       0 |             0 |       657
+      270 |     +0.0% |       0 |       0 |             0 |       647
+      280 |     +0.0% |       0 |       0 |             0 |       637
+      290 |     +0.0% |       0 |       0 |             0 |       627
+      300 |     +0.0% |       0 |       0 |             0 |       617
+      310 |     +0.0% |       0 |       0 |             0 |       607
+      320 |     +0.0% |       0 |       0 |             0 |       597
+      330 |     +0.0% |       0 |       0 |             0 |       587
+      340 |     +0.0% |       0 |       0 |             0 |       577
+      350 |     +0.0% |       0 |       0 |             0 |       567
+      360 |     +0.0% |       0 |       0 |             0 |       557
+      370 |     +0.0% |       0 |       0 |             0 |       547
+      380 |     +0.0% |       0 |       0 |             0 |       537
+      390 |     +0.0% |       0 |       0 |             0 |       527
+      400 |     +0.0% |       0 |       0 |             0 |       517
+      410 |     +0.0% |       0 |       0 |             0 |       507
+      420 |     +0.0% |       0 |       0 |             0 |       497
+      430 |     +0.0% |       0 |       0 |             0 |       487
+      440 |     +0.0% |       0 |       0 |             0 |       477
+      450 |     +0.0% |       0 |       0 |             0 |       467
+      460 |     +0.0% |       0 |       0 |             0 |       457
+      470 |     +0.0% |       0 |       0 |             0 |       447
+      480 |     +0.0% |       0 |       0 |             0 |       437
+      490 |     +0.0% |       0 |       0 |             0 |       427
+      500 |     +0.0% |       0 |       0 |             0 |       417
+      510 |     +0.0% |       0 |       0 |             0 |       407
+      520 |     +0.0% |       0 |       0 |             0 |       397
+      530 |     +0.0% |       0 |       0 |             0 |       387
+      540 |     +0.0% |       0 |       0 |             0 |       377
+      550 |     +0.0% |       0 |       0 |             0 |       367
+      560 |     +0.0% |       0 |       0 |             0 |       357
+      570 |     +0.0% |       0 |       0 |             0 |       347
+      580 |     +0.0% |       0 |       0 |             0 |       337
+      590 |     +0.0% |       0 |       0 |             0 |       327
+      600 |     +0.0% |       0 |       0 |             0 |       317
+      610 |     +0.0% |       0 |       0 |             0 |       307
+      620 |     +0.0% |       0 |       0 |             0 |       297
+      630 |     +0.0% |       0 |       0 |             0 |       287
+      640 |     +0.0% |       0 |       0 |             0 |       277
+      650 |     +0.0% |       0 |       0 |             0 |       267
+      660 |     +0.0% |       0 |       0 |             0 |       257
+      670 |     +0.0% |       0 |       0 |             0 |       247
+      680 |     +0.0% |       0 |       0 |             0 |       237
+      690 |     +0.0% |       0 |       0 |             0 |       227
+      700 |     +0.0% |       0 |       0 |             0 |       217
+      710 |     +0.0% |       0 |       0 |             0 |       207
+      720 |     +0.0% |       0 |       0 |             0 |       197
+      730 |     +0.0% |       0 |       0 |             0 |       187
+      740 |     +0.0% |       0 |       0 |             0 |       177
+      750 |     +0.0% |       0 |       0 |             0 |       167
+      760 |     +0.0% |       0 |       0 |             0 |       157
+      770 |     +0.0% |       0 |       0 |             0 |       147
+      780 |     +0.0% |       0 |       0 |             0 |       137
+      790 |     +0.0% |       0 |       0 |             0 |       127
+      800 |     +0.0% |       0 |       0 |             0 |       117
+      810 |     +0.0% |       0 |       0 |             0 |       107
+      820 |     +0.0% |       0 |       0 |             0 |        97
+      830 |     +0.0% |       0 |       0 |             0 |        87
+      840 |     +0.0% |       0 |       0 |             0 |        77
+      850 |     +0.0% |       0 |       0 |             0 |        67
+      860 |     +0.0% |       0 |       0 |             0 |        57
+      870 |     +0.0% |       0 |       0 |             0 |        47
+      880 |     +0.0% |       0 |       0 |             0 |        37
+      890 |     +0.0% |       0 |       0 |             0 |        27
+      900 |     +0.0% |       0 |       0 |             0 |        17
+      910 |     +0.0% |       0 |       0 |             0 |         7
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+Floating nets: 
+[WARNING RSZ-0020] found 4 floating nets.
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 34109 um^2 28% utilization.
+Instance count before 929, after 929
+Pin count before 2784, after 2784
+write_db ./results/ihp-sg13g2/i2c-gpio-expander/base/3_4_place_resized.odb
+Elapsed time: 0:00.50[h:]min:sec. CPU time: user 0.64 sys 0.19 (165%). Peak memory: 122612KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+3_4_place_resized                  0            119 d85671a7efadd7ccba8a
