@@ -13,10 +13,22 @@ if ( ! $?TARGET_CFG ) then
   setenv TARGET_CFG "cv64a6_imafdc_sv39"
 endif
 
+set flist = "$script_dir/core/Flist.cva6"
+
+if ( ! -f "$flist" ) then
+  echo "Missing SystemVerilog file list: $flist"
+  exit 1
+endif
+
 if ( $?KEPLER_FORMAL_BIN ) then
   set kepler_formal_bin = "$KEPLER_FORMAL_BIN"
 else
   set kepler_formal_bin = kepler-formal
 endif
 
-"$kepler_formal_bin" --config config.yaml --report-skipped-pos
+"$kepler_formal_bin" -systemverilog \
+  --sv_design1_flist "$flist" \
+  --sv_design1_top cva6 \
+  --sv_design2_flist "$flist" \
+  --sv_design2_top cva6 \
+  --report-skipped-pos
