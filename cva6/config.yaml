@@ -1,0 +1,8 @@
+# Copyright 2026 keplertech.io
+# SPDX-License-Identifier: GPL-3.0-only
+format: systemverilog
+sv_design1_flist: core/Flist.cva6
+sv_design1_top: cva6
+sv_design2_flist: core/Flist.cva6
+sv_design2_top: cva6
+log_level: info
