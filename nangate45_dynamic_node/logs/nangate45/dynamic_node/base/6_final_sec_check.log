@@ -1,0 +1,21 @@
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1102] KEPLER FORMAL: Run.
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1110] Input format: VERILOG
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1112] Run log: ./logs/nangate45/dynamic_node/base/6_final_sec_check.log
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:427] Netlist 1: ./1_synth_lec.v
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:427] Netlist 2: ./6_final_lec.v
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1189] Solver: KISSAT
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1190] Verification: sec
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1192] SEC max_k: 32
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1193] SEC engine: pdr
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1194] SEC uncomputable sequentials: boundary abstraction
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1199] Compact mode: disabled
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1200] Skipped PO reports: disabled
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1202] Library: ./NangateOpenCellLibrary_typical.lib
+[2026-05-24 20:15:06.571] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./NangateOpenCellLibrary_typical.lib
+[2026-05-24 20:15:06.615] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1549] Parsing verilog file(s) for design 1
+[2026-05-24 20:15:06.762] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1578] Found top design: dynamic_node_top_wrap
+[2026-05-24 20:15:06.762] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./NangateOpenCellLibrary_typical.lib
+[2026-05-24 20:15:06.804] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1628] Parsing verilog file(s) for design 2
+[2026-05-24 20:15:06.966] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1657] Found top design: dynamic_node_top_wrap
+[2026-05-24 20:15:12.148] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1211] SEC output coverage: 100.00% (331/331 covered/existing outputs).
+[2026-05-24 20:15:12.148] [kepler_formal_main_logger] [critical] [KeplerFormal.cpp:1259] SEC was inconclusive up to max_k = 32: PDR reached an abstract counterexample that concrete BMC did not validate for output `thanksIn_P[0]` at k = 1
