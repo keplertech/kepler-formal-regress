@@ -1,0 +1,73 @@
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1102] KEPLER FORMAL: Run.
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1110] Input format: VERILOG
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1112] Run log: ./logs/asap7/ethmac/base/6_final_sec_check.log
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:427] Netlist 1: ./1_synth_lec.v
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:427] Netlist 2: ./6_final_lec.v
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1189] Solver: KISSAT
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1190] Verification: sec
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1192] SEC max_k: 32
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1193] SEC engine: pdr
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1194] SEC uncomputable sequentials: boundary abstraction
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1199] Compact mode: disabled
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1200] Skipped PO reports: disabled
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1202] Library: ./asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1202] Library: ./asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1202] Library: ./asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1202] Library: ./asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1202] Library: ./asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+[2026-05-27 13:02:21.719] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+[2026-05-27 13:02:22.004] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+[2026-05-27 13:02:22.008] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+[2026-05-27 13:02:22.268] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+[2026-05-27 13:02:22.291] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+[2026-05-27 13:02:22.312] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1549] Parsing verilog file(s) for design 1
+[2026-05-27 13:02:23.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1578] Found top design: ethmac
+[2026-05-27 13:02:23.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+[2026-05-27 13:02:24.114] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+[2026-05-27 13:02:24.118] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+[2026-05-27 13:02:24.371] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+[2026-05-27 13:02:24.390] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+[2026-05-27 13:02:24.403] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1628] Parsing verilog file(s) for design 2
+[2026-05-27 13:02:26.008] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1657] Found top design: ethmac
+[2026-05-27 13:18:49.241] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1211] SEC output coverage: 100.00% (120/120 covered/existing outputs).
+[2026-05-27 13:18:49.241] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1251] Difference was found. SEC found a counterexample at k = 2.
+[2026-05-27 13:18:49.241] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1255] SEC counterexample details:
+Counterexample reaches the first bad frame at cycle 2.
+Input trace:
+  cycle 0: wb_cyc_i[0]=1, wb_stb_i[0]=1, wb_we_i[0]=1, wb_adr_i[2]=1, wb_adr_i[3]=0, wb_adr_i[4]=0, wb_adr_i[5]=0, wb_adr_i[6]=0, wb_adr_i[7]=0, wb_adr_i[8]=0, wb_adr_i[9]=0, wb_adr_i[10]=0, wb_adr_i[11]=0, wb_dat_i[0]=1, wb_dat_i[1]=0, wb_dat_i[2]=1, wb_dat_i[3]=1, wb_dat_i[4]=0, wb_dat_i[5]=1, wb_dat_i[6]=1, wb_sel_i[0]=1, wb_sel_i[1]=0, wb_sel_i[2]=0, wb_sel_i[3]=0
+  cycle 1: wb_cyc_i[0]=1, wb_stb_i[0]=1, wb_we_i[0]=1, wb_adr_i[2]=0, wb_adr_i[3]=1, wb_adr_i[4]=0, wb_adr_i[5]=0, wb_adr_i[6]=0, wb_adr_i[7]=0, wb_adr_i[8]=0, wb_adr_i[9]=0, wb_adr_i[10]=0, wb_adr_i[11]=0, wb_dat_i[0]=1, wb_dat_i[1]=1, wb_dat_i[2]=1, wb_dat_i[3]=0, wb_dat_i[4]=1, wb_dat_i[5]=0, wb_dat_i[6]=0, wb_sel_i[0]=1, wb_sel_i[1]=0, wb_sel_i[2]=0, wb_sel_i[3]=0
+  cycle 2: wb_cyc_i[0]=0, wb_stb_i[0]=0, wb_we_i[0]=0, wb_adr_i[2]=0, wb_adr_i[3]=0, wb_adr_i[4]=0, wb_adr_i[5]=0, wb_adr_i[6]=0, wb_adr_i[7]=0, wb_adr_i[8]=0, wb_adr_i[9]=0, wb_adr_i[10]=0, wb_adr_i[11]=0, wb_dat_i[0]=0, wb_dat_i[1]=0, wb_dat_i[2]=0, wb_dat_i[3]=0, wb_dat_i[4]=0, wb_dat_i[5]=0, wb_dat_i[6]=0, wb_sel_i[0]=0, wb_sel_i[1]=0, wb_sel_i[2]=0, wb_sel_i[3]=0
+Observed output mismatches at cycle 2:
+  int_o[0]: design0=0, design1=1
+Traceback for first differing point `int_o[0]` at cycle 2:
+  design0 cone to environment inputs:
+    step 0: _100831_.Y[0]
+    step 1: _100827_.Y[0], _100828_.Y[0], _100829_.Y[0], _100830_.Y[0]
+    step 2: ethreg1.INT_MASK_0.DataOut[0]$_DFFE_PP0P_.QN[0], ethreg1.INT_MASK_0.DataOut[1]$_DFFE_PP0P_.QN[0], ethreg1.INT_MASK_0.DataOut[2]$_DFFE_PP0P_.QN[0], ethreg1.INT_MASK_0.DataOut[3]$_DFFE_PP0P_.QN[0], ethreg1.INT_MASK_0.DataOut[4]$_DFFE_PP0P_.QN[0], ethreg1.INT_MASK_0.DataOut[5]$_DFFE_PP0P_.QN[0], ethreg1.INT_MASK_0.DataOut[6]$_DFFE_PP0P_.QN[0], ethreg1.irq_busy$_DFFE_PP0P_.QN[0], ethreg1.irq_rxb$_DFFE_PP0P_.QN[0], ethreg1.irq_rxc$_DFFE_PP0P_.QN[0], ethreg1.irq_rxe$_DFFE_PP0P_.QN[0], ethreg1.irq_txb$_DFFE_PP0P_.QN[0], ... +2 more
+    step 3: _058806_.Y[0], _067582_.Y[0], _067584_.Y[0], _067588_.Y[0], _067591_.Y[0], _067594_.Y[0], _067597_.Y[0], _067602_.Y[0], _067639_.Y[0], _075377_.Y[0], _075381_.Y[0], _075384_.Y[0], ... +5 more
+    step 4: _055882_.Y[0], _067580_.Y[0], _067581_.Y[0], _067583_.Y[0], _067585_.Y[0], _067586_.Y[0], _067587_.Y[0], _067590_.Y[0], _067593_.Y[0], _067596_.Y[0], _067601_.Y[0], _067637_.Y[0], ... +20 more
+    step 5: _067579_.Y[0], _067589_.Y[0], _067592_.Y[0], _067595_.Y[0], _067636_.Y[0], _067695_.Y[0], _067704_.Y[0], _067709_.Y[0], _067778_.Y[0], _075343_.Y[0], _075379_.Y[0], _100825_.Y[0], ... +11 more
+    step 6: _057595_.Y[0], _057597_.Y[0], _058082_.Y[0], _058100_.Y[0], _066371_.Y[0], _066381_.Y[0], _067570_.Y[0], _067578_.Y[0], _067613_.Y[0], _067635_.Y[0], _067694_.Y[0], _067705_.Y[0], ... +14 more
+    step 7: _057978_.Y[0], _058081_.Y[0], _058098_.Y[0], _058099_.Y[0], _067569_.Y[0], _067572_.Y[0], _067577_.Y[0], _067634_.Y[0], _075538_.Y[0], _100871_.Y[0], ethreg1.CTRLMODER_0.DataOut[1]$_DFFE_PP0P_.QN[0], ethreg1.SetRxCIrq_sync2$_DFF_PP0_.QN[0], ... +12 more
+    step 8: _057594_.Y[0], _057596_.Y[0], _057944_.Y[0], _057945_.Y[0], _057977_.Y[0], _058002_.Y[0], _058014_.Y[0], _058079_.Y[0], _058080_.Y[0], _066373_.Y[0], _066383_.Y[0], _066489_.Y[0], ... +23 more
+    step 9: _055988_.Y[0], _056015_.Y[0], _057786_.Y[0], _057812_.Y[0], _057830_.Y[0], _057832_.Y[0], _057836_.Y[0], _057840_.Y[0], _057976_.Y[0], _058013_.Y[0], _058078_.Y[0], _058094_.Y[0], ... +41 more
+    step 10: _055811_.Y[0], _055937_.Y[0], _055974_.Y[0], _057605_.Y[0], _057787_.Y[0], _057811_.Y[0], _057821_.Y[0], _057822_.Y[0], _057829_.Y[0], _057831_.Y[0], _057835_.Y[0], _057892_.Y[0], ... +49 more
+    step 11: CarrierSense_Tx2$_DFF_PP0_.QN[0], _055839_.Y[0], _055962_.Y[0], _055965_.Y[0], _055973_.Y[0], _056017_.Y[0], _057585_.Y[0], _057606_.Y[0], _057725_.Y[0], _057783_.Y[0], _057808_.Y[0], _057809_.Y[0], ... +71 more
+    ... +32 more trace steps
+  design1 cone to environment inputs:
+    step 0: output1339.Y[0]
+    step 1: _100831_.Y[0]
+    step 2: _100827_.Y[0], _100828_.Y[0], _100829_.Y[0], _100830_.Y[0]
+    step 3: ethreg1.INT_MASK_0.DataOut[0]$_DFFE_PP0P_.QN[0], ethreg1.INT_MASK_0.DataOut[1]$_DFFE_PP0P_.QN[0], ethreg1.INT_MASK_0.DataOut[2]$_DFFE_PP0P_.QN[0], ethreg1.INT_MASK_0.DataOut[3]$_DFFE_PP0P_.QN[0], ethreg1.INT_MASK_0.DataOut[4]$_DFFE_PP0P_.QN[0], ethreg1.INT_MASK_0.DataOut[5]$_DFFE_PP0P_.QN[0], ethreg1.INT_MASK_0.DataOut[6]$_DFFE_PP0P_.QN[0], ethreg1.irq_busy$_DFFE_PP0P_.QN[0], ethreg1.irq_rxb$_DFFE_PP0P_.QN[0], ethreg1.irq_rxc$_DFFE_PP0P_.QN[0], ethreg1.irq_rxe$_DFFE_PP0P_.QN[0], ethreg1.irq_txb$_DFFE_PP0P_.QN[0], ... +2 more
+    step 4: _067582_.Y[0], _067584_.Y[0], _067588_.Y[0], _067591_.Y[0], _067594_.Y[0], _067597_.Y[0], _067602_.Y[0], _067639_.Y[0], _075377_.Y[0], _075381_.Y[0], _075384_.Y[0], _075387_.Y[0], ... +31 more
+    step 5: _067581_.Y[0], _067583_.Y[0], _067585_.Y[0], _067586_.Y[0], _067587_.Y[0], _067590_.Y[0], _067593_.Y[0], _067596_.Y[0], _067601_.Y[0], _067636_.Y[0], _067638_.Y[0], _075375_.Y[0], ... +27 more
+    step 6: _067579_.Y[0], _067635_.Y[0], _067704_.Y[0], _067705_.Y[0], _067707_.Y[0], _067709_.Y[0], _100825_.Y[0], _100826_.Y[0], _100873_.Y[0], _100874_.Y[0], _100877_.Y[0], _100878_.Y[0], ... +30 more
+    step 7: _057595_.Y[0], _057597_.Y[0], _058082_.Y[0], _058100_.Y[0], _066371_.Y[0], _066381_.Y[0], _067568_.Y[0], _067578_.Y[0], _067634_.Y[0], _067694_.Y[0], _067708_.Y[0], _100868_.Y[0], ... +22 more
+    step 8: _057978_.Y[0], _058081_.Y[0], _058098_.Y[0], _058099_.Y[0], _058806_.Y[0], _067567_.Y[0], _067577_.Y[0], _067632_.Y[0], _075538_.Y[0], _100871_.Y[0], clkbuf_2_1_0_wb_clk_i.Y[0], clkbuf_2_3_0_wb_clk_i.Y[0], ... +28 more
+    step 9: _057594_.Y[0], _057596_.Y[0], _057944_.Y[0], _057945_.Y[0], _057977_.Y[0], _058002_.Y[0], _058014_.Y[0], _058079_.Y[0], _058080_.Y[0], _058089_.Y[0], _058090_.Y[0], _066373_.Y[0], ... +61 more
+    step 10: _055988_.Y[0], _056015_.Y[0], _057786_.Y[0], _057812_.Y[0], _057830_.Y[0], _057832_.Y[0], _057976_.Y[0], _058013_.Y[0], _058078_.Y[0], _058087_.Y[0], _058088_.Y[0], _065225_.Y[0], ... +67 more
+    step 11: _055811_.Y[0], _055974_.Y[0], _056017_.Y[0], _057605_.Y[0], _057787_.Y[0], _057811_.Y[0], _057822_.Y[0], _057829_.Y[0], _057831_.Y[0], _057892_.Y[0], _057953_.Y[0], _057967_.Y[0], ... +81 more
+    ... +32 more trace steps
+  cone terms only in design0: _055831_.Y[0], _055882_.Y[0], _055884_.Y[0], _055885_.Y[0], _055887_.Y[0], _055890_.Y[0], _055892_.Y[0], _055896_.Y[0], _055900_.Y[0], _055902_.Y[0], _055906_.Y[0], _055937_.Y[0], _055939_.Y[0], _055962_.Y[0], _055973_.Y[0], _055975_.Y[0], _056004_.Y[0], _056029_.Y[0], _056030_.Y[0], _056032_.Y[0], ... +3783 more
+  cone terms only in design1: CarrierSense_Tx1$_DFF_PP0__5.H[0], CarrierSense_Tx2$_DFF_PP0__6.H[0], Collision_Tx1$_DFF_PP0__7.H[0], Collision_Tx2$_DFFE_PP0P__8.H[0], RstTxPauseRq$_DFF_PP0__9.H[0], RxAbortRst$_DFF_PP0__10.H[0], RxAbortRst_sync1$_DFF_PP0__11.H[0], RxAbort_latch$_DFFE_PP0P__12.H[0], RxAbort_sync1$_DFF_PP0__13.H[0], RxAbort_wb$_DFF_PP0__14.H[0], RxEnSync$_DFFE_PP0N__15.H[0], TPauseRq$_DFF_PP0__16.H[0], TxPauseRq_sync1$_DFF_PP0__17.H[0], TxPauseRq_sync2$_DFF_PP0__18.H[0], TxPauseRq_sync3$_DFF_PP0__19.H[0], WillSendControlFrame_sync1$_DFF_PP0__20.H[0], WillSendControlFrame_sync2$_DFF_PP0__21.H[0], WillSendControlFrame_sync3$_DFF_PP0__22.H[0], clkbuf_0_mrx_clk_pad_i.Y[0], clkbuf_0_mtx_clk_pad_i.Y[0], ... +6879 more
+
