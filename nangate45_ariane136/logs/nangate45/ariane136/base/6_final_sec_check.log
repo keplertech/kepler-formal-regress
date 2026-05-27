@@ -1,0 +1,22 @@
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1102] KEPLER FORMAL: Run.
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1110] Input format: VERILOG
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1112] Run log: ./logs/nangate45/ariane136/base/6_final_sec_check.log
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:427] Netlist 1: ./1_synth_lec.v
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:427] Netlist 2: ./6_final_lec.v
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1189] Solver: KISSAT
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1190] Verification: sec
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1192] SEC max_k: 32
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1193] SEC engine: pdr
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1194] SEC uncomputable sequentials: boundary abstraction
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1199] Compact mode: disabled
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1200] Skipped PO reports: disabled
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1202] Library: ./NangateOpenCellLibrary_typical.lib
+[2026-05-27 18:35:57.003] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1202] Library: ./fakeram45_256x16.lib
+[2026-05-27 18:35:57.004] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./NangateOpenCellLibrary_typical.lib
+[2026-05-27 18:35:57.061] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./fakeram45_256x16.lib
+[2026-05-27 18:35:57.064] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1549] Parsing verilog file(s) for design 1
+[2026-05-27 18:36:00.011] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1578] Found top design: ariane
+[2026-05-27 18:36:00.011] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./NangateOpenCellLibrary_typical.lib
+[2026-05-27 18:36:00.047] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1292] Loading library file: ./fakeram45_256x16.lib
+[2026-05-27 18:36:00.049] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1628] Parsing verilog file(s) for design 2
+[2026-05-27 18:36:02.834] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1657] Found top design: ariane
