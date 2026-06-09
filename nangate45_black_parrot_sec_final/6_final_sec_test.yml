@@ -1,0 +1,14 @@
+format: verilog
+verification: sec
+sec_engine: pdr
+input_paths:
+  - ./1_synth_lec.v
+  - ./6_final_lec.v
+liberty_files:
+ - ./NangateOpenCellLibrary_typical.lib
+ - ./fakeram45_512x64.lib
+ - ./fakeram45_256x95.lib
+ - ./fakeram45_64x7.lib
+ - ./fakeram45_64x15.lib
+ - ./fakeram45_64x96.lib
+log_file: ./logs/nangate45/bp/base/6_final_sec_check.log
