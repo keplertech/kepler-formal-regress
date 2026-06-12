@@ -1,0 +1,130 @@
+[2026-06-12 22:59:10.809] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1221] KEPLER FORMAL: Run.
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1229] Input format: VERILOG
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1231] Run log: ./logs/nangate45/ibex/base/6_final_sec_check.log
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:502] Netlist 1: ./1_synth_lec.v
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:502] Netlist 2: ./6_final_lec.v
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1312] Solver: KISSAT
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1313] Verification: sec
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1315] SEC max_k: 32
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1316] SEC engine: pdr
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1317] SEC encoding: dual_rail_steady
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1318] SEC uncomputable sequentials: boundary abstraction
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1323] Compact mode: disabled
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1324] Skipped PO reports: disabled
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1326] Library: ./NangateOpenCellLibrary_typical.lib
+[2026-06-12 22:59:10.810] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1422] Loading library file: ./NangateOpenCellLibrary_typical.lib
+[2026-06-12 22:59:10.853] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1679] Parsing verilog file(s) for design 1
+[2026-06-12 22:59:11.091] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1708] Found top design: ibex_core
+[2026-06-12 22:59:11.091] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1422] Loading library file: ./NangateOpenCellLibrary_typical.lib
+[2026-06-12 22:59:11.135] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1758] Parsing verilog file(s) for design 2
+[2026-06-12 22:59:11.376] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1787] Found top design: ibex_core
+[2026-06-12 23:03:30.557] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1335] SEC output coverage: 0.00% (0/106 covered/existing outputs).
+[2026-06-12 23:03:30.563] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1346] SEC skipped observed outputs due to extraction or coverage limitations:
+  - alert_major_o[0]: dual-rail PDR repair was inconclusive after isolating this output
+  - alert_minor_o[0]: dual-rail PDR repair was inconclusive after isolating this output
+  - core_sleep_o[0]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_req_o[0]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_we_o[0]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_req_o[0]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[0]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[1]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[2]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[3]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[4]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[5]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[6]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[7]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[8]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[9]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[10]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[11]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[12]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[13]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[14]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[15]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[16]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[17]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[18]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[19]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[20]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[21]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[22]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[23]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[24]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[25]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[26]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[27]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[28]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[29]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[30]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_addr_o[31]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_be_o[0]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_be_o[1]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_be_o[2]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_be_o[3]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[0]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[1]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[2]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[3]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[4]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[5]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[6]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[7]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[8]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[9]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[10]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[11]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[12]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[13]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[14]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[15]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[16]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[17]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[18]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[19]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[20]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[21]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[22]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[23]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[24]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[25]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[26]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[27]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[28]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[29]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[30]: dual-rail PDR repair was inconclusive after isolating this output
+  - data_wdata_o[31]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[0]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[1]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[2]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[3]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[4]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[5]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[6]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[7]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[8]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[9]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[10]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[11]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[12]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[13]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[14]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[15]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[16]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[17]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[18]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[19]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[20]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[21]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[22]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[23]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[24]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[25]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[26]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[27]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[28]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[29]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[30]: dual-rail PDR repair was inconclusive after isolating this output
+  - instr_addr_o[31]: dual-rail PDR repair was inconclusive after isolating this output
+
+[2026-06-12 23:03:30.566] [kepler_formal_main_logger] [critical] [KeplerFormal.cpp:1389] SEC was inconclusive up to max_k = 32: Dual-rail PDR did not prove any observed output
