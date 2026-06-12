@@ -1,9 +1,0 @@
-format: verilog
-verification: sec
-sec_engine: pdr
-input_paths:
-  - ./1_synth_lec.v
-  - ./6_final_lec.v
-liberty_files:
- - ./NangateOpenCellLibrary_typical.lib
-log_file: ./logs/nangate45/ibex/base/6_final_sec_check.log
