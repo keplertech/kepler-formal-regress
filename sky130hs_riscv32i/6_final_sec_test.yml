@@ -1,0 +1,9 @@
+format: verilog
+verification: sec
+sec_engine: pdr
+input_paths:
+  - ./1_synth_lec.v
+  - ./6_final_lec.v
+liberty_files:
+ - ./sky130_fd_sc_hs__tt_025C_1v80.lib
+log_file: ./logs/sky130hs/riscv32i/base/6_final_sec_check.log
