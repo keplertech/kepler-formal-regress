@@ -1,0 +1,11 @@
+format: sv2v
+input_paths:
+  -
+    - ./rtl/designs/src/gcd/gcd.v
+  -
+    - ./results/sky130hd/gcd/base/4_before_rsz_lec.v
+sv_design1_flist: ./rtl/sv2v_design1.f
+sv_design1_top: gcd
+liberty_files:
+ - ./sky130_fd_sc_hd__tt_025C_1v80.lib
+log_file: ./logs/sky130hd/gcd/base/sv2v_lec_check.log

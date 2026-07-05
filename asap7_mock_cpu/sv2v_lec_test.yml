@@ -1,0 +1,23 @@
+format: sv2v
+input_paths:
+  -
+    - ./rtl/designs/src/fifo/fifo.v
+    - ./rtl/designs/src/fifo/fifo1.v
+    - ./rtl/designs/src/fifo/fifomem.v
+    - ./rtl/designs/src/fifo/mock_cpu.v
+    - ./rtl/designs/src/fifo/mock_cpu_tb.v
+    - ./rtl/designs/src/fifo/rptr_empty.v
+    - ./rtl/designs/src/fifo/sync_r2w.v
+    - ./rtl/designs/src/fifo/sync_w2r.v
+    - ./rtl/designs/src/fifo/wptr_full.v
+  -
+    - ./1_synth_lec.v
+sv_design1_flist: ./rtl/sv2v_design1.f
+sv_design1_top: mock_cpu
+liberty_files:
+ - ./asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+ - ./asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+ - ./asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+ - ./asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+ - ./asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+log_file: ./logs/asap7/mock-cpu/base/sv2v_lec_check.log

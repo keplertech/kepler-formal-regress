@@ -1,0 +1,5 @@
+-D SYNTHESIS
+--compat=vcs
+--ignore-assertions
+--no-implicit-memories
+-I./rtl/designs/src/ibex_sv/vendor/lowrisc_ip/prim/rtl

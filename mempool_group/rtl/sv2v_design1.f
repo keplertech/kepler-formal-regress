@@ -1,0 +1,6 @@
+-D SYNTHESIS
+--compat=vcs
+--ignore-assertions
+--no-implicit-memories
+-I./rtl/designs/src/mempool_group/rtl
+-I./rtl/designs/src/mempool_group/rtl/register_interface/include

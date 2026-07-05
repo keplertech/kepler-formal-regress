@@ -1,0 +1,2 @@
+-D SYNTHESIS
+-I./rtl/designs/src/jpeg/include
