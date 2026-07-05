@@ -1,4 +1,6 @@
 format: sv2v
+verification: sec
+sec_engine: pdr
 input_paths:
   -
     - ./rtl/designs/src/ibex_sv/ibex_alu.sv
@@ -23,9 +25,9 @@ input_paths:
     - ./rtl/designs/src/ibex_sv/ibex_wb_stage.sv
     - ./rtl/designs/src/ibex_sv/syn/rtl/prim_clock_gating.v
   -
-    - ./1_synth_lec.v
+    - ./results/ihp-sg13g2/ibex/base/4_before_rsz_lec.v
 sv_design1_flist: ./rtl/sv2v_design1.f
 sv_design1_top: ibex_core
 liberty_files:
- - ./NangateOpenCellLibrary_typical.lib
-log_file: ./logs/nangate45/ibex/base/sv2v_lec_check.log
+ - ./sg13g2_stdcell_typ_1p20V_25C.lib
+log_file: ./logs/ihp-sg13g2/ibex/base/sv2v_sec_check.log

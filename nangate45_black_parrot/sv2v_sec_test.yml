@@ -1,4 +1,6 @@
 format: sv2v
+verification: sec
+sec_engine: pdr
 input_paths:
   -
     - ./rtl/designs/src/black_parrot/pickled.v
@@ -14,4 +16,4 @@ liberty_files:
  - ./lib/fakeram45_64x7.lib
  - ./lib/fakeram45_64x15.lib
  - ./lib/fakeram45_64x96.lib
-log_file: ./logs/nangate45/bp/base/sv2v_lec_check.log
+log_file: ./logs/nangate45/bp/base/sv2v_sec_check.log

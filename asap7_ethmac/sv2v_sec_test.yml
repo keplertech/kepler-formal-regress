@@ -1,4 +1,6 @@
 format: sv2v
+verification: sec
+sec_engine: pdr
 input_paths:
   -
     - ./rtl/designs/src/ethmac/eth_clockgen.v
@@ -38,4 +40,4 @@ liberty_files:
  - ./asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
  - ./asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
  - ./asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
-log_file: ./logs/asap7/ethmac/base/sv2v_lec_check.log
+log_file: ./logs/asap7/ethmac/base/sv2v_sec_check.log

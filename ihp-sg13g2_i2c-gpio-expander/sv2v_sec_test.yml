@@ -1,4 +1,6 @@
 format: sv2v
+verification: sec
+sec_engine: pdr
 input_paths:
   -
     - ./rtl/designs/ihp-sg13g2/i2c-gpio-expander/I2cGpioExpanderTop.v
@@ -12,4 +14,4 @@ liberty_files:
  - ./lib/sg13g2_stdcell_typ_1p20V_25C.lib
  - ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_typ.lib
  - ./lib/sg13g2_io_typ_1p2V_3p3V_25C.lib
-log_file: ./logs/ihp-sg13g2/i2c-gpio-expander/base/sv2v_lec_check.log
+log_file: ./logs/ihp-sg13g2/i2c-gpio-expander/base/sv2v_sec_check.log

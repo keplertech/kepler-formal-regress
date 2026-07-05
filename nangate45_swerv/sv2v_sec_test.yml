@@ -1,4 +1,6 @@
 format: sv2v
+verification: sec
+sec_engine: pdr
 input_paths:
   -
     - ./rtl/designs/src/swerv/swerv_wrapper.sv2v.v
@@ -8,4 +10,4 @@ sv_design1_flist: ./rtl/sv2v_design1.f
 sv_design1_top: swerv
 liberty_files:
  - NangateOpenCellLibrary_typical.lib
-log_file: ./logs/nangate45/swerv/base/sv2v_lec_check.log
+log_file: ./logs/nangate45/swerv/base/sv2v_sec_check.log

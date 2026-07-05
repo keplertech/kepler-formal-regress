@@ -1,20 +1,22 @@
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1221] KEPLER FORMAL: Run.
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1229] Input format: VERILOG
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1231] Run log: ./logs/sky130hd/riscv32i/base/6_final_sec_check.log
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:502] Netlist 1: ./1_synth_lec.v
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:502] Netlist 2: ./6_final_lec.v
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1312] Solver: KISSAT
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1313] Verification: sec
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1315] SEC max_k: 32
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1316] SEC engine: pdr
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1317] SEC encoding: dual_rail_steady
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1318] SEC uncomputable sequentials: boundary abstraction
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1323] Compact mode: disabled
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1324] Skipped PO reports: disabled
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1326] Library: ./sky130_fd_sc_hd__tt_025C_1v80.lib
-[2026-06-14 15:06:11.252] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1422] Loading library file: ./sky130_fd_sc_hd__tt_025C_1v80.lib
-[2026-06-14 15:06:11.334] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1679] Parsing verilog file(s) for design 1
-[2026-06-14 15:06:11.418] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1708] Found top design: riscv
-[2026-06-14 15:06:11.418] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1422] Loading library file: ./sky130_fd_sc_hd__tt_025C_1v80.lib
-[2026-06-14 15:06:11.488] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1758] Parsing verilog file(s) for design 2
-[2026-06-14 15:06:11.580] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1787] Found top design: riscv
+[2026-06-15 16:43:06.528] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1547] KEPLER FORMAL: Run.
+[2026-06-15 16:43:06.529] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1559] Input format: VERILOG
+[2026-06-15 16:43:06.529] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1561] Run log: ./logs/sky130hd/riscv32i/base/6_final_sec_check.log
+[2026-06-15 16:43:06.529] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:614] Netlist 1: ./1_synth_lec.v
+[2026-06-15 16:43:06.529] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:614] Netlist 2: ./6_final_lec.v
+[2026-06-15 16:43:06.529] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1670] Solver: KISSAT
+[2026-06-15 16:43:06.529] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1671] Verification: sec
+[2026-06-15 16:43:06.529] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1673] SEC max_k: 32
+[2026-06-15 16:43:06.529] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1674] SEC engine: pdr
+[2026-06-15 16:43:06.529] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1675] SEC encoding: dual_rail_steady
+[2026-06-15 16:43:06.529] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1679] SEC uncomputable sequentials: boundary abstraction
+[2026-06-15 16:43:06.529] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1681] Compact mode: disabled
+[2026-06-15 16:43:06.529] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1682] Skipped PO reports: disabled
+[2026-06-15 16:43:06.529] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1684] Library: ./sky130_fd_sc_hd__tt_025C_1v80.lib
+[2026-06-15 16:43:06.530] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1810] Loading library file: ./sky130_fd_sc_hd__tt_025C_1v80.lib
+[2026-06-15 16:43:06.627] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:2138] Parsing verilog file(s) for design 1
+[2026-06-15 16:43:06.673] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:2173] Found top design: riscv
+[2026-06-15 16:43:06.673] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1810] Loading library file: ./sky130_fd_sc_hd__tt_025C_1v80.lib
+[2026-06-15 16:43:06.770] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:2247] Parsing verilog file(s) for design 2
+[2026-06-15 16:43:06.817] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:2282] Found top design: riscv
+[2026-06-15 16:45:12.246] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1699] SEC output coverage: 100.00% (99/99 covered/existing outputs).
+[2026-06-15 16:45:12.247] [kepler_formal_main_logger] [info] [KeplerFormal.cpp:1752] No difference was found. SEC proved equivalence at k = 0.

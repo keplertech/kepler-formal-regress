@@ -1,4 +1,6 @@
 format: sv2v
+verification: sec
+sec_engine: pdr
 input_paths:
   -
     - ./rtl/designs/src/aes/aes_cipher_top.v
@@ -20,4 +22,4 @@ liberty_files:
  - ./asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
  - ./asap7sc7p5t_DFFHQNH2V2X_RVT_FF_nldm_FAKE.lib
  - ./asap7sc7p5t_DFFHQNV2X_RVT_FF_nldm_FAKE.lib
-log_file: ./logs/asap7/aes-mbff/base/sv2v_lec_check.log
+log_file: ./logs/asap7/aes-mbff/base/sv2v_sec_check.log

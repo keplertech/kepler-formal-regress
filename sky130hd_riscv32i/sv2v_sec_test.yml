@@ -1,4 +1,6 @@
 format: sv2v
+verification: sec
+sec_engine: pdr
 input_paths:
   -
     - ./rtl/designs/src/riscv32i/adder.v
@@ -31,4 +33,4 @@ sv_design1_flist: ./rtl/sv2v_design1.f
 sv_design1_top: riscv
 liberty_files:
  - ./sky130_fd_sc_hd__tt_025C_1v80.lib
-log_file: ./logs/sky130hd/riscv32i/base/sv2v_lec_check.log
+log_file: ./logs/sky130hd/riscv32i/base/sv2v_sec_check.log
