@@ -1,0 +1,37 @@
+format: sv2v
+verification: sec
+sec_engine: pdr
+sec_encoding: binary
+input_paths:
+  -
+    - ./rtl/designs/src/riscv32i/adder.v
+    - ./rtl/designs/src/riscv32i/alu.v
+    - ./rtl/designs/src/riscv32i/aludec.v
+    - ./rtl/designs/src/riscv32i/controller.v
+    - ./rtl/designs/src/riscv32i/datapath.v
+    - ./rtl/designs/src/riscv32i/dmem.v
+    - ./rtl/designs/src/riscv32i/flopenr.v
+    - ./rtl/designs/src/riscv32i/flopens.v
+    - ./rtl/designs/src/riscv32i/flopr.v
+    - ./rtl/designs/src/riscv32i/magcompare2b.v
+    - ./rtl/designs/src/riscv32i/magcompare2c.v
+    - ./rtl/designs/src/riscv32i/magcompare32.v
+    - ./rtl/designs/src/riscv32i/maindec.v
+    - ./rtl/designs/src/riscv32i/mux2.v
+    - ./rtl/designs/src/riscv32i/mux3.v
+    - ./rtl/designs/src/riscv32i/mux4.v
+    - ./rtl/designs/src/riscv32i/mux5.v
+    - ./rtl/designs/src/riscv32i/mux8.v
+    - ./rtl/designs/src/riscv32i/regfile.v
+    - ./rtl/designs/src/riscv32i/riscv.v
+    - ./rtl/designs/src/riscv32i/rom.v
+    - ./rtl/designs/src/riscv32i/shifter.v
+    - ./rtl/designs/src/riscv32i/signext.v
+    - ./rtl/designs/src/riscv32i/top.v
+  -
+    - ./1_synth_lec.v
+sv_design1_flist: ./rtl/sv2v_design1.f
+sv_design1_top: riscv
+liberty_files:
+ - ./sky130_fd_sc_hs__tt_025C_1v80.lib
+log_file: ./logs/sky130hs/riscv32i/base/sv2v_sec_pdr_binary_check.log

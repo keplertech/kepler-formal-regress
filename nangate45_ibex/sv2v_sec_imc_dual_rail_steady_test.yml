@@ -1,0 +1,34 @@
+format: sv2v
+verification: sec
+sec_engine: imc
+sec_encoding: dual_rail_steady
+input_paths:
+  -
+    - ./rtl/designs/src/ibex_sv/ibex_alu.sv
+    - ./rtl/designs/src/ibex_sv/ibex_compressed_decoder.sv
+    - ./rtl/designs/src/ibex_sv/ibex_controller.sv
+    - ./rtl/designs/src/ibex_sv/ibex_core.sv
+    - ./rtl/designs/src/ibex_sv/ibex_counter.sv
+    - ./rtl/designs/src/ibex_sv/ibex_cs_registers.sv
+    - ./rtl/designs/src/ibex_sv/ibex_csr.sv
+    - ./rtl/designs/src/ibex_sv/ibex_decoder.sv
+    - ./rtl/designs/src/ibex_sv/ibex_ex_block.sv
+    - ./rtl/designs/src/ibex_sv/ibex_fetch_fifo.sv
+    - ./rtl/designs/src/ibex_sv/ibex_id_stage.sv
+    - ./rtl/designs/src/ibex_sv/ibex_if_stage.sv
+    - ./rtl/designs/src/ibex_sv/ibex_load_store_unit.sv
+    - ./rtl/designs/src/ibex_sv/ibex_multdiv_fast.sv
+    - ./rtl/designs/src/ibex_sv/ibex_multdiv_slow.sv
+    - ./rtl/designs/src/ibex_sv/ibex_pkg.sv
+    - ./rtl/designs/src/ibex_sv/ibex_pmp.sv
+    - ./rtl/designs/src/ibex_sv/ibex_prefetch_buffer.sv
+    - ./rtl/designs/src/ibex_sv/ibex_register_file_ff.sv
+    - ./rtl/designs/src/ibex_sv/ibex_wb_stage.sv
+    - ./rtl/designs/src/ibex_sv/syn/rtl/prim_clock_gating.v
+  -
+    - ./1_synth_lec.v
+sv_design1_flist: ./rtl/sv2v_design1.f
+sv_design1_top: ibex_core
+liberty_files:
+ - ./NangateOpenCellLibrary_typical.lib
+log_file: ./logs/nangate45/ibex/base/sv2v_sec_imc_dual_rail_steady_check.log

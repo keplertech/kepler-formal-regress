@@ -1,0 +1,16 @@
+format: sv2v
+verification: sec
+sec_engine: imc
+sec_encoding: binary
+input_paths:
+  -
+    - ./rtl/designs/src/ariane136/ariane.sv2v.v
+    - ./rtl/designs/nangate45/ariane136/macros.v
+  -
+    - ./1_synth_lec.v
+sv_design1_flist: ./rtl/sv2v_design1.f
+sv_design1_top: ariane
+liberty_files:
+ - ./NangateOpenCellLibrary_typical.lib
+ - ./fakeram45_256x16.lib
+log_file: ./logs/nangate45/ariane136/base/sv2v_sec_imc_binary_check.log

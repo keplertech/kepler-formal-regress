@@ -1,0 +1,18 @@
+format: sv2v
+verification: sec
+sec_engine: pdr
+sec_encoding: binary
+input_paths:
+  -
+    - ./rtl/designs/ihp-sg13g2/i2c-gpio-expander/I2cGpioExpanderTop.v
+    - ./rtl/designs/ihp-sg13g2/i2c-gpio-expander/I2cGpioExpander.v
+    - ./rtl/platforms/ihp-sg13g2/verilog/sg13g2_io.v
+  -
+    - ./results/ihp-sg13g2/i2c-gpio-expander/base/4_before_rsz_lec.v
+sv_design1_flist: ./rtl/sv2v_design1.f
+sv_design1_top: I2cGpioExpanderTop
+liberty_files:
+ - ./lib/sg13g2_stdcell_typ_1p20V_25C.lib
+ - ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_typ.lib
+ - ./lib/sg13g2_io_typ_1p2V_3p3V_25C.lib
+log_file: ./logs/ihp-sg13g2/i2c-gpio-expander/base/sv2v_sec_pdr_binary_check.log

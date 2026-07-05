@@ -1,0 +1,14 @@
+format: sv2v
+verification: sec
+sec_engine: imc
+sec_encoding: dual_rail_steady
+input_paths:
+  -
+    - ./rtl/designs/ihp-sg13g2/i2c-gpio-expander/I2cGpioExpander.v
+  -
+    - ./results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/4_before_rsz_lec.v
+sv_design1_flist: ./rtl/sv2v_design1_I2cDeviceCtrl.f
+sv_design1_top: I2cDeviceCtrl
+liberty_files:
+ - ./lib/sg13g2_stdcell_typ_1p20V_25C.lib
+log_file: ./logs/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/sv2v_I2cDeviceCtrl_sec_imc_dual_rail_steady_check.log

@@ -1,0 +1,18 @@
+format: sv2v
+verification: sec
+sec_engine: pdr
+sec_encoding: binary
+input_paths:
+  -
+    - ./rtl/designs/src/bp_be_top/pickled.v
+    - ./rtl/designs/nangate45/bp_be_top/macros.v
+  -
+    - ./1_synth_lec.v
+sv_design1_flist: ./rtl/sv2v_design1.f
+sv_design1_top: bp_be_top
+liberty_files:
+ - ./NangateOpenCellLibrary_typical.lib
+ - ./fakeram45_512x64.lib
+ - ./fakeram45_64x15.lib
+ - ./fakeram45_64x96.lib
+log_file: ./logs/nangate45/bp_be/base/sv2v_sec_pdr_binary_check.log

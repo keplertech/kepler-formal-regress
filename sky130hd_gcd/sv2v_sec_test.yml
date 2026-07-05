@@ -1,6 +1,7 @@
 format: sv2v
 verification: sec
 sec_engine: pdr
+sec_encoding: dual_rail_steady
 input_paths:
   -
     - ./rtl/designs/src/gcd/gcd.v
