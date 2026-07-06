@@ -256,18 +256,19 @@ def revert_force_output_value(gate_rel, output_expr, value):
     gate_path.write_text(_remove_first(text, edit))
     print(f"reverted {gate_rel}: removed force on {output_expr}")
 
-# Verified with sv2v k-induction dual-rail steady: first bad frame is k = 2.
-ACTIONS = [('replace',
-  './1_synth_lec.v',
-  '_100929_',
-  'B',
-  '_005781_',
-  '_005783_',
-  ['./asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz',
-   './asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz',
-   './asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz',
-   './asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz',
-   './asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib'],
+ACTIONS = [('force',
+  './results/ihp-sg13g2/i2c-gpio-expander/base/4_before_rsz_lec.v',
+  'io_i2c_interrupt_PAD',
+  "1'b1",
+  ['./lib/sg13g2_stdcell_typ_1p20V_25C.lib',
+   './results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/I2cDeviceCtrl_typ.lib',
+   './lib/sg13g2_io_typ_1p2V_3p3V_25C.lib'],
+  True),
+ ('detach',
+  './results/ihp-sg13g2/i2c-gpio-expander_I2cDeviceCtrl/base/4_before_rsz_lec.v',
+  'io_cmd_payload_data[7]',
+  'X',
+  ['./lib/sg13g2_stdcell_typ_1p20V_25C.lib'],
   True)]
 
 

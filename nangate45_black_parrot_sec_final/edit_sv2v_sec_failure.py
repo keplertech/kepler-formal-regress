@@ -256,18 +256,16 @@ def revert_force_output_value(gate_rel, output_expr, value):
     gate_path.write_text(_remove_first(text, edit))
     print(f"reverted {gate_rel}: removed force on {output_expr}")
 
-# Verified with sv2v k-induction dual-rail steady: first bad frame is k = 2.
-ACTIONS = [('replace',
+ACTIONS = [('detach',
   './1_synth_lec.v',
-  '_100929_',
-  'B',
-  '_005781_',
-  '_005783_',
-  ['./asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz',
-   './asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz',
-   './asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz',
-   './asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz',
-   './asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib'],
+  'mem_cmd_o[26]',
+  'ZN',
+  ['./NangateOpenCellLibrary_typical.lib',
+   './fakeram45_512x64.lib',
+   './fakeram45_256x95.lib',
+   './fakeram45_64x7.lib',
+   './fakeram45_64x15.lib',
+   './fakeram45_64x96.lib'],
   True)]
 
 
