@@ -1,0 +1,11 @@
+format: cc
+verification: sec
+max_k: 4
+cc_top: pqcrystals_dilithium5_ref_ntt
+cc_output_dir: ./generated
+cc_include_paths:
+  - ./src
+  - ./src/adams_bridge_dilithium_ref
+input_paths:
+  - ./src/ntt_xlscc.cc
+  - ./src/ntt_xlscc.cc

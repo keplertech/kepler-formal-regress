@@ -1,0 +1,8 @@
+format: systemverilog
+verification: sec
+max_k: 4
+sv_design1_top: temporal_accum
+sv_design2_top: temporal_accum
+input_paths:
+  - ./generated/design1_accum_same0.sv
+  - ./generated/design2_accum_same1.sv

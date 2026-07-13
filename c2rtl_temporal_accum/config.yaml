@@ -1,0 +1,9 @@
+format: cc
+verification: sec
+max_k: 4
+cc_top: temporal_accum
+cc_block_proto_path: ./src/accum_block.textproto
+cc_output_dir: ./generated
+input_paths:
+  - ./src/accum_same0.cc
+  - ./src/accum_same1.cc
