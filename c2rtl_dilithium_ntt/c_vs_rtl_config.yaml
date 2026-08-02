@@ -1,0 +1,12 @@
+format: c_vs_rtl
+verification: sec
+max_k: 4
+cc_top: pqcrystals_dilithium5_ref_ntt
+cc_output_dir: ./generated/c_vs_rtl
+cc_include_paths:
+  - ./src
+  - ./src/adams_bridge_dilithium_ref
+sv_design2_top: pqcrystals_dilithium5_ref_ntt
+input_paths:
+  - ./src/ntt_xlscc.cc
+  - ./generated/design2_ntt_xlscc.sv
