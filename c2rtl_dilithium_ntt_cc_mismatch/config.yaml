@@ -1,0 +1,15 @@
+format: cc
+verification: sec
+compact_mode: true
+sec_engine: pdr
+sec_encoding: dual_rail_steady
+max_k: 4
+solver: kissat
+cc_top: pqcrystals_dilithium5_ref_ntt
+cc_output_dir: ./generated
+cc_include_paths:
+  - ./src
+  - ./src/adams_bridge_dilithium_ref
+input_paths:
+  - ./src/ntt_reference.cc
+  - ./src/ntt_mismatch.cc
